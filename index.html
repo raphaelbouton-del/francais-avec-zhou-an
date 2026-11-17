@@ -1,0 +1,1667 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zhou An 的法语小课堂 — Le français avec Zhou An · V10.2 · Zhou An</title>
+<style>
+:root{
+  --creme:#FBF7EF; --creme2:#F3ECDD; --nuit:#1F2A44; --nuit2:#2A3855;
+  --corail:#E8907A; --corail-d:#C96A52; --ok:#4C8A5C; --bad:#B4573F;
+  --txt:#2B2B2B; --muted:#6B6355; --line:#E4DAC8;
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+html{font-size:18px;}
+body{margin:0;background:var(--creme);color:var(--txt);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,-apple-system,sans-serif;
+  line-height:1.75; padding-bottom:calc(100px + env(safe-area-inset-bottom, 0px));}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px;}
+header{background:var(--nuit);color:#fff;padding:14px 16px;position:sticky;top:0;z-index:20;}
+.hrow{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:10px;justify-content:space-between;}
+.logo{font-size:1.05rem;font-weight:700;letter-spacing:.5px;cursor:pointer;background:none;border:none;color:#fff;padding:8px 0;}
+.logo small{display:block;font-size:.62rem;font-weight:400;opacity:.75;letter-spacing:0;}
+.badge{background:var(--corail);color:#fff;font-size:.7rem;padding:4px 10px;border-radius:999px;white-space:nowrap;}
+nav{background:var(--nuit2);position:fixed;bottom:0;left:0;right:0;z-index:30;display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;padding-bottom:env(safe-area-inset-bottom,0px);}
+nav button{flex:1 0 60px;background:none;border:none;color:#CFD6E8;font-size:.72rem;padding:9px 4px 10px;min-height:56px;font-family:inherit;}
+nav button .ic{display:block;font-size:1.35rem;line-height:1.4;}
+nav button.on{color:#fff;background:var(--corail);}
+h1{color:var(--nuit);font-size:1.5rem;margin:1.2rem 0 .4rem;}
+h2{color:var(--nuit);font-size:1.2rem;margin:1.4rem 0 .5rem;}
+h3{color:var(--nuit);font-size:1.02rem;margin:1rem 0 .35rem;}
+p{margin:.5rem 0;}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0;box-shadow:0 1px 3px rgba(31,42,68,.06);}
+.btn{display:inline-block;min-height:44px;padding:10px 18px;border-radius:12px;border:none;background:var(--corail);color:#fff;font-size:1rem;font-family:inherit;cursor:pointer;}
+.btn.sec{background:var(--nuit);}
+.btn.ghost{background:#fff;color:var(--nuit);border:1.5px solid var(--nuit);}
+.btn:disabled{opacity:.45;cursor:default;}
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--corail-d);outline-offset:2px;}
+.wordcard{background:#fff;border:1.5px solid var(--line);border-left:6px solid var(--corail);border-radius:14px;padding:14px 16px;margin:12px 0;}
+.wfr{font-size:1.9rem;font-weight:700;color:var(--nuit);letter-spacing:.5px;}
+.whz{font-size:1.5rem;color:var(--txt);}
+.wpy{font-size:.85rem;color:var(--muted);}
+.wex{font-size:.92rem;color:var(--muted);border-top:1px dashed var(--line);margin-top:8px;padding-top:8px;}
+.exfr{font-size:1.15rem;font-weight:600;color:var(--nuit);}
+.pbar{background:var(--creme2);border-radius:999px;height:12px;overflow:hidden;border:1px solid var(--line);}
+.pfill{background:linear-gradient(90deg,var(--corail),var(--corail-d));height:100%;border-radius:999px;transition:width .3s;}
+.qopt{display:block;width:100%;text-align:left;min-height:48px;margin:8px 0;padding:10px 14px;border-radius:12px;border:1.5px solid var(--line);background:#fff;font-size:1.05rem;font-family:inherit;cursor:pointer;}
+.qopt:hover{border-color:var(--corail);}
+.tag{display:inline-block;font-size:.72rem;background:var(--creme2);color:var(--nuit);border-radius:999px;padding:2px 10px;margin-right:6px;}
+.fbk{border-radius:10px;padding:10px 14px;margin-top:10px;font-size:.95rem;}
+.fbk.ok{background:#E7F1E9;color:#2E5C3B;border:1px solid #BBD8C3;}
+.fbk.bad{background:#F9E9E2;color:#7A3320;border:1px solid #E8C4B4;}
+input.txt{width:100%;min-height:48px;font-size:1.15rem;padding:8px 12px;border-radius:12px;border:1.5px solid var(--nuit);background:#fff;font-family:inherit;}
+.chip{display:inline-block;min-height:44px;min-width:44px;padding:8px 14px;margin:4px;border-radius:10px;border:1.5px solid var(--nuit);background:#fff;font-size:1.05rem;cursor:pointer;font-family:inherit;}
+.chip.used{opacity:.35;cursor:default;}
+.slotline{min-height:56px;border:2px dashed var(--line);border-radius:12px;padding:6px;display:flex;flex-wrap:wrap;align-items:center;}
+.okline{color:var(--ok);font-weight:700;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+@media(max-width:420px){.grid2{grid-template-columns:1fr;}}
+.wkcard{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0;width:100%;text-align:left;font-family:inherit;cursor:pointer;}
+.wknum{background:var(--nuit);color:#fff;width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700;flex:none;}
+.daybtn{display:flex;flex-direction:column;align-items:flex-start;gap:2px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-height:44px;font-family:inherit;font-size:.9rem;cursor:pointer;text-align:left;}
+.daybtn .dn{font-weight:700;color:var(--nuit);}
+.daybtn .dt{font-size:.78rem;color:var(--muted);}
+.daybtn.done{border-color:var(--ok);background:#F0F7F1;}
+.muted{color:var(--muted);font-size:.9rem;}
+.center{text-align:center;}
+.dictrow{display:flex;align-items:flex-start;gap:10px;}
+.dictrow .grow{flex:1;}
+.star{background:none;border:none;font-size:1.5rem;min-width:44px;min-height:44px;cursor:pointer;}
+.motmsg{font-size:1.05rem;background:var(--creme2);border-left:5px solid var(--corail);border-radius:10px;padding:12px 14px;margin:10px 0;}
+.kbd{font-size:.85rem;color:var(--muted);}
+.hidden{display:none;}
+a{color:var(--corail-d);}
+ul{padding-left:1.2em;}
+
+.lessonsteps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:14px 0}
+.lessonsteps a{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 9px;text-align:center;text-decoration:none;color:var(--nuit);font-weight:600;font-size:.85rem;min-height:48px}
+h2[id]{scroll-margin-top:90px}
+.qopt:focus-visible,.chip:focus-visible{outline:3px solid var(--corail-d);outline-offset:2px}
+.pairgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pairgrid button{width:100%;margin:5px 0;min-height:50px;overflow-wrap:anywhere}
+.pairgrid button.selected{background:var(--creme2);border-color:var(--corail-d);box-shadow:inset 0 0 0 1px var(--corail-d)}
+.pairgrid button.matched{background:#E7F1E9;border-color:var(--ok);opacity:.65}
+@media(max-width:420px){html{font-size:16px}.badge{font-size:.62rem}.wordcard{padding:12px 13px}nav button{font-size:.67rem}}
+
+.elixlink{display:inline-flex;align-items:center;gap:7px;margin-top:10px;padding:9px 12px;min-height:44px;border-radius:10px;background:#E9EFF9;border:1px solid #B9CCE5;color:#1F2A44!important;text-decoration:none;font-size:.86rem;font-weight:650;}
+.elixlink:hover,.elixlink:focus-visible{background:#D8E8FA;}
+.elixnote{font-size:.8rem;color:var(--muted);margin-top:6px;line-height:1.5}
+.elixintro{background:#F1F6FC;border:1px solid #C7D9EA;border-radius:12px;padding:12px 14px;margin:12px 0}
+
+.v6visual{font-size:2.5rem;line-height:1.3;padding:4px 0 7px;user-select:none}
+.v6dialog{background:#f7f9fc;border-color:#d8e1ec}
+.v6bubble{background:#fff;border:1px solid #d8e1ec;padding:12px 14px;border-radius:13px;margin:10px 0;max-width:95%}
+.v6bubble.answer{margin-left:auto;background:#eaf2f0}
+.v6bubble strong{display:block;color:#1f2a44;font-size:1.08rem}
+.v6bubble small{display:block;color:#5e655f;margin-top:3px;font-size:.88rem}
+.v6review{padding:12px;margin-top:12px;border:1px solid var(--line);border-radius:13px}
+.v6review .btn{margin:6px 5px 5px 0}
+
+/* V8 : niveau progressif, sans dépendance externe */
+.advanced-wrap{border:2px solid #62738f;border-radius:15px;padding:14px;margin:18px 0;background:#f3f6fb}
+.advanced-wrap h3{margin-top:0}.advanced-details{margin-top:10px}
+.advanced-details summary{display:block;cursor:pointer;background:var(--nuit);color:#fff;padding:12px 16px;border-radius:11px;font-weight:700;min-height:48px}
+.advanced-details[open] summary{margin-bottom:12px}
+.advanced-question{background:#fff;border:1px solid #d5dfed;border-radius:12px;padding:13px;margin:10px 0}
+.advanced-question label{display:block;font-weight:650;margin:6px 0}
+.advanced-question input{width:100%;max-width:100%;font-size:1.05rem;border:1.5px solid #72829b;border-radius:10px;padding:11px;font-family:inherit}
+.advanced-result{margin-top:8px;font-size:.9rem;line-height:1.6}
+.grammar-focus{background:#f3f7fc;border:1px solid #c8d8e9;border-radius:13px;padding:14px;margin:12px 0}
+.grammar-focus table{border-collapse:collapse;width:100%;margin:8px 0;background:white}
+.grammar-focus th,.grammar-focus td{text-align:left;padding:8px;border:1px solid #d6e0ed;font-size:.88rem}
+.grammar-focus p{margin:8px 0}
+.advanced-tip{color:#4b5568;font-size:.9rem}
+
+/* V9: visual recall, mobile-first and accessible */
+.v9callout{border-left:5px solid var(--corail);background:#fffaf2}
+.v9tabs{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0}.v9tabs .btn{font-size:.88rem;min-height:45px;padding:8px 12px}
+.v9tabs .btn.active{background:var(--nuit);color:#fff}
+.v9prompt{background:#f5f0e7;border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center;margin:14px 0}
+.v9symbol{font-size:2.6rem;font-weight:700;color:var(--nuit);line-height:1.45}
+.v9cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;margin-top:12px}
+.v9cal span{font-size:.7rem;text-align:center;border:1px solid var(--line);border-radius:7px;padding:5px 1px;background:#fff;overflow:hidden}
+.v9cal .active{background:var(--corail);color:#fff;font-weight:700}
+.v9question{border:1px solid var(--line);background:#fff;padding:16px;border-radius:14px;margin:12px 0}
+.v9question label{font-weight:700;display:block;margin-bottom:8px}.v9question input{margin:8px 0 6px}
+.v9result{margin-top:9px}.v9result:empty{display:none}
+@media(max-width:420px){.v9symbol{font-size:2.15rem}.v9cal span{font-size:.61rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hrow">
+    <button class="logo" onclick="go('home')">Zhou An 的法语小课堂<small>Le français avec Zhou An · V10.2 · 两阶段120课</small></button>
+    
+  </div>
+</header>
+<main id="app" class="wrap"></main>
+<nav id="nav"></nav>
+<script>
+"use strict";
+/* ---------- 存储 ---------- */
+var KEY="zhouanfr_v1"; // Clé propre à Zhou An : ne jamais renommer lors des mises à jour.
+var SHADOW_KEY="zhouanfr_v1_safety_copy"; // Copie locale de secours, sur le même navigateur.
+var storageWarning=false;
+function isRecord(x){return !!x&&typeof x==="object"&&!Array.isArray(x);}
+function isProgressData(d){return isRecord(d)&&Array.isArray(d.done)&&Array.isArray(d.fav)&&Array.isArray(d.err)&&isRecord(d.mynotes)&&(!d.memory||isRecord(d.memory));}
+function normalizeProgress(d){
+  d=isRecord(d)?d:{};
+  return {done:Array.isArray(d.done)?d.done.filter(function(x){return typeof x==="string"&&/^([1-9]|1[0-2])-[1-5]$/.test(x);}):[],
+    fav:Array.isArray(d.fav)?d.fav:[],err:Array.isArray(d.err)?d.err:[],
+    mynotes:isRecord(d.mynotes)?d.mynotes:{},current:d.current||null,last:d.last||null,
+    memory:isRecord(d.memory)?d.memory:{},practice:isRecord(d.practice)?d.practice:{},
+    recall:isRecord(d.recall)?d.recall:{},journal:isRecord(d.journal)?d.journal:{}};
+}
+function load(){
+  var d=null;
+  try{
+    var raw=localStorage.getItem(KEY);
+    if(raw){try{var main=JSON.parse(raw);if(isProgressData(main))d=main;}catch(parseError){/* Essayer la copie de secours. */}}
+    // Restaurer la copie uniquement lorsque les données principales sont absentes ou illisibles.
+    if(!d){var secondary=localStorage.getItem(SHADOW_KEY);if(secondary){var copy=JSON.parse(secondary);if(isProgressData(copy)){d=copy;localStorage.setItem(KEY,JSON.stringify(copy));}}}
+  }catch(e){storageWarning=true;}
+  return normalizeProgress(d);
+}
+var S=load();
+function save(){
+  S.last=Date.now();
+  try{
+    var raw=JSON.stringify(S);
+    localStorage.setItem(KEY,raw);
+    localStorage.setItem(SHADOW_KEY,raw);
+    storageWarning=false;
+  }catch(e){storageWarning=true;}
+}
+function storageNotice(){return storageWarning?'<div class="fbk bad" role="alert">⚠️ 浏览器无法保存学习记录。请检查是否使用无痕浏览，并先下载学习备份。学习期间不要清除网站数据。</div>':'';}
+// Mettre à jour la copie de secours dès l'ouverture, y compris pour les anciennes versions.
+if(!storageWarning)save();
+function isDone(id){return S.done.indexOf(id)>=0;}
+function toggleDone(id){if(!isDone(id))S.done.push(id);save();}
+/* V6: espacements de revision, sans changer l'identifiant de sauvegarde V5 */
+var REVIEW_DELAYS=[1,3,7,14];
+function dayStamp(){return Math.floor(Date.now()/86400000);}
+function memoryKey(fr){return String(fr).trim().toLowerCase();}
+function encounterWords(l){
+  if(!S.memory)S.memory={};
+  l.words.forEach(function(w){var k=memoryKey(w[0]);
+    if(!S.memory[k])S.memory[k]={stage:0,due:dayStamp()+1,seen:dayStamp(),ok:0};
+  });save();
+}
+function dueItems(){
+  if(!S.memory)S.memory={};
+  var w=allWords(),seen={};
+  return w.filter(function(item){var k=memoryKey(item.fr);if(seen[k])return false;seen[k]=1;return S.memory[k]&&S.memory[k].due<=dayStamp();});
+}
+function answerMemory(fr,ok){
+ var k=memoryKey(fr),r=S.memory[k]||{stage:0,seen:dayStamp(),ok:0};
+ if(ok){r.stage=Math.min(4,(r.stage||0)+1);r.ok=(r.ok||0)+1;r.due=dayStamp()+REVIEW_DELAYS[Math.min(r.stage-1,3)];}
+ else{r.stage=0;r.due=dayStamp()+1;}
+ S.memory[k]=r;save();
+}
+
+/* ---------- 数据：60 课（12周 × 5天） ----------
+   J1–J4 每天新内容；J5 为本周复习（由程序自动汇总本周词汇与句子生成）。
+   拼音只标注汉字（拼音是汉语的注音，不是法语发音）。 */
+function L(w,d,th,goal,words,gram,ex,exs){return {w:w,d:d,th:th,goal:goal,words:words,gram:gram,ex:ex,exs:exs};}
+var LESSONS=[];
+/* ===== 第1周：认识与问候 ===== */
+LESSONS.push(L(1,1,"第一次见面：你好和谢谢",
+"今天先学 4 个词和 1 句话：认识「我 / 你 / 你好 / 谢谢」，并看懂「我是Zhou An」。",
+[["bonjour","你好","nǐ hǎo"],["merci","谢谢","xiè xie"],["je","我","wǒ"],["tu","你","nǐ"]],
+"先认识两个简单对应：je = 我，tu = 你。但法语和中文的句子结构不同，不能永远一个字对应一个字。注意：卡片上的拼音是<strong>汉字的读音</strong>（帮助你确认中文），它<strong>不是</strong>法语的发音。法语我们只学「读和写」，不学「说和听」。",
+[["Je suis Zhou An.","我是Zhou An。"],["Bonjour !","你好！"],["Merci !","谢谢！"]],
+[{"t":"mcq","q":"「你好」的法语怎么写？","o":["bonjour","merci","je"],"a":0,"exp":"bonjour = 你好。"},
+ {"t":"mcq","q":"下面哪个词表示「我」？","o":["tu","je","merci"],"a":1,"exp":"je = 我；tu = 你。"},
+ {"t":"fill","q":"填空：____ suis Zhou An.（我是Zhou An。）","a":"je","exp":"je = 我。注意法语习惯首字母大写，但小写也算对。"}]));
+LESSONS.push(L(1,2,"我、你、他、她",
+"复习昨天的词，再加上「他 / 她」。法语里 il 和 elle 写法不同，一看就分清。",
+[["il","他","tā"],["elle","她","tā"],["chinois","中国人（男）","zhōngguó rén"],["chinoise","中国人（女）","zhōngguó rén"]],
+"法语的 il = 他，elle = 她：写法不同，靠眼睛就能区分。中文的“他”和“她”读音相同（tā），但汉字不同；法语也用两个不同的词。中文「中国人」不分男女，法语要在词尾加 -e 表示女性：chinois / chinoise。",
+[["Il est chinois.","他是中国人。"],["Elle est chinoise.","她是中国人。"],["Tu es Zhou An ?","你是Zhou An吗？"]],
+[{"t":"mcq","q":"「她是中国人」里应该用哪个词？","o":["il","elle","je"],"a":1,"exp":"女性用 elle（她）。"},
+ {"t":"fill","q":"填空：Elle est ________.（她是中国人。）","a":"chinoise","exp":"女性写 chinoise，词尾多一个 e。"},
+ {"t":"mcq","q":"昨天学的「我是Zhou An」，完整写一遍：","o":["Je suis Zhou An","Je est Zhou An","Tu suis Zhou An"],"a":0,"exp":"固定搭配：je suis = 我是。"}]));
+LESSONS.push(L(1,3,"你叫什么名字？",
+"学会问名字和回答：comment / appeler / je m'appelle。今天只有一个新句型。",
+[["comment","怎么","zěn me"],["s'appeler","叫（名字）","jiào"],["je m'appelle…","我叫……","wǒ jiào"],["et toi ?","你呢？","nǐ ne"]],
+"法语问名字说 Comment tu t'appelles ?（你叫什么）。回答用 je m'appelle + 名字（我叫……）。这里的 m' 是「我自己」的意思，先整体记住这个句型，不拆开分析。",
+[["Comment tu t'appelles ?","你叫什么名字？"],["Je m'appelle Zhou An.","我叫Zhou An。"],["Je m'appelle Zhou An. Et toi ?","我叫Zhou An。你呢？"]],
+[{"t":"order","w":["Je","m'appelle","Zhou An"],"a":"Je m'appelle Zhou An","q":"把词排成「我叫Zhou An」：","exp":"je m'appelle = 我叫，后面直接接名字。"},
+ {"t":"fill","q":"填空：Comment tu t'______ ?（你叫什么名字？）","a":"appelles","exp":"s'appeler 的问句形式，整体记住即可。"},
+ {"t":"mcq","q":"「我叫Zhou An」怎么说？","o":["Je m'appelle Zhou An","Je suis appelle Zhou An","Comment Zhou An"],"a":0,"exp":"je m'appelle + 名字。"}]));
+LESSONS.push(L(1,4,"介绍身份与法国手语",
+"认识 sourd / sourde（聋的）和 LSF（法国手语）；了解如何根据实际情况介绍自己。",
+[["sourd / sourde","聋的（男/女）","lóng"],["la langue des signes","手语","shǒu yǔ"],["LSF","法国手语（缩写）","fǎguó shǒu yǔ"],["lire","读 / 看（文字）","dú"],["écrire","写","xiě"]],
+"LSF 是<strong>法国手语</strong>，它和书面法语是两种独立的语言，就像汉语和手语也不是一回事。如果适用于自己，男性可以说：Je suis sourd.（我是聋人。）女性说 Je suis sourde。Je lis le français.（我能读法语。）我们这个课堂学习法语的阅读与写作，不需要听力。",
+[["Je suis sourd.","我是聋人。（男性说法）"],["Je lis le français.","我读法语。"],["J'écris un message.","我写一条消息。"]],
+[{"t":"mcq","q":"男性说「我是聋人」：","o":["Je suis sourde","Je suis sourd","Il est sourde"],"a":1,"exp":"男性用 sourd；女性用 sourde。只有符合自己的情况才这样介绍。"},
+ {"t":"mcq","q":"LSF 指的是：","o":["法国手语","法国美食","法国城市"],"a":0,"exp":"LSF = langue des signes française，法国手语。"},
+ {"t":"fill","q":"填空：Je ______ le français.（我读法语。）","a":"lis","exp":"lire 的「我」形式是 lis。"}]));
+/* ===== 第2周：家庭 ===== */
+LESSONS.push(L(2,1,"我的家人（一）",
+"认识家庭基础词：famille / père / mère，并用 mon（我的）连起来。",
+[["la famille","家庭 / 家人","jiārén"],["le père","父亲","fùqīn"],["la mère","母亲","mǔqīn"],["mon","我的（男性/中性词前）","wǒ de"],["ma","我的（女性词前）","wǒ de"]],
+"多数法语名词都分「阴阳性」，像两堆卡片：le père 用 mon（我的），la mère 用 ma（我的）。中文的「我的」不区分名词阴阳性，法语常用 mon 或 ma。不用急，先记住：père→mon，mère→ma。",
+[["Voici ma famille.","这是我的家人。"],["Mon père est en Chine.","我的父亲在中国。"],["Ma mère est là.","我的母亲在这里。"]],
+[{"t":"mcq","q":"「我的母亲」，mon 还是 ma？","o":["mon père","ma mère"],"a":1,"exp":"mère 是阴性，用 ma。"},
+ {"t":"fill","q":"填空：Mon ______ est en Chine.（我的父亲在中国。）","a":"père","exp":"père = 父亲。"},
+ {"t":"mcq","q":"famille 是什么意思？","o":["家庭","朋友","城市"],"a":0,"exp":"la famille = 家庭/家人。"}]));
+LESSONS.push(L(2,2,"兄弟姐妹和孩子",
+"加上 frère / sœur / fils / fille，学会「我有……」。",
+[["le frère","兄弟","xiōngdì"],["la sœur","姐妹","jiěmèi"],["le fils","儿子","érzi"],["la fille","女儿 / 女孩","nǚ'ér"],["j'ai","我有","wǒ yǒu"]],
+"今天的重点是 j'ai = 我有。注意：j'ai 是两个词 je + ai 的缩写（省掉了一个字母），意思等于中文「我有」。看多了就认识了。",
+[["J'ai un frère.","我有一个兄弟。"],["J'ai une sœur.","我有一个姐妹。"],["J'ai deux enfants.","我有两个孩子。"]],
+[{"t":"fill","q":"填空：J'____ une sœur.（我有一个姐妹。）","a":"ai","exp":"j'ai = 我有，固定写法。"},
+ {"t":"mcq","q":"「女儿」是：","o":["le fils","la fille","le frère"],"a":1,"exp":"la fille = 女儿/女孩；le fils = 儿子。"},
+ {"t":"order","w":["J'ai","un","frère"],"a":"J'ai un frère","q":"把词排成「我有一个兄弟」：","exp":"j'ai + 数量 + 名词。"}]));
+LESSONS.push(L(2,3,"丈夫、妻子和小家庭",
+"学会 mari / femme / enfant，并能简单介绍家人。",
+[["le mari","丈夫","zhàngfu"],["la femme","妻子 / 女人","qīzi"],["l'enfant","孩子","háizi"],["nous","我们","wǒmen"],["et","和 / 与","hé"]],
+"一个提醒：la femme 指「妻子」，也可以指「女人」，看句子判断。nous = 我们，对应 je（我）的复数。今天句型：Voici mon mari.（这是我丈夫。）",
+[["Voici mon mari.","这是我丈夫。"],["Voici ma femme.","这是我妻子。"],["Nous avons un enfant.","我们有一个孩子。"]],
+[{"t":"mcq","q":"「这是我们妻子」对吗？应该选正确的：","o":["Voici ma femme","Voici mon femme","Voici ma mari"],"a":0,"exp":"femme 阴性用 ma；mari 阳性用 mon。"},
+ {"t":"fill","q":"填空：Nous ______ un enfant.（我们有一个孩子。）","a":"avons","exp":"nous avons = 我们有。"},
+ {"t":"mcq","q":"l'enfant 的意思是：","o":["朋友","孩子","父母"],"a":1,"exp":"l'enfant = 孩子。"}]));
+LESSONS.push(L(2,4,"长辈和家人的称呼",
+"认识 grand-mère / grand-père / parents，并复习整周的家庭词。",
+[["la grand-mère","祖母 / 外婆","zǔmǔ"],["le grand-père","祖父 / 外公","zǔfù"],["les parents","父母","fùmǔ"],["avec","和……一起","hé…yīqǐ"],["aussi","也","yě"]],
+"法语 grand-mère 是 grand（大）+ mère（母亲）拼成的，字面上像「大母亲」= 祖母。拼词记忆比死记更容易。aussi = 也，放在句子最后：Ma sœur est là aussi.",
+[["Ma grand-mère est en Chine.","我的祖母在中国。"],["Je suis avec ma famille.","我和家人在一起。"],["Mon grand-père lit aussi.","我的祖父也读书。"]],
+[{"t":"fill","q":"填空：Ma grand-______ est en Chine.（我的祖母在中国。）","a":"mère","exp":"grand-mère = 祖母。"},
+ {"t":"mcq","q":"「父母」是：","o":["les parents","les enfants","la famille"],"a":0,"exp":"les parents = 父母；les enfants = 孩子们。"},
+ {"t":"mcq","q":"aussi 的意思是：","o":["也","和","但是"],"a":0,"exp":"aussi = 也，常放句尾。"}]));
+/* ===== 第3周：数字、时间和日期 ===== */
+LESSONS.push(L(3,1,"数字 1–5",
+"会认会写 un / deux / trois / quatre / cinq，并用「我有……」造句。",
+[["un","一（个）","yī"],["deux","二","èr"],["trois","三","sān"],["quatre","四","sì"],["cinq","五","wǔ"]],
+"数字不难：先记住 1 到 5。注意 un 除了「一」，也当「一个」讲（un frère = 一个兄弟），第2周已经见过它了。",
+[["J'ai deux frères.","我有两个兄弟。"],["Trois enfants.","三个孩子。"],["Un café, s'il vous plaît.","请来一杯咖啡。"]],
+[{"t":"mcq","q":"「三」怎么写？","o":["trois","deux","cinq"],"a":0,"exp":"trois = 三。"},
+ {"t":"fill","q":"填空：J'ai ______ enfants.（我有两个孩子。）","a":"deux","exp":"deux = 二/两。"},
+ {"t":"order","w":["quatre","cinq","et"],"a":"quatre et cinq","q":"把词排成「四和五」：","exp":"et = 和。"}]));
+LESSONS.push(L(3,2,"数字 6–10 和电话号码",
+"认识六到十，学会看懂一个号码。数字是 WhatsApp 消息里最常用的。",
+[["six","六","liù"],["sept","七","qī"],["huit","八","bā"],["neuf","九","jiǔ"],["dix","十","shí"]],
+"提醒：sept（七）和 huit（八）里都有不发音的字母，我们只管写，不用管读音。看号码时一个一个数认即可。",
+[["Mon numéro : 06 12 34 56 78.","我的号码：06 12 34 56 78。"],["Dix minutes.","十分钟。"],["Six messages.","六条消息。"]],
+[{"t":"mcq","q":"「八」怎么写？","o":["huit","neuf","six"],"a":0,"exp":"huit = 八。"},
+ {"t":"fill","q":"填空：neuf + un = ______（九加一等于？用法语数字写）","a":"dix","exp":"dix = 十。"},
+ {"t":"mcq","q":"「六」是：","o":["sept","six","dix"],"a":1,"exp":"six = 六。"}]));
+LESSONS.push(L(3,3,"现在几点了？",
+"看懂钟点：heure / Il est … heures，能读懂别人发来的时间。",
+[["l'heure","小时 / 点钟","diǎnzhōng"],["Il est trois heures.","现在是三点。","xiànzài shì sān diǎn"],["et demie","半点（……点半）","bàn diǎn"],["du matin","上午","shàngwǔ"],["du soir","晚上","wǎnshang"]],
+"说法语的钟点像列清单：Il est + 数字 + heures（几点+钟）。3点 = Il est trois heures. 半点加 et demie：3点半 = trois heures et demie。早晚加 du matin / du soir 区分。",
+[["Il est huit heures du matin.","现在是早上八点。"],["Il est sept heures et demie.","现在是七点半。"],["À quelle heure ?","几点？"]],
+[{"t":"mcq","q":"「现在是九点」：","o":["Il est neuf heures","Il est neuf demie","Neuf heures du matin ?"],"a":0,"exp":"Il est + 数字 + heures。"},
+ {"t":"fill","q":"填空：Il est six heures et ______.（现在是六点半。）","a":"demie","exp":"et demie = 半。"},
+ {"t":"mcq","q":"du soir 的意思是：","o":["上午","晚上","中午"],"a":1,"exp":"du soir = 晚上。"}]));
+LESSONS.push(L(3,4,"今天几号？星期几？",
+"认识星期和「今天」，能看懂约时间的消息。",
+[["aujourd'hui","今天","jīntiān"],["lundi","星期一","xīngqīyī"],["mardi","星期二","xīngqī'èr"],["mercredi","星期三","xīngqīsān"],["demain","明天","míngtiān"]],
+"法语星期名称有不同写法：lundi、mardi、mercredi……今天 aujourd'hui 里有个撇号（'），它是「of day（之日）」缩合的痕迹，整体记住拼写。",
+[["Aujourd'hui, c'est lundi.","今天是星期一。"],["Demain, c'est mardi.","明天是星期二。"],["C'est pour mercredi.","这是给星期三的（星期三见/交）。"]],
+[{"t":"fill","q":"填空：______'hui, c'est lundi.","a":"aujourd","exp":"aujourd'hui = 今天，注意撇号。"},
+ {"t":"mcq","q":"「明天」是：","o":["demain","aujourd'hui","mercredi"],"a":0,"exp":"demain = 明天。"},
+ {"t":"order","w":["Demain","c'est","mardi"],"a":"Demain c'est mardi","q":"把词排成「明天是星期二」：","exp":"c'est = 这是/这是（时间表达常用）。"}]));
+/* ===== 第4周：日常生活 ===== */
+LESSONS.push(L(4,1,"一天的开始",
+"描述早上：matin / se réveiller / petit-déjeuner。",
+[["le matin","早上","zǎoshang"],["se réveiller","醒来","xǐnglái"],["le petit-déjeuner","早餐","zǎocān"],["boire","喝","hē"],["l'eau","水","shuǐ"]],
+"今天认识「日常动作」。je me réveille = 我醒来（这里的 me 和上周 m'appelle 的 m' 类似，先整体记）。boire de l'eau = 喝水。",
+[["Le matin, je me réveille à sept heures.","早上我七点醒来。"],["Je bois de l'eau.","我喝水。"],["Le petit-déjeuner est à huit heures.","早餐在八点。"]],
+[{"t":"fill","q":"填空：Je ______ de l'eau.（我喝水。）","a":"bois","exp":"boire 的「我」形式是 bois。"},
+ {"t":"mcq","q":"petit-déjeuner 是：","o":["午餐","早餐","晚餐"],"a":1,"exp":"petit（小）+ déjeuner（午餐）= 小午餐，即早餐。"},
+ {"t":"mcq","q":"「早上」是：","o":["le matin","le soir","demain"],"a":0,"exp":"le matin = 早上。"}]));
+LESSONS.push(L(4,2,"工作的一天",
+"学会说工作：travailler / le travail / le bureau，并写一句自己的日程。",
+[["travailler","工作（动词）","gōngzuò"],["le travail","工作（名词）","gōngzuò"],["le bureau","办公室","bàngōngshì"],["la pause","休息（时间）","xiūxi"],["vingt minutes","二十分钟","èrshí fēnzhōng"]],
+"travailler 是动词原形，「我工作」写作 je travaille（动词加了 -e）。先把 je travaille 当一个词组记住即可。vingt = 二十，是本周新数字。",
+[["Je travaille au bureau.","我在办公室工作。"],["À midi, je fais une pause.","中午我休息一下。"],["La pause dure vingt minutes.","休息持续二十分钟。"]],
+[{"t":"fill","q":"填空：Je ______ au bureau.（我在办公室工作。）","a":"travaille","exp":"je travaille = 我工作。"},
+ {"t":"mcq","q":"vingt minutes 是多久？","o":["十分钟","二十分钟","三十分钟"],"a":1,"exp":"vingt = 二十。"},
+ {"t":"order","w":["Je","travaille","au","bureau"],"a":"Je travaille au bureau","q":"把词排成「我在办公室工作」：","exp":"au = à + le（在……）的缩写，固定记住。"}]));
+LESSONS.push(L(4,3,"晚上在家",
+"描述晚上：soir / dîner / regarder，写一句晚上的习惯。",
+[["le soir","晚上","wǎnshang"],["le dîner","晚餐","wǎncān"],["regarder","看","kàn"],["télé","电视（缩写）","diànshì"],["fatigué / fatiguée","累的（男/女）","lèi de"]],
+"晚上三件事：dîner（晚餐）、regarder la télé（看电视）、je suis fatiguée（我累了）。女性用 fatiguée，词尾加 e，规则和 sourde 一样。",
+[["Le soir, je regarde la télé.","晚上我看电视。"],["Après le dîner, je lis.","晚餐后我读书。"],["Le soir, je suis fatiguée.","晚上我很累。"]],
+[{"t":"fill","q":"填空：Le soir, je ______ la télé.（晚上我看电视。）","a":"regarde","exp":"regarder 的「我」形式是 regarde。"},
+ {"t":"mcq","q":"女性说「我累了」：","o":["Je suis fatigué","Je suis fatiguée","Je fatiguée"],"a":1,"exp":"女性词尾加 e：fatiguée。"},
+ {"t":"mcq","q":"le dîner 是：","o":["早餐","午餐","晚餐"],"a":2,"exp":"le dîner = 晚餐。"}]));
+LESSONS.push(L(4,4,"我的日常（小结）",
+"把一周的动词串成一天，认识 toujours（总是）和 parfois（有时）。",
+[["toujours","总是","zǒngshì"],["parfois","有时","yǒushí"],["ne…jamais","从不","cóng bù"],["la journée","白天 / 一天","yītiān"],["aussi","也","yě"]],
+"今天最实用的句型：Je travaille toujours le matin.（我总在早上工作。）Parfois = 有时。ne…jamais 是两片括号，把动词夹在中间 = 从不：Je ne regarde jamais la télé le matin.（我早上从不看电视。）",
+[["Je travaille toujours le matin.","我总在早上工作。"],["Parfois, je lis le soir.","有时我晚上读书。"],["Je ne regarde jamais la télé au bureau.","我在办公室从不看电视。"]],
+[{"t":"mcq","q":"「有时」是：","o":["toujours","parfois","jamais"],"a":1,"exp":"parfois = 有时。"},
+ {"t":"fill","q":"填空：Je ne regarde ______ la télé.（我从不看电视。）","a":"jamais","exp":"ne…jamais = 从不，jamais 放在动词后。"},
+ {"t":"mcq","q":"「我总在早上工作」：","o":["Je travaille toujours le matin","Je travaille jamais le matin","Je parfois le matin"],"a":0,"exp":"toujours 放在动词后面。"}]));
+/* ===== 第5周：吃与买 ===== */
+LESSONS.push(L(5,1,"基础食物",
+"认识 le pain / le riz / le fromage 等基础食物词，会用「我吃……」。",
+[["manger","吃","chī"],["le pain","面包","miànbāo"],["le riz","米饭","mǐfàn"],["le fromage","奶酪","nǎilào"],["le poisson","鱼","yú"],["la viande","肉","ròu"]],
+"j'ai déjà = 我已经……。介绍饮食：Je mange du riz.（我吃米饭。）du / de la 表示「一些」，中文常省略不译，先见到认得即可：du pain（一些面包）、de la viande（一些肉）。",
+[["Je mange du riz.","我吃米饭。"],["J'aime le fromage.","我喜欢奶酪。"],["Le poisson est bon.","鱼很好。"]],
+[{"t":"mcq","q":"le fromage 是：","o":["鱼","奶酪","面包"],"a":1,"exp":"fromage = 奶酪。"},
+ {"t":"fill","q":"填空：Je mange du ______.（我吃一些面包。）","a":"pain","exp":"pain = 面包。"},
+ {"t":"mcq","q":"「我吃米饭」：","o":["Je mange du riz","Je bois du riz","Je suis riz"],"a":0,"exp":"manger = 吃；boire = 喝。"}]));
+LESSONS.push(L(5,2,"喝的东西",
+"认识 café / thé / eau / jus，学会点单：un café, s'il vous plaît。",
+[["le café","咖啡","kāfēi"],["le thé","茶","chá"],["le jus","果汁","guǒzhī"],["s'il vous plaît","请（礼貌用语）","qǐng"],["lait","牛奶","niúnǎi"]],
+"s'il vous plaît 字面是「如果它让您高兴」，实际就是中文的「请」。点单句式：un + 东西 + s'il vous plaît。",
+[["Un thé, s'il vous plaît.","请来一杯茶。"],["Je bois du jus d'orange.","我喝橙汁。"],["Le café au lait.","牛奶咖啡。"]],
+[{"t":"fill","q":"填空：Un café, s'il ______ plaît.","a":"vous","exp":"s'il vous plaît 整体记住 = 请。"},
+ {"t":"mcq","q":"「茶」是：","o":["le café","le thé","le jus"],"a":1,"exp":"thé = 茶。"},
+ {"t":"order","w":["Un","thé","s'il","vous","plaît"],"a":"Un thé s'il vous plaît","q":"把词排成「请来一杯茶」（可不打标点）：","exp":"un + 东西 + s'il vous plaît。"}]));
+LESSONS.push(L(5,3,"多少钱？",
+"学会问价格和回答：combien / euro / cher，能看懂小票。",
+[["combien ?","多少（钱）？","duōshǎo"],["l'euro","欧元","ōuyuán"],["cher / chère","贵的（男/女）","guì de"],["c'est combien ?","这个多少钱？","zhège duōshǎo qián"],["les fruits","水果","shuǐguǒ"]],
+"问价：C'est combien ?（这个多少钱？）回答直接数字 + euros：C'est cinq euros.（五欧元。）注意 euro 一般要加 s。",
+[["C'est combien ?","这个多少钱？"],["C'est trois euros.","这是三欧元。"],["C'est trop cher !","太贵了！"]],
+[{"t":"mcq","q":"问「多少钱」用哪个词？","o":["combien","toujours","comment"],"a":0,"exp":"combien = 多少。"},
+ {"t":"fill","q":"填空：C'est ______ euros.（这是五欧元。）","a":"cinq","exp":"cinq = 五，第3周学过。"},
+ {"t":"mcq","q":"cher 的意思是：","o":["便宜的","贵的","免费的"],"a":1,"exp":"cher / chère = 贵的。"}]));
+LESSONS.push(L(5,4,"在餐厅",
+"能看懂菜单关键词和一句完整点单。复习本周全部食物词。",
+[["le menu","菜单 / 套餐","càidān"],["la commande","点的餐 / 订单","dìngdān"],["l'addition","账单","zhàngdān"],["bon / bonne","好的（男/女）","hǎo de"],["manger dehors","在外面吃","zài wàimiàn chī"]],
+"在法国餐厅：看 le menu（菜单），点 la commande（点的餐），吃完要 l'addition（账单）。形容好吃说 C'est bon !（真好吃！）女性说自己是 satisfied 之类以后再学，今天记住 c'est bon 就够。",
+[["La commande arrive.","点的餐来了。"],["L'addition, s'il vous plaît.","请给我账单。"],["C'est très bon !","非常好吃！"]],
+[{"t":"mcq","q":"饭后要付账，应该要：","o":["le menu","l'addition","la commande"],"a":1,"exp":"l'addition = 账单。"},
+ {"t":"fill","q":"填空：C'est très ______ !（非常好吃！）","a":"bon","exp":"c'est bon = 好吃/好。"},
+ {"t":"mcq","q":"le menu 的意思是：","o":["菜单","账单","厨房"],"a":0,"exp":"le menu = 菜单/套餐。"}]));
+/* ===== 第6周：问路与交通 ===== */
+LESSONS.push(L(6,1,"左、右、直走",
+"认识方向词，看懂简单的指路。",
+[["à gauche","在左边","zuǒbiān"],["à droite","在右边","yòubiān"],["tout droit","一直往前","yīzhí wǎng qián"],["où ?","哪里？","nǎlǐ"],["la rue","街道 / 路","jiēdào"]],
+"方向三件套：à gauche（左）、à droite（右）、tout droit（直走）。注意 à = 在。问地点用 où（哪里）：La gare est où ?（火车站在哪？）",
+[["La pharmacie est à gauche.","药店在左边。"],["Tu vas tout droit.","你一直往前走。"],["Où est la rue ?","路在哪里？"]],
+[{"t":"mcq","q":"「在右边」是：","o":["à gauche","à droite","tout droit"],"a":1,"exp":"droite = 右，gauche = 左。"},
+ {"t":"fill","q":"填空：La pharmacie est à ______.（药店在左边。）","a":"gauche","exp":"gauche = 左。"},
+ {"t":"mcq","q":"「一直往前」是：","o":["tout droit","à droite","où"],"a":0,"exp":"tout droit = 直走。"}]));
+LESSONS.push(L(6,2,"交通工具",
+"认识 gare / métro / bus / train，看懂交通信息。",
+[["la gare","火车站","huǒchēzhàn"],["le train","火车","huǒchē"],["le métro","地铁","dìtiě"],["le bus","公交车","gōngjiāochē"],["le billet","票","piào"]],
+"交通工具都是「乘具」：train（火车）、métro（地铁）、bus（公交）。买票说 un billet（一张票），坐几号线用 numéro。",
+[["Le train part à huit heures.","火车八点出发。"],["Un billet de métro.","一张地铁票。"],["Le bus est là.","公交车在这里。"]],
+[{"t":"mcq","q":"«地铁»是：","o":["le train","le métro","le bus"],"a":1,"exp":"métro = 地铁。"},
+ {"t":"fill","q":"填空：Un ______ de métro.（一张地铁票。）","a":"billet","exp":"billet = 票。"},
+ {"t":"mcq","q":"la gare 是：","o":["火车站","飞机场","汽车站"],"a":0,"exp":"la gare = 火车站。"}]));
+LESSONS.push(L(6,3,"去某个地方：aller à",
+"学会 je vais（我去），去城市用 à，去的国家后面见 a。",
+[["aller","去","qù"],["je vais","我去","wǒ qù"],["à","去……（地点前）","qù……"],["la ville","城市","chéngshì"],["venir","来","lái"]],
+"今天黄金动词 aller：je vais（我去）、tu vas（你去）。地点前加 à：Je vais au bureau.（我去办公室。）au 又出现了（= à + le），固定记住。",
+[["Je vais au bureau.","我去办公室。"],["Je vais en ville.","我去城里。"],["Tu vas où ?","你去哪里？"]],
+[{"t":"fill","q":"填空：Je ______ au bureau.（我去办公室。）","a":"vais","exp":"aller 的「我」形式是 vais。"},
+ {"t":"mcq","q":"«你去哪里?»","o":["Tu vas où ?","Tu es où ?","Tu vais où ?"],"a":0,"exp":"tu vas = 你去；tu es = 你是/在。"},
+ {"t":"order","w":["Je","vais","en","ville"],"a":"Je vais en ville","q":"把词排成「我去城里」：","exp":"en ville = 去城里，固定搭配。"}]));
+LESSONS.push(L(6,4,"看懂一段指路",
+"综合本周方向+交通，读懂一小段真实指路文字。",
+[["tourner","转弯","zhuǎnwān"],["prendre","乘 / 拿","chéng"],["ensuite","然后","ránhòu"],["en face","对面","duìmiàn"],["près de","靠近 / 附近","fùjìn"]],
+"指路常用动词：tourner（转弯）、prendre（乘/走某条路）。比如：Prenez la première rue à droite.（走第一条右边的路。）prendre 的 vous 形式是 prenez，餐厅菜单上也会见到。",
+[["Tournez à gauche.","向左转。"],["Prenez le métro.","坐地铁。"],["La gare est en face.","火车站在对面。"]],
+[{"t":"mcq","q":"«向左转»：","o":["Tournez à gauche","Tournez à droite","Allez en face"],"a":0,"exp":"tourner = 转弯，gauche = 左。"},
+ {"t":"fill","q":"填空：La gare est en ______.（火车站在对面。）","a":"face","exp":"en face = 对面。"},
+ {"t":"mcq","q":"près de 的意思是：","o":["对面","附近","里面"],"a":1,"exp":"près de = 靠近/附近。"}]));
+/* ===== 第7周：家与住所 ===== */
+LESSONS.push(L(7,1,"房间",
+"认识 maison / chambre / cuisine / salle de bain。",
+[["la maison","房子 / 家","fángzi"],["la chambre","卧室","wòshì"],["la cuisine","厨房","chúfáng"],["la salle de bain","浴室","yùshì"],["le salon","客厅","kètīng"]],
+"房间词汇是拼图：salle（厅）+ de bain（洗浴）= 浴室；salon = 客厅；cuisine = 厨房。房子整体叫 maison。",
+[["Ma maison est petite.","我的房子很小。"],["La cuisine est grande.","厨房很大。"],["La chambre est calme.","卧室很安静。"]],
+[{"t":"mcq","q":"«厨房»是：","o":["la chambre","la cuisine","le salon"],"a":1,"exp":"cuisine = 厨房。"},
+ {"t":"fill","q":"填空：la salle de ______（浴室）","a":"bain","exp":"salle de bain = 浴室。"},
+ {"t":"mcq","q":"«卧室»是：","o":["la chambre","la maison","la salle de bain"],"a":0,"exp":"chambre = 卧室。"}]));
+LESSONS.push(L(7,2,"家具",
+"认识 lit / table / chaise / porte，会描写一个房间。",
+[["le lit","床","chuáng"],["la table","桌子","zhuōzi"],["la chaise","椅子","yǐzi"],["la porte","门","mén"],["la fenêtre","窗","chuāng"]],
+"家具词都很短，好记。描写房间：Dans ma chambre, il y a un lit.（我的卧室里有一张床。）il y a = 有（表示某处存在东西），超级常用，整体记住。",
+[["Dans ma chambre, il y a un lit.","我的卧室里有一张床。"],["Il y a deux chaises.","有两把椅子。"],["La porte est ouverte.","门开着。"]],
+[{"t":"fill","q":"填空：Dans ma chambre, il y a un ______.（有一张床。）","a":"lit","exp":"le lit = 床。"},
+ {"t":"mcq","q":"il y a 的意思是：","o":["有（某处存在）","是","没有"],"a":0,"exp":"il y a = 有，固定句型。"},
+ {"t":"mcq","q":"«窗户»是：","o":["la porte","la fenêtre","la table"],"a":1,"exp":"fenêtre = 窗。"}]));
+LESSONS.push(L(7,3,"位置：在里面、在上面、在旁边",
+"学会 dans / sur / à côté de 三个位置词。",
+[["dans","在……里面","zài……lǐmiàn"],["sur","在……上面","zài……shàngmiàn"],["à côté de","在……旁边","zài……pángbiān"],["sous","在……下面","zài……xiàmiàn"],["devant","在……前面","zài……qiánmiàn"]],
+"位置词像坐标：dans（里）、sur（上）、sous（下）、devant（前）、à côté de（旁边）。例：Le livre est sur la table.（书在桌上。）中文「在」= 法语里的这几个词各管一个方向。",
+[["Le livre est sur la table.","书在桌子上。"],["Le chat est sous la table.","猫在桌子下。"],["La lampe est à côté du lit.","台灯在床边。"]],
+[{"t":"mcq","q":"«书在桌子上»：","o":["Le livre est sur la table","Le livre est dans la table","Le livre est sous la table"],"a":0,"exp":"sur = 上面。"},
+ {"t":"fill","q":"填空：Le chat est ______ la table.（猫在桌子下面。）","a":"sous","exp":"sous = 下面。"},
+ {"t":"mcq","q":"à côté de 是：","o":["前面","旁边","里面"],"a":1,"exp":"à côté de = 旁边。"}]));
+LESSONS.push(L(7,4,"描写我的家",
+"综合本周词汇，写 2–3 句自己家的话，认识 j'habite（我住在）。",
+[["habiter","居住","jūzhù"],["j'habite","我住在","wǒ zhù zài"],["l'appartement","公寓","gōngyù"],["grand / grande","大的（男/女）","dà de"],["petit / petite","小的（男/女）","xiǎo de"]],
+"今天造句：J'habite dans un appartement.（我住在一套公寓里。）用第2周的形容词结尾规则：appartement 是阳性，用 grand / petit。",
+[["J'habite dans un appartement.","我住在一套公寓里。"],["Mon appartement est petit.","我的公寓很小。"],["Il y a une grande fenêtre.","有一扇大窗。"]],
+[{"t":"fill","q":"填空：J'______ dans un appartement.","a":"habite","exp":"j'habite = 我住在。"},
+ {"t":"order","w":["Mon","appartement","est","petit"],"a":"Mon appartement est petit","q":"把词排成「我的公寓很小」：","exp":"mon + 阳性名词 + est + 形容词。"},
+ {"t":"mcq","q":"l'appartement 是：","o":["房子","公寓","房间"],"a":1,"exp":"appartement = 公寓；maison = 独栋房子。"}]));
+/* ===== 第8周：être, avoir, aller, faire 与否定 ===== */
+LESSONS.push(L(8,1,"être（是）：我、你、他、她",
+"正式整理 être：suis / es / est，加上否定 ne…pas。",
+[["je suis","我是","wǒ shì"],["tu es","你是","nǐ shì"],["il est","他是","tā shì"],["elle est","她是","tā shì"],["ne…pas","不（否定括号）","bù"]],
+"第一周就认识 je suis 了，今天把它放进表格里：je suis / tu es / il est / elle est。否定 ne…pas 像两片括号把动词夹住：Je ne suis pas chinoise? → 例：Je ne suis pas fatiguée.（我不累。）",
+[["Je suis contente.","我很高兴。"],["Tu es là.","你在这里。"],["Je ne suis pas fatiguée.","我不累。"]],
+[{"t":"fill","q":"填空：Tu ______ là.","a":"es","exp":"tu es = 你是/在。"},
+ {"t":"mcq","q":"«我不累»（女性）：","o":["Je suis fatiguée","Je ne suis pas fatiguée","Je pas suis fatiguée"],"a":1,"exp":"ne…pas 夹住动词 suis。"},
+ {"t":"mcq","q":"选择正确的词：il ___ content.（他很满意。）","o":["est","suis","es"],"a":0,"exp":"il est = 他是。"}]));
+LESSONS.push(L(8,2,"avoir（有）：我有、你有",
+"整理 avoir：ai / as / a，并说年龄。",
+[["j'ai","我有","wǒ yǒu"],["tu as","你有","nǐ yǒu"],["il a","他有","tā yǒu"],["elle a","她有","tā yǒu"],["ne…pas（avec avoir）","没有","méiyǒu"]],
+"avoir（有）：j'ai / tu as / il a / elle a。否定：Je n'ai pas de voiture.（我没有车。）注意 n'ai：ne 在元音前变成 n'。法语说年龄也用 avoir：J'ai trente ans.（我三十岁。）",
+[["J'ai trente ans.","我三十岁。"],["Tu as un chat ?","你有猫吗？"],["Elle a une voiture.","她有一辆车。"]],
+[{"t":"fill","q":"填空：Tu ______ un chat ?","a":"as","exp":"tu as = 你有。"},
+ {"t":"mcq","q":"«她有一辆车»：","o":["Elle a une voiture","Elle est une voiture","Elle as une voiture"],"a":0,"exp":"elle a = 她有。"},
+ {"t":"fill","q":"填空：Je n'______ pas de voiture.（我没有车。）","a":"ai","exp":"n'ai pas = 没有（ne 变 n'）。"}]));
+LESSONS.push(L(8,3,"aller（去）和 faire（做）",
+"整理 aller 和 faire 的我/你形式，说计划。",
+[["je vais / tu vas","我去 / 你去","wǒ qù / nǐ qù"],["je fais / tu fais","我做 / 你做","wǒ zuò / nǐ zuò"],["faire","做","zuò"],["samedi","星期六","xīngqīliù"],["dimanche","星期日","xīngqīrì"]],
+"今天认新数字星期六、日，并把上周的 je vais 与今天 je fais 连起来说计划：Samedi, je fais le ménage.（周六我打扫。）Dimanche, je vais au marché.（周日我去市场。）",
+[["Samedi, je fais le ménage.","周六我打扫卫生。"],["Dimanche, je vais au marché.","周日我去市场。"],["Tu fais quoi ?","你做什么？"]],
+[{"t":"fill","q":"填空：Dimanche, je ______ au marché.","a":"vais","exp":"je vais = 我去。"},
+ {"t":"mcq","q":"«周六»是：","o":["dimanche","samedi","lundi"],"a":1,"exp":"samedi = 周六，dimanche = 周日。"},
+ {"t":"order","w":["Samedi","je","fais","le","ménage"],"a":"Samedi je fais le ménage","q":"把词排成「周六我打扫卫生」：","exp":"时间放句首 + je fais + 事情。"}]));
+LESSONS.push(L(8,4,"否定家族：ne…rien, ne…jamais",
+"复习否定，认识 ne…rien（什么都不）。",
+[["ne…rien","什么都不……","shén me dōu bù"],["rien","什么都没有","méiyǒu shénme"],["ne…plus","不再","bù zài"],["je ne fais rien","我什么都不做","wǒ shén me dōu bù zuò"]],
+"否定是家族：ne…pas（不）、ne…jamais（从不，第4周见过）、ne…rien（什么都不）、ne…plus（不再）。共同点：ne 在动词前，另一半在后。",
+[["Je ne fais rien.","我什么都不做。"],["Je ne mange plus de fromage.","我不再吃奶酪了。"],["Il n'y a rien.","什么都没有。"]],
+[{"t":"mcq","q":"«我什么都不做»：","o":["Je ne fais rien","Je ne fais pas rien","Je fais rien"],"a":0,"exp":"ne…rien 夹住 fais。"},
+ {"t":"fill","q":"填空：Je ne mange ______ de fromage.（我不再吃奶酪。）","a":"plus","exp":"ne…plus = 不再。"},
+ {"t":"mcq","q":"ne…jamais 的意思（第4周学过）：","o":["从不","有时","总是"],"a":0,"exp":"ne…jamais = 从不。"}]));
+/* ===== 第9周：心情与消息 ===== */
+LESSONS.push(L(9,1,"今天心情如何",
+"认识基础心情词：content / triste / fatigué，会说 je suis + 心情。",
+[["content / contente","高兴的（男/女）","gāoxìng de"],["triste","难过的","nánguò de"],["fatigué / fatiguée","累的（男/女）","lèi de"],["calme","平静的","píngjìng de"],["sympa","友好的 / 好相处","yǒuhǎo de"]],
+"心情句型就是 je suis + 形容词：Je suis contente.（我很高兴。）女性朋友、家人说别人时注意结尾 e：il est content / elle est contente。sympa 是口语缩写，聊天里很常用：C'est sympa !（真好/真不错！）",
+[["Je suis contente aujourd'hui.","我今天很高兴。"],["Je suis un peu triste.","我有点难过。"],["C'est sympa !","真好！"]],
+[{"t":"fill","q":"填空：Je suis ______ aujourd'hui.（我今天很高兴，女性。）","a":"contente","exp":"女性加 e：contente。"},
+ {"t":"mcq","q":"«有点»怎么表达？","o":["un peu","beaucoup","jamais"],"a":0,"exp":"un peu = 一点/有点。"},
+ {"t":"mcq","q":"C'est sympa ! 的意思：","o":["真难！","真好！","再见！"],"a":1,"exp":"sympa = 友好/不错，聊天常用。"}]));
+LESSONS.push(L(9,2,"喜欢与不喜欢",
+"学会 aimer（喜欢）和 j'aime / je n'aime pas。",
+[["aimer","喜欢 / 爱","xǐhuan / ài"],["j'aime","我喜欢","wǒ xǐhuan"],["je n'aime pas","我不喜欢","wǒ bù xǐhuan"],["beaucoup","很 / 很多","hěn"],["aimer bien","比较喜欢","bǐjiào xǐhuan"]],
+"j'aime = 我喜欢（je + aime 缩写）。否定用 ne…pas 夹住 aime：Je n'aime pas le café.（我不喜欢咖啡。）加强用 beaucoup：J'aime beaucoup le thé.（我很喜欢茶。）注意：aimer 对人用是「爱」：J'aime ma famille.",
+[["J'aime beaucoup le thé.","我很喜欢茶。"],["Je n'aime pas le café.","我不喜欢咖啡。"],["J'aime ma famille.","我爱我的家人。"]],
+[{"t":"fill","q":"填空：J'______ le thé.（我喜欢茶。）","a":"aime","exp":"j'aime = 我喜欢。"},
+ {"t":"mcq","q":"«我不喜欢咖啡»：","o":["Je n'aime pas le café","Je aime pas le café","J'aime le café"],"a":0,"exp":"n'aime pas = 不喜欢。"},
+ {"t":"order","w":["J'aime","beaucoup","le","thé"],"a":"J'aime beaucoup le thé","q":"把词排成「我很喜欢茶」：","exp":"beaucoup 放在 aime 后面。"}]));
+LESSONS.push(L(9,3,"想要和请求",
+"学会 vouloir 的 je voudrais（我想要），礼貌地要东西。",
+[["je voudrais","我想要","wǒ xiǎng yào"],["vouloir","想要","xiǎng yào"],["s'il te plaît","请（对熟人）","qǐng"],["peux-tu ? / tu peux ?","你可以……吗？","nǐ kěyǐ……ma"],["m'aider","帮我","bāng wǒ"]],
+"je voudrais = 我想要，比 je veux（我要）更礼貌客气。请求句：Tu peux m'aider ?（你能帮我吗？）对熟人用 s'il te plaît，对陌生人用 s'il vous plaît（第5周学的）。",
+[["Je voudrais un café, s'il vous plaît.","请给我一杯咖啡。"],["Je voudrais du pain.","我想要一些面包。"],["Tu peux m'aider ?","你能帮我吗？"]],
+[{"t":"fill","q":"填空：Je ______ un café.（我想要一杯咖啡。）","a":"voudrais","exp":"je voudrais 礼貌表达想要。"},
+ {"t":"mcq","q":"对朋友说「请」，用：","o":["s'il te plaît","s'il vous plaît","merci"],"a":0,"exp":"te 用于熟人，vous 用于陌生人/长辈。"},
+ {"t":"mcq","q":"«你能帮我吗?»","o":["Tu peux m'aider ?","Tu veux aider ?","Tu es aider ?"],"a":0,"exp":"peux = 能（pouvoir 的 tu 形式）。"}]));
+LESSONS.push(L(9,4,"写一条暖心的消息",
+"学会 Bonne journée / Bonne nuit / À ce soir 等消息结尾。",
+[["bonne journée","日安 / 祝你白天愉快","zhù nǐ bái tiān yúkuài"],["bonne nuit","晚安（睡前）","wǎn'ān"],["à ce soir","今晚见","jīn wǎn jiàn"],["à demain","明天见","míngtiān jiàn"],["prends soin de toi","照顾好自己","zhàogù hǎo zìjǐ"]],
+"消息常用结尾：bonne journée（白天发）、bonne nuit（睡前发）、à demain（明天见）。prends soin de toi = 照顾好自己，是很暖的一句话，发给亲近的人。",
+[["Bonne journée !","祝你白天愉快！"],["Bonne nuit, à demain !","晚安，明天见！"],["Prends soin de toi.","照顾好自己。"]],
+[{"t":"mcq","q":"睡前发哪句？","o":["Bonne journée","Bonne nuit","À ce soir"],"a":1,"exp":"bonne nuit = 晚安（睡前）。"},
+ {"t":"fill","q":"填空：à ______（明天见）","a":"demain","exp":"demain = 明天。"},
+ {"t":"mcq","q":"prends soin de toi 的意思：","o":["照顾好自己","晚安","很快见"],"a":0,"exp":"prendre soin de = 照顾。"}]));
+/* ===== 第10周：法国与鲁昂 ===== */
+LESSONS.push(L(10,1,"法国和法语",
+"认识 France / français / Paris 等基本词。",
+[["la France","法国","Fǎguó"],["le français","法语 / 法国人（男）","Fǎyǔ"],["la langue","语言","yǔyán"],["Paris","巴黎","Bālí"],["vivre","生活 / 居住","shēnghuó"]],
+"国家名和语言名：France（法国）→ français（法语）。中文两者都是「法国/法语」，法语里首字母小写是规则（不是「Français」）。vivre（生活）：Je vis en France.（我生活在法国。）",
+[["J'apprends le français.","我在学法语。"],["Je vis en France.","我生活在法国。"],["Paris est la capitale.","巴黎是首都。"]],
+[{"t":"fill","q":"填空：J'apprends le ______.（我在学法语。）","a":"français","exp":"apprendre = 学；le français = 法语。"},
+ {"t":"mcq","q":"«法国»是：","o":["le français","la France","Paris"],"a":1,"exp":"France = 法国。"},
+ {"t":"mcq","q":"«我在学»用哪个动词？","o":["apprendre","manger","aller"],"a":0,"exp":"apprendre = 学习。"}]));
+LESSONS.push(L(10,2,"鲁昂：诺曼底的城市",
+"认识 ville / cathédrale / fleuve 等描写城市的词（只讲常见、可查证的常识）。",
+[["la ville","城市","chéngshì"],["la cathédrale","大教堂","dà jiàotáng"],["le fleuve","河流","héliú"],["la Normandie","诺曼底（地区）","Nuòmàndǐ"],["la Seine","塞纳河","Sāinà hé"]],
+"鲁昂（Rouen）是诺曼底地区的一座城市，有著名的大教堂，塞纳河流经这里。今天学描写城市的句型：Rouen est une ville en Normandie. 记住：地名首字母大写（Rouen、Normandie），普通名词小写。",
+[["Rouen est une ville en Normandie.","鲁昂是诺曼底的一座城市。"],["La cathédrale est grande.","大教堂很大。"],["La Seine passe à Rouen.","塞纳河流经鲁昂。"]],
+[{"t":"mcq","q":"«大教堂»是：","o":["la cathédrale","le fleuve","la ville"],"a":0,"exp":"cathédrale = 大教堂。"},
+ {"t":"fill","q":"填空：Rouen est une ______ en Normandie.","a":"ville","exp":"ville = 城市。"},
+ {"t":"mcq","q":"la Seine 是：","o":["地区","河流","教堂"],"a":1,"exp":"la Seine = 塞纳河，fleuve = 河流。"}]));
+LESSONS.push(L(10,3,"参观和旅游",
+"学会 visiter / musée / place，看懂一句旅游建议。",
+[["visiter","参观","cānguān"],["le musée","博物馆","bówùguǎn"],["la place","广场 / 地点","guǎngchǎng"],["l'église","教堂","jiàotáng"],["beau / belle","美的（男/女）","měi de"]],
+"beau（美）有两副面孔：阳性 beau，特殊阴性 belle。说「鲁昂很美」：Rouen est belle.（ville 是阴性）。旅游句：Je visite le musée.（我参观博物馆。）",
+[["Je visite le musée.","我参观博物馆。"],["La place est belle.","广场很美。"],["Rouen est une belle ville.","鲁昂是一座美丽的城市。"]],
+[{"t":"fill","q":"填空：Je ______ le musée.（我参观博物馆。）","a":"visite","exp":"visiter 的 je 形式是 visite。"},
+ {"t":"mcq","q":"阴性「美」用：","o":["beau","belle","bel"],"a":1,"exp":"阴性用 belle。"},
+ {"t":"mcq","q":"le musée 是：","o":["广场","博物馆","教堂"],"a":1,"exp":"musée = 博物馆。"}]));
+LESSONS.push(L(10,4,"中国和法国",
+"对比两个国家，复习本周词汇，写一句「我来自……」。",
+[["la Chine","中国","Zhōngguó"],["chinois / chinoise","中国的 / 中国人","Zhōngguó de"],["je viens de…","我来自……","wǒ láizì"],["le pays","国家","guójiā"],["entre","在……之间","zài……zhījiān"]],
+"«我来自»是 je viens de + 地名：Je viens de Chine.（我来自中国。）注意 英语 China 和法语 Chine 拼写不同。对比句：entre la Chine et la France（在中国和法国之间）。",
+[["Je viens de Chine.","我来自中国。"],["La Chine est un grand pays.","中国是一个大国。"],["Je voyage entre la Chine et la France.","我在中国和法国之间旅行。"]],
+[{"t":"fill","q":"填空：Je viens de ______.（我来自中国。）","a":"Chine","exp":"Chine = 中国（大写或小写都接受）。"},
+ {"t":"mcq","q":"«国家»是：","o":["le pays","la ville","la langue"],"a":0,"exp":"le pays = 国家。"},
+ {"t":"order","w":["Je","viens","de","Chine"],"a":"Je viens de Chine","q":"把词排成「我来自中国」：","exp":"venir de = 来自。"}]));
+/* ===== 第11周：WhatsApp 与对话 ===== */
+LESSONS.push(L(11,1,"消息的开头",
+"认识聊天打招呼：coucou / ça va / salut。",
+[["coucou","喂~（亲密随意）","wèi"],["salut","你好 / 拜（随意）","nǐ hǎo"],["ça va ?","最近好吗？","zuìjìn hǎo ma"],["et toi ?","你呢？","nǐ ne"],["moi","我（强调/句末）","wǒ"]],
+"聊天里没人写完整句子：coucou 是亲密的「喂~」，ça va ? 就是「最近好吗」。回答：Ça va bien, merci. Et toi ?（我很好，谢谢。你呢？）moi = 我（放句末强调）：Et moi ?（那我呢？）",
+[["Coucou ! Ça va ?","喂~！最近好吗？"],["Ça va bien, merci.","我很好，谢谢。"],["Moi aussi !","我也是！"]],
+[{"t":"mcq","q":"coucou 的语气是：","o":["正式","亲密随意","生气"],"a":1,"exp":"coucou 用于亲近的人。"},
+ {"t":"fill","q":"填空：Ça va ______, merci.（我很好，谢谢。）","a":"bien","exp":"ça va bien = 很好。"},
+ {"t":"mcq","q":"«你呢?»","o":["Et toi ?","Et moi ?","Ça va ?"],"a":0,"exp":"问对方用 toi，说自己用 moi。"}]));
+LESSONS.push(L(11,2,"同意、拒绝、抱歉",
+"认识 oui / non / d'accord / pardon，让对话能继续。",
+[["oui","是 / 对","shì"],["non","不 / 不是","bù"],["d'accord","好的 / 同意","hǎo de"],["pardon","对不起 / 请再说一遍","duìbùqǐ"],["pas grave","没关系（口语）","méiguānxi"]],
+"对话里的四个常用词：oui（对）、non（不）、d'accord（同意）、pardon（抱歉）。pas grave 字面「不严重」= 没关系。注意 non 常带 「'」形式 n'（je n'aime pas 里见过 ne→n'）。",
+[["Oui, d'accord !","好的，同意！"],["Non, merci.","不用了，谢谢。"],["Pardon ! Pas grave ?","抱歉！没关系吧？"]],
+[{"t":"mcq","q":"«同意/好的»是：","o":["oui","d'accord","pardon"],"a":1,"exp":"d'accord = 同意/行。"},
+ {"t":"fill","q":"填空：pas ______（没关系）","a":"grave","exp":"pas grave = 不严重/没关系。"},
+ {"t":"mcq","q":"别人道歉，你可以说：","o":["Pas grave","Pardon","Non"],"a":0,"exp":"pas grave 安慰对方。"}]));
+LESSONS.push(L(11,3,"问问题的方式",
+"学会三种问法：…? / est-ce que / qu'est-ce que。",
+[["est-ce que…?","……吗？（问句开头）","……ma"],["qu'est-ce que…?","什么……？","shénme"],["qui ?","谁？","shéi"],["pourquoi ?","为什么？","wèishénme"],["parce que","因为","yīnwèi"]],
+"法语问问题最简单的方式：直接句尾加问号（Tu viens ?你来吗？）。正式一点在句首加 est-ce que。问「什么」用 qu'est-ce que：Qu'est-ce que tu fais ?（你在做什么？）回答用 parce que（因为）。",
+[["Tu viens ce soir ?","你今晚来吗？"],["Est-ce que tu viens ?","你来吗？（另一种问法）"],["Qu'est-ce que tu fais ?","你在做什么？"]],
+[{"t":"mcq","q":"最简单的问句方式是：","o":["句尾加 ?","加 est-ce que","必须用 pourquoi"],"a":0,"exp":"口语直接加问号即可。"},
+ {"t":"fill","q":"填空：______-ce que tu viens ?（你来吗？）","a":"est","exp":"est-ce que 整体记住。"},
+ {"t":"mcq","q":"«因为»是：","o":["pourquoi","parce que","qui"],"a":1,"exp":"parce que = 因为；pourquoi = 为什么。"}]));
+LESSONS.push(L(11,4,"一段完整的小对话",
+"把本周内容串成一段 WhatsApp 对话，能读懂并仿写。",
+[["une conversation","一段对话","yī duàn duìhuà"],["un message","一条消息","yī tiáo xiāoxi"],["répondre","回答","huídá"],["envoyer","发送","fāsòng"],["vite","快 / 很快","hěn kuài"]],
+"今天不学新语法，只读一段对话：A: Coucou ! Ça va ? B: Ça va bien ! Et toi ? A: Moi aussi. Tu viens ce soir ? B: Oui, d'accord ! À ce soir ! 这就是法国人真实聊天的样子。",
+[["Coucou ! Ça va ?","喂~！最近好吗？"],["Oui, d'accord ! À ce soir !","好的！今晚见！"],["J'envoie un message vite.","我马上发一条消息。"]],
+[{"t":"order","w":["Ça","va","bien","et","toi"],"a":"Ça va bien et toi","q":"把词排成「我很好，你呢」（忽略标点）：","exp":"ça va bien + et toi。"},
+ {"t":"mcq","q":"«发送»是：","o":["répondre","envoyer","visiter"],"a":1,"exp":"envoyer = 发送；répondre = 回答。"},
+ {"t":"mcq","q":"«一条消息»是：","o":["un message","une conversation","un mot"],"a":0,"exp":"message 是阳性：un message。"}]));
+/* ===== 第12周：综合与自由前行 ===== */
+LESSONS.push(L(12,1,"我是谁（总复习一）",
+"用第1-2周的词完整介绍自己：名字、国籍、家人。",
+[["je m'appelle","我叫","wǒ jiào"],["je suis","我是","wǒ shì"],["j'ai","我有","wǒ yǒu"],["sourd / sourde","聋的（男 / 女）","lóng"],["je viens de","我来自","wǒ láizì"]],
+"今天把 12 周学过的句子拼成一段自我介绍：Je m'appelle Zhou An. J'apprends le français. Je lis le français. J'ai une famille. 能连着读懂，就已经掌握了最核心的法语。",
+[["Je m'appelle Zhou An. J'apprends le français.","我叫Zhou An。我学习法语。"],["Je lis le français.","我读法语。"],["J'ai une famille en Chine.","我的家人在中国。"]],
+[{"t":"mcq","q":"«我是中国人»（男性）：","o":["Je suis chinoise","Je suis chinois","J'ai chinoise"],"a":1,"exp":"男性用 chinois；女性用 chinoise。"},
+ {"t":"fill","q":"填空：Je ______ une famille en Chine.","a":"ai","exp":"j'ai = 我有。"},
+ {"t":"order","w":["Je","viens","de","Chine"],"a":"Je viens de Chine","q":"把词排成「我来自中国」：","exp":"je viens de + 国家。"}]));
+LESSONS.push(L(12,2,"我的日常（总复习二）",
+"用第3-5周的词写自己的一天：时间、吃饭、购物。",
+[["à sept heures","在七点","zài qī diǎn"],["je mange","我吃","wǒ chī"],["je bois","我喝","wǒ hē"],["je travaille","我工作","wǒ gōngzuò"],["vingt minutes","二十分钟","èrshí fēnzhōng"]],
+"第二段复习：Le matin, je me réveille à sept heures. Je bois un café. À midi, je fais une pause de vingt minutes. Le soir, je mange avec ma famille. 这就是完整的一天描述。",
+[["À midi, je fais une pause.","中午我休息。"],["Le soir, je mange du riz.","晚上我吃米饭。"],["Le matin, je travaille.","早上我工作。"]],
+[{"t":"fill","q":"填空：Le matin, je ______ un café.","a":"bois","exp":"boire 的 je 形式是 bois。"},
+ {"t":"mcq","q":"«中午»是：","o":["le matin","à midi","le soir"],"a":1,"exp":"midi = 中午十二点。"},
+ {"t":"order","w":["Le","soir","je","mange","du","riz"],"a":"Le soir je mange du riz","q":"把词排成「晚上我吃米饭」：","exp":"时间 + je + 动词 + du + 名词。"}]));
+LESSONS.push(L(12,3,"我和你（总复习三）",
+"用第6-9周的词写计划、心情和消息。",
+[["je vais","我去","wǒ qù"],["je fais","我做","wǒ zuò"],["j'aime","我喜欢","wǒ xǐhuan"],["je voudrais","我想要","wǒ xiǎng yào"],["à bientôt","回见 / 很快见","hěn kuài jiàn"]],
+"第三段复习，同时学最后一句道别：à bientôt（回见）。现在可以说：Samedi, je vais au marché. J'aime le thé. Je voudrais un café. À bientôt !",
+[["Samedi, je vais au marché.","周六我去市场。"],["J'aime beaucoup le thé.","我很喜欢茶。"],["À bientôt !","回见！"]],
+[{"t":"fill","q":"填空：Samedi, je ______ au marché.","a":"vais","exp":"je vais = 我去。"},
+ {"t":"mcq","q":"«回见»是：","o":["à bientôt","bonne nuit","à demain"],"a":0,"exp":"à bientôt = 很快再见。"},
+ {"t":"mcq","q":"«我很喜欢茶»：","o":["J'aime beaucoup le thé","Je voudrais le thé","J'ai le thé"],"a":0,"exp":"beaucoup 加强 aimer。"}]));
+LESSONS.push(L(12,4,"自由前行：你的法语工具箱",
+"最后一课：盘点你拥有的句型，并给你之后的自由学习建议。",
+[["continuer","继续","jìxù"],["petit à petit","一点一点地","yī diǎn yī diǎn"],["bravo !","太棒了！","tài bàng le"],["une question","一个问题","yī gè wèntí"],["libre","自由的 / 空闲的","zìyóu de"]],
+"12 周走到这里，你已经拥有：自我介绍、家庭、数字时间、日常、购物、问路、家、心情、消息——这些是真实生活里最常用的法语。之后不用赶进度：petit à petit（一点一点），随时回到任何一周复习。Bravo !（太棒了！）",
+[["Petit à petit.","一点一点来。"],["Je continue le français.","我继续学法语。"],["Bravo, Zhou An !","Zhou An，太棒了！"]],
+[{"t":"mcq","q":"«一点一点地»是：","o":["petit à petit","vite vite","toujours"],"a":0,"exp":"petit à petit = 慢慢来。"},
+ {"t":"fill","q":"填空：Je ______ le français.（我继续学法语。）","a":"continue","exp":"continuer 的 je 形式是 continue。"},
+ {"t":"mcq","q":"夸人「太棒了」用法语写：","o":["bravo","pardon","salut"],"a":0,"exp":"bravo ! = 太棒了。"}]));
+/* ---------- 每周 J5 复习课：由本周词汇自动生成 ---------- */
+var WEEKS=[
+ {n:1,th:"自我介绍",d:"认识、问候、我是谁"},
+ {n:2,th:"家庭",d:"家人与「我有」"},
+ {n:3,th:"数字、时间、日期",d:"几点了？今天星期几？"},
+ {n:4,th:"日常生活",d:"一天的作息"},
+ {n:5,th:"吃与买",d:"食物、点单、价格"},
+ {n:6,th:"问路与交通",d:"左右、公交、去哪里"},
+ {n:7,th:"家与住所",d:"房间、家具、位置"},
+ {n:8,th:"核心动词与否定",d:"是、有、去、做；说「不」"},
+ {n:9,th:"心情与消息",d:"感受、喜欢、暖心消息"},
+ {n:10,th:"法国与鲁昂",d:"城市与国家"},
+ {n:11,th:"WhatsApp 与对话",d:"真实聊天的写法"},
+ {n:12,th:"综合复习",d:"把一切连起来"}];
+function rid(w,d){return w+"-"+d;}
+function getLesson(w,d){return ALL.find(function(l){return l.w===w&&l.d===d;});}
+function weekLessons(w){return LESSONS.filter(function(l){return l.w===w;});}
+function mkReview(w){
+  var ls=weekLessons(w),words=[],examples=[];
+  ls.forEach(function(l){words.push(l.words[0]);if(l.words[1])words.push(l.words[1]);if(l.ex[0])examples.push(l.ex[0]);});
+  words=words.slice(0,4);examples=examples.slice(0,2);
+  var a=words[0],b=words[1],c=words[2];
+  var questions=[
+    {t:"mcq",q:"「"+a[1]+"」的法语是什么？",o:[a[0],b[0],c[0]],a:0,exp:a[0]+" = "+a[1]+"。"},
+    {t:"fill",q:"请写出「"+b[1]+"」的法语：",a:b[0],exp:b[0]+" = "+b[1]+"。"},
+    {t:"match",pairs:words.slice(0,4)}
+  ];
+  return L(w,5,"本周轻松复习","今天不学新内容。看看这周见过的词，再做三个小游戏。",words,
+    "复习没有考试，也没有计时。想不起来就回到前面的课程看看。",examples,questions);
+}
+function allLessons(){
+  var all=LESSONS.slice();
+  for(var w=1;w<=12;w++){all.push(mkReview(w));}
+  all.sort(function(a,b){return a.w-b.w||a.d-b.d;});
+  return all;
+}
+var ALL=allLessons();
+/* ---------- 和你一起：日常句子（可发 WhatsApp） ---------- */
+var PHRASES=[
+ {fr:"Coucou ! Ça va ?",cn:"喂~！最近好吗？"},
+ {fr:"Je pense à toi.",cn:"我想你。"},
+ {fr:"Bonne journée !",cn:"祝你白天愉快！"},
+ {fr:"Bonne nuit, fais de beaux rêves.",cn:"晚安，做好梦。"},
+ {fr:"Merci pour aujourd'hui.",cn:"谢谢你今天的陪伴。"},
+ {fr:"Tu me manques.",cn:"我想你（法语说「你对我来说是缺少的」）。"},
+ {fr:"À ce soir !",cn:"今晚见！"},
+ {fr:"Je suis contente de te voir.",cn:"见到你我很高兴。"},
+ {fr:"Prends soin de toi.",cn:"照顾好自己。"},
+ {fr:"Je t'écris en français : petit message pour toi.",cn:"我用法语给你写：给你的小消息。"},
+ {fr:"J'apprends le français petit à petit.",cn:"我正在一点一点地学习法语。"},
+ {fr:"Bonne semaine !",cn:"祝你这一周愉快！"}];
+var MOTS=["慢慢来，一点一点也很好。","今天又多认识了一个词，很棒。","不用赶进度，你说了算。","读得懂就是会，你已经会了。","轻松学一点，胜过压力学很多。","眼熟就好，见多了自然记住。","你的节奏是最好的节奏。","每一步都算数。"];
+/* ---------- Elix: liens externes de consultation, pas de videos re-hebergees ---------- */
+/* V7.1: recherche lexicale Elix. Les URL sont des recherches :
+   aucun résultat ni vidéo ne sont garantis pour un terme. */
+var ELIX_TERMS={
+ "bonjour":"bonjour","merci":"merci","je":"je","tu":"tu","il":"il","elle":"elle",
+ "nous":"nous","moi":"moi","toi":"toi","et":"et","avec":"avec","aussi":"aussi",
+ "beaucoup":"beaucoup","toujours":"toujours","parfois":"parfois","jamais":"jamais",
+ "rien":"rien","plus":"plus","vite":"vite","ensuite":"ensuite",
+ "chinois":"chinois","chinoise":"chinois","comment":"comment","s'appeler":"appeler",
+ "lire":"lire","écrire":"écrire","sourd / sourde":"sourd","sourde":"sourde",
+ "la langue des signes":"langue des signes","lsf":"langue des signes",
+ "la famille":"famille","le père":"père","la mère":"mère","le frère":"frère",
+ "la sœur":"sœur","le fils":"fils","la fille":"fille","le mari":"mari",
+ "la femme":"femme","l'enfant":"enfant","la grand-mère":"grand-mère",
+ "le grand-père":"grand-père","les parents":"parents",
+ "un":"un","deux":"deux","trois":"trois","quatre":"quatre","cinq":"cinq",
+ "six":"six","sept":"sept","huit":"huit","neuf":"neuf","dix":"dix",
+ "l'heure":"heure","et demie":"demie","du matin":"matin","du soir":"soir",
+ "aujourd'hui":"aujourd'hui","lundi":"lundi","mardi":"mardi","mercredi":"mercredi",
+ "jeudi":"jeudi","vendredi":"vendredi","samedi":"samedi","dimanche":"dimanche",
+ "demain":"demain","la journée":"journée","le matin":"matin","le soir":"soir",
+ "se réveiller":"réveiller","le petit-déjeuner":"petit-déjeuner","boire":"boire",
+ "l'eau":"eau","travailler":"travailler","le travail":"travail","le bureau":"bureau",
+ "la pause":"pause","vingt minutes":"minute","le dîner":"dîner","regarder":"regarder",
+ "télé":"télévision","fatigué / fatiguée":"fatigué","manger":"manger",
+ "le pain":"pain","le riz":"riz","le fromage":"fromage","le poisson":"poisson",
+ "la viande":"viande","le café":"café","le thé":"thé","le jus":"jus","lait":"lait",
+ "s'il vous plaît":"s'il vous plaît","s'il te plaît":"s'il te plaît",
+ "combien ?":"combien","l'euro":"euro","cher / chère":"cher","les fruits":"fruit",
+ "le menu":"menu","la commande":"commande","l'addition":"addition",
+ "bon / bonne":"bon",
+ "à gauche":"gauche","à droite":"droite","tout droit":"tout droit","où ?":"où",
+ "la rue":"rue","la gare":"gare","le train":"train","le métro":"métro","le bus":"bus",
+ "le billet":"billet","aller":"aller","je vais":"aller","tu vas":"aller",
+ "venir":"venir","tourner":"tourner","prendre":"prendre",
+ "près de":"près","la ville":"ville",
+ "la maison":"maison","la chambre":"chambre","la cuisine":"cuisine",
+ "la salle de bain":"salle de bain","le salon":"salon","le lit":"lit","la table":"table",
+ "la chaise":"chaise","la porte":"porte","la fenêtre":"fenêtre",
+ "habiter":"habiter","j'habite":"habiter","l'appartement":"appartement",
+ "grand / grande":"grand","petit / petite":"petit",
+ "je suis":"être","tu es":"être","il est":"être","elle est":"être",
+ "j'ai":"avoir","tu as":"avoir","il a":"avoir","elle a":"avoir",
+ "je fais":"faire","tu fais":"faire","faire":"faire","sourde":"sourde",
+ "content / contente":"content","triste":"triste","calme":"calme","sympa":"sympathique",
+ "aimer":"aimer","j'aime":"aimer","aimer bien":"aimer","je voudrais":"vouloir",
+ "vouloir":"vouloir","peux-tu ? / tu peux ?":"pouvoir","m'aider":"aider",
+ "bonne journée":"journée","bonne nuit":"nuit","à ce soir":"soir","à demain":"demain",
+ "à bientôt":"bientôt",
+ "la france":"france","le français":"français","la langue":"langue","paris":"paris",
+ "vivre":"vivre","la cathédrale":"cathédrale","le fleuve":"fleuve",
+ "la normandie":"normandie","visiter":"visiter",
+ "le musée":"musée","la place":"place","l'église":"église","beau / belle":"beau",
+ "la chine":"chine","le pays":"pays","je viens de…":"venir","je viens de":"venir",
+ "entre":"entre",
+ "je m'appelle…":"appeler","je m'appelle":"appeler",
+ "c'est combien ?":"combien","je mange":"manger",
+ "je bois":"boire","je travaille":"travailler","à côté de":"côté",
+ "dans":"dans","sur":"sur","sous":"sous","devant":"devant","mon":"mon","ma":"ma",
+ "coucou":"coucou","salut":"salut","ça va ?":"ça va","oui":"oui","non":"non",
+ "d'accord":"d'accord","pardon":"pardon","qui ?":"qui",
+ "pourquoi ?":"pourquoi","parce que":"parce que","bravo !":"bravo",
+ "une conversation":"conversation","un message":"message","répondre":"répondre",
+ "envoyer":"envoyer","une question":"question","libre":"libre","continuer":"continuer",
+ 
+};
+(function(){var norm={},k;for(k in ELIX_TERMS){if(Object.prototype.hasOwnProperty.call(ELIX_TERMS,k)){norm[elixKey(k)]=ELIX_TERMS[k];}}ELIX_TERMS=norm;})();
+function elixKey(w){
+  var t=String(w||"").trim().toLowerCase();
+  t=t.replace(/（[^）]*）/g,"").replace(/\(\)/g,"");   // annotations chinoises
+  t=t.replace(/[…?!。\s]+$/,"").trim();                   // ponctuation finale
+  t=t.replace(/\s*\/\s*/g," / ");                        // espaces autour du slash
+  return t;
+}
+function elixTerm(word){
+  var t=elixKey(word);
+  if(!t)return null;
+  if(Object.prototype.hasOwnProperty.call(ELIX_TERMS,t))return ELIX_TERMS[t];
+  var bare=t.replace(/^(le |la |les |l')/,"").replace(/^ne…/,"");
+  if(Object.prototype.hasOwnProperty.call(ELIX_TERMS,bare))return ELIX_TERMS[bare];
+  return null;
+}
+function elixButton(word){
+  var term=elixTerm(word);
+  if(!term)return "";
+  var url="https://dico.elix-lsf.fr/dictionnaire/"+encodeURIComponent(term);
+  var key=elixKey(word),direct=(key===elixKey(term)||key==="le "+elixKey(term)||key==="la "+elixKey(term)||key==="les "+elixKey(term)||key==="l'"+elixKey(term));
+  var label=direct?"🤟 在 Elix 查询手语 ↗":"🤟 在 Elix 搜索："+esc(term)+" ↗";
+  var hint=direct?"查询这个词的手语；可能有多个词义，也可能暂无视频。":"这是相关词或动词原形，并非整句的逐词手语翻译。";
+  return '<a class="elixlink" href="'+url+'" target="_blank" rel="noopener noreferrer" title="'+hint+'" aria-label="'+hint+'">'+label+'</a>';
+}
+/* ---------- 工具 ---------- */
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+function norm(s){return String(s).normalize("NFC").toLowerCase().replace(/[.,!?;:'’«»\s]+/g," ").trim();}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function verb(t,o,n){t.addEventListener("click",function(){o();if(n)t.removeEventListener("click",arguments.callee);});}
+var app=document.getElementById("app");
+var cur="home", curLesson=null;
+/* ---------- 导航 ---------- */
+var NAV=[["home","🏠","主页"],["plan","🗓","课程"],["part2","🌿","进阶"],["dict","📖","词典"],["rev","🔄","复习"],["memorylab","🧠","记忆"],["recall","✍️","挑战"],["share","💛","和你一起"],["progress","📈","进度"],["help","❓","说明"]];
+function go(view,arg){
+  if(view==="lesson"&&arg){S.current={w:arg.w,d:arg.d};save();}
+  cur=view; curLesson=(view==="lesson")?arg:null;
+  window.scrollTo(0,0);
+  if(view==="home")renderHome();
+  else if(view==="plan")renderPlan(arg);
+  else if(view==="lesson")renderLesson(arg);
+  else if(view==="part2")renderPart2(arg);
+  else if(view==="dict")renderDict();
+  else if(view==="rev")renderRev();
+  else if(view==="memorylab")renderMemoryLab();
+  else if(view==="recall")renderRecall();
+  else if(view==="share")renderShare();
+  else if(view==="progress")renderProgressShare();
+  else if(view==="help")renderHelp();
+  renderNav();
+}
+function renderNav(){
+  var n=document.getElementById("nav");
+  n.innerHTML=NAV.map(function(x){return '<button class="'+(cur===x[0]||(x[0]==="plan"&&cur==="lesson")?"on":"")+'" onclick="go(\''+x[0]+'\')"><span class="ic">'+x[1]+'</span>'+x[2]+'</button>';}).join("");
+}
+/* ---------- 主页 ---------- */
+function nextLesson(){
+  if(S.current){var last=getLesson(S.current.w,S.current.d);if(last&&!isDone(last.w+"-"+last.d))return last;}
+  for(var i=0;i<ALL.length;i++){if(!isDone(ALL[i].w+"-"+ALL[i].d))return ALL[i];}
+  return null;
+}
+function renderHome(){
+  var pct=Math.round(100*ALL.filter(function(l){return isDone(l.w+"-"+l.d);}).length/ALL.length);
+  var nl=nextLesson();
+  var mot=MOTS[new Date().getDate()%MOTS.length];
+  var h='<h1>Zhou An 的法语小课堂</h1><p class="muted">轻松学一点法语 · 无需听力 · 适合 iPhone 和电脑</p>';
+  h+=storageNotice();
+  h+='<div class="card"><h3>我的进度</h3><p class="muted">📱 仅显示这台设备的学习记录，不会自动同步给别人。</p><div class="pbar"><div class="pfill" style="width:'+pct+'%"></div></div>'+
+     '<p class="muted">已完成 '+ALL.filter(function(l){return isDone(l.w+'-'+l.d);}).length+' / '+ALL.length+' 节小课（'+pct+'%）</p>'+
+     (nl?'<button class="btn" onclick="go(\'lesson\',{w:'+nl.w+',d:'+nl.d+'})">继续学习 →</button>':'<p>🎉 60 节全部完成！随时可回到任意一周复习。</p>')+' <button class="btn ghost" onclick="go(\'progress\')">📈 分享我的学习进度</button></div>';
+  var completedFirstWeek=ALL.filter(function(l){return l.w===1&&isDone(l.w+"-"+l.d);}).length;
+  if(completedFirstWeek===5)h+='<div class="fbk ok">🌷 第一周已经完成！做得很好。随时可以回到第一周复习，不必着急往前赶。</div>';
+  h+='<div class="motmsg">💬 '+mot+'</div>';
+  var due=dueItems().length;
+  h+='<div class="card"><h3>🧠 今天的轻松复习</h3><p>已有 <b>'+due+'</b> 个词可以复习。昨天学过的词会回来，记住后再隔几天复习。</p><button class="btn ghost" onclick="go(\'rev\')">开始复习 →</button><p class="muted">不需要每天复习，也没有连续打卡压力。</p></div>';
+  h+='<div class="card v9callout"><h3>🧠 视觉记忆训练</h3><p>不靠死记硬背：练数字、钟点、星期，以及 mon / ma / un / une。先试着回忆，再看解释。不会扣除已经完成的课程。</p><button class="btn sec" onclick="go(\'memorylab\')">开始记忆训练 →</button></div>';
+  h+='<div class="card v9callout"><h3>✍️ V10 · 无提示记忆挑战</h3><p>先自己想、自己写，再看参考答案。5 题轻松复习或 10 题深入挑战，也可以写一句真实生活里的法语。不会影响以前完成的课程。</p><button class="btn sec" onclick="go(\'recall\')">试试记忆挑战 →</button></div>';
+  h+='<div class="card"><h3>🌿 第二阶段 · 进阶法语（第13–24周）</h3><p>专注真实交流、回忆与书面表达。第13–24周共60节课程全部开放。第一阶段的60课进度完全独立。</p><button class="btn sec" onclick="go(\'part2\')">探索第二阶段 →</button></div>';
+  h+='<h2>12 周课程（自由节奏，不必按时完成）</h2>';
+  WEEKS.forEach(function(wk){
+    var ls=ALL.filter(function(l){return l.w===wk.n;});
+    var dn=ls.filter(function(l){return isDone(l.w+"-"+l.d);}).length;
+    h+='<button class="wkcard" onclick="go(\'plan\','+wk.n+')"><div class="wknum">'+wk.n+'</div><div style="flex:1"><b>第'+wk.n+'周 · '+wk.th+'</b><br><span class="muted">'+wk.d+' · 完成 '+dn+'/5</span></div><div>›</div></button>';
+  });
+  h+='<p class="muted">每节课可按自己的节奏学习：① 看词 ② 句子与语法 ③ 基础练习＋可选进阶挑战 ④ 写一句。做挑战不用重新完成旧课程。</p>';
+  app.innerHTML=h;
+}
+/* ---------- 课程总览 / 周 ---------- */
+function renderPlan(w){
+  if(!w){var h='<h1>课程总览</h1><p class="muted">点开任何一周。每周 5 节：第 1–4 天学新内容，第 5 天是轻松复习。</p>';
+    WEEKS.forEach(function(wk){var dn=ALL.filter(function(l){return l.w===wk.n&&isDone(l.w+"-"+l.d);}).length;
+      h+='<button class="wkcard" onclick="go(\'plan\','+wk.n+')"><div class="wknum">'+wk.n+'</div><div style="flex:1"><b>第'+wk.n+'周 · '+wk.th+'</b><br><span class="muted">'+wk.d+' · 完成 '+dn+'/5</span></div><div>›</div></button>';});
+    app.innerHTML=h;return;}
+  var wk=WEEKS[w-1], h='<h1>第'+w+'周 · '+wk.th+'</h1><p class="muted">'+wk.d+'</p>';
+  var days=["周一 · 新内容","周二 · 新内容","周三 · 新内容","周四 · 新内容","周五 · 轻松复习"];
+  if(w===2)h+='<div class="card v9callout"><b>✍️ 家庭与冠词</b><p>练习 ma famille、une sœur，不会重置旧课程。</p><button class="btn sec" onclick="go(\'memorylab\')">开始练习 →</button></div>';
+  if(w===3)h+='<div class="card v9callout"><b>📅 第三周：数字 · 日期 · 时间</b><p>不用一下子背完。用数字卡、电子钟和日历练习，每次只做几题。</p><button class="btn sec" onclick="go(\'memorylab\')">打开视觉记忆练习 →</button></div>';
+  if(w===2)h+='<div class="card v9callout"><b>✍️ mon / ma / un / une</b><p>想巩固家庭词汇？可以用简短填空练习，不会重置已完成的课程。</p><button class="btn sec" onclick="go(\'memorylab\')">开始练习 →</button></div>';
+  h+='<div class="grid2">';
+  ALL.filter(function(l){return l.w===w;}).forEach(function(l,i){
+    h+='<button class="daybtn '+(isDone(l.w+"-"+l.d)?"done":"")+'" onclick="go(\'lesson\',{w:'+l.w+',d:'+l.d+'})"><span class="dn">'+days[i]+'</span><span class="dt">'+l.th+(isDone(l.w+"-"+l.d)?" ✓":"")+'</span></button>';
+  });
+  h+='</div><p style="margin-top:14px"><button class="btn ghost" onclick="go(\'plan\')">← 返回全部周</button></p>';
+  app.innerHTML=h;
+}
+
+/* ---------- V8 : approfondissement facultatif, sans toucher a S.done ---------- */
+var V8_GRAMMAR={
+ "1-1":'<b>人称代词 + être（是）</b><p>“我”是 je，“你”是 tu。动词 être 在不同人称后会变形：je <b>suis</b>（我是），tu <b>es</b>（你是），il/elle <b>est</b>（他/她是）。不能写“je est”。</p><table><tr><th>谁？</th><th>正确写法</th><th>意思</th></tr><tr><td>je</td><td>je suis</td><td>我是</td></tr><tr><td>tu</td><td>tu es</td><td>你是</td></tr><tr><td>elle</td><td>elle est</td><td>她是</td></tr></table>',
+ "1-2":'<b>性别形式与形容词</b><p>形容一个人的国籍时，有些词随人物性别改变：<b>chinois</b>（男性），<b>chinoise</b>（女性）。记住完整的句子，而不是只看最后一个字母：<b>Il est chinois.</b> / <b>Elle est chinoise.</b></p><p>注意：法语里多数名词还有语法阴阳性，和人的性别不总相同。</p>',
+ "1-3":'<b>你问的关键问题：appeler、s’appeler、t’appelles 有什么区别？</b><p><b>appeler</b> 是动词原形，意思是“叫、呼叫某人”：<i>J’appelle Zhou An.</i>（我给 Zhou An 打电话／我叫 Zhou An。）</p><p><b>s’appeler</b> 是代词式动词的原形，意思是“名字叫……”。这里的 s’ 会随主语改变。</p><table><tr><th>人称</th><th>完整结构</th><th>中文</th></tr><tr><td>je</td><td>je <b>m’appelle</b></td><td>我叫……</td></tr><tr><td>tu</td><td>tu <b>t’appelles</b></td><td>你叫……</td></tr><tr><td>il / elle</td><td>il / elle <b>s’appelle</b></td><td>他／她叫……</td></tr></table><p><b>m’ / t’ / s’</b> 对应不同的人称；<b>appelle / appelles</b> 是动词变位。<b>tu t’appelles</b> 需要两个部分：t’ + appelles。字母 <b>-s</b> 是“tu”的常见词尾。不要把 <b>t’appelles</b> 当作另一个独立动词。</p>',
+ "1-4":'<b>être + 身份；lire / écrire</b><p>完整句子：<b>Je suis sourd.</b>（男性形式，如果符合实际情况。）女性形式是 <b>Je suis sourde.</b>。<b>Je lis le français.</b>（我阅读法语。）<b>J’écris une phrase.</b>（我写一个句子。）</p><p>法语书面语与 LSF 是不同的语言；看到一个 LSF 手语视频不等于整句法语的语法也一样。</p>',
+ "1-5":'<b>复习：自己造句</b><p>把前三天学到的结构连起来：<b>Je m’appelle Zhou An. J’apprends le français.</b>（我叫 Zhou An。我学习法语。）</p><p>遇到新句子先找主语，再找动词：例如 <b>je + suis</b>，<b>tu + es</b>，<b>je + m’appelle</b>。</p>'
+};
+var V8_WEEK_GRAMMAR={
+ 2:'这周学习名词的阴阳性与物主词：mon père、ma mère。注意：mon / ma 是跟着后面的名词变化，不是跟着说话者的性别变化。',
+ 3:'数字和时间里常见固定结构：Il est + 数字 + heure(s)。1 点是 une heure，2 点是 deux heures。日期和星期的表达不能总按汉语逐字翻译。',
+ 4:'动作词的原形与“我”的形式不同，例如 travailler → je travaille，boire → je bois。先在句子中辨认主语和动词。',
+ 5:'点餐常见冠词与部分冠词：un café、du pain、de l’eau。注意 un 和 du 表达的意思不同。',
+ 6:'指路时识别介词和动词：à gauche、à droite、tout droit；Je vais au bureau（去）和 Je suis au bureau（在）不同。',
+ 7:'句型 il y a 表示某处“有”；dans / sur / sous 用来表达不同位置。可以用实物位置自己写句子。',
+ 8:'重点比较 être、avoir、aller、faire 在 je / tu / il / elle 后的变位。否定 ne…pas 把变位动词放在中间。',
+ 9:'表示情感时比较 j’aime、je n’aime pas、je voudrais。对熟人说 s’il te plaît，对不熟的人说 s’il vous plaît。',
+ 10:'观察问题句、回答句和否定句的词序。试着不看中文提示，写一条你真的会发出的短消息。',
+ 11:'阅读一小段法语时找三个信息：谁（主语）、做什么（动词）、何时/何地（时间或地点）。',
+ 12:'综合前面所学内容，不只做选择题：写完整句子、修改错误、重新表达同一个意思。'
+};
+function grammarFocusV8(l){
+ var id=l.w+'-'+l.d;
+ var txt=V8_GRAMMAR[id]||('<b>进阶语法提示</b><p>'+esc(V8_WEEK_GRAMMAR[l.w]||'把新词放到完整句子里使用。')+'</p>');
+ return '<section class="grammar-focus" aria-label="深入理解语法"><h3>🔎 深入理解：为什么这样写？</h3>'+txt+'</section>';
+}
+function v8ChallengeData(l){
+ if(l.w===1&&l.d===3){return [
+  {label:'填空：我叫 Zhou An → Je ___ appelle Zhou An.', answer:"m'", tip:'主语是 je → m’。'},
+  {label:'填空：你叫什么？ → Comment tu t’___ ?', answer:'appelles',tip:'主语是 tu，写 appelles（双 l，词尾 s）。'},
+  {label:'填空：她叫 Marie → Elle ___ appelle Marie.',answer:"s'",tip:'主语是 elle → s’。'}
+ ];}
+ if(l.w===1&&l.d===1){return [
+  {label:'填空：我是 Zhou An。 → Je ___ Zhou An.',answer:'suis',tip:'être：je suis。'},
+  {label:'填空：你是 Zhou An。 → Tu ___ Zhou An.',answer:'es',tip:'être：tu es。'},
+  {label:'填空：她是 Marie。 → Elle ___ Marie.',answer:'est',tip:'être：elle est。'}
+ ];}
+ var forms=l.exs.filter(function(x){return x.t==='fill'&&typeof x.a==='string'&&x.a.length<50;}).slice(0,2);
+ var a=forms.map(function(x){return {label:x.q,answer:x.a,tip:x.exp||'回看上面的句子和讲解。'};});
+ var unique={};a=a.filter(function(x){var k=x.label+'|'+x.answer;if(unique[k])return false;unique[k]=1;return true;});
+ if(a.length<2&&l.words.length){var w=l.words[0];a.push({label:'不看词卡，写出「'+w[1]+'」的法语（可以包含冠词）。',answer:w[0],tip:'回忆今天第一张词卡。'});}
+ return a;
+}
+function advancedChallengeV8(l){
+ var id=l.w+'-'+l.d, questions=v8ChallengeData(l);
+ var h='<section class="advanced-wrap"><h3>🌟 进阶挑战 · 更有深度的练习</h3>'+
+ '<p class="advanced-tip">根据你的反馈增加了填空和语法解释。挑战自选；不必重复第一周，也不会改变已经完成的进度。</p>'+
+ '<details class="advanced-details"><summary>打开进阶挑战（不计入课程完成）</summary>';
+ questions.forEach(function(x,i){var label=esc(x.label);h+='<div class="advanced-question"><label for="v8-fill-'+i+'">'+(i+1)+'. '+label+'</label>'+
+ '<input id="v8-fill-'+i+'" autocomplete="off" spellcheck="false" placeholder="在这里输入法语答案">'+
+ '<button type="button" class="btn ghost" style="margin-top:8px" onclick="checkV8Challenge('+i+')">检查答案</button>'+
+ '<div class="advanced-result" id="v8-result-'+i+'" role="status" aria-live="polite"></div></div>';});
+ h+='<div class="advanced-question"><b>✍️ 独立写一句（没有唯一答案）</b><p>把下面这句话翻成法语，尽量不看上面的例句：</p><p>'+esc(l.ex[0]?l.ex[0][1]:l.th)+'</p>'+
+ '<textarea id="v8-translation" class="txt" style="min-height:86px" placeholder="自己尝试写完整的法语句子……"></textarea>'+
+ '<button class="btn ghost" type="button" onclick="revealV8Example()">看参考答案</button>'+
+ '<p id="v8-example" class="advanced-result" role="status" aria-live="polite"></p>'+
+ '<p class="advanced-tip">参考答案只是一个示例，自己写的其他正确表达也可能成立。文字不会自动发送，也不影响已有记录。</p></div></details></section>';
+ return h;
+}
+function checkV8Challenge(i){
+ if(!curLesson)return;
+ var l=getLesson(curLesson.w,curLesson.d);if(!l)return;
+ var q=v8ChallengeData(l)[i],input=document.getElementById('v8-fill-'+i),out=document.getElementById('v8-result-'+i);
+ if(!q||!input||!out)return;
+ var val=norm(input.value),expected=norm(q.answer);
+ if(!val){out.textContent='先写下你的答案。';return;}
+ var ok=val===expected;
+ out.className='advanced-result fbk '+(ok?'ok':'bad');
+ out.textContent=ok?'✓ 正确！'+q.tip:'再想想。提示：'+q.tip+'（参考答案：'+q.answer+'）';
+}
+function revealV8Example(){
+ if(!curLesson)return;var l=getLesson(curLesson.w,curLesson.d),out=document.getElementById('v8-example');
+ if(l&&out&&l.ex[0])out.textContent='参考写法：'+l.ex[0][0];
+}
+
+/* ---------- 课程页 ---------- */
+var exState; // 当前课练习状态
+function renderLesson(a){
+  var l=getLesson(a.w,a.d); if(!l){go("plan");return;}
+  var id=l.w+"-"+l.d;
+  var idx=ALL.indexOf(l);
+  exState={done:0,total:0};
+  var h='<p class="muted"><a href="javascript:void(0)" onclick="go(\'plan\','+l.w+')">第'+l.w+'周</a> · 第'+l.d+'天</p>';
+  h+='<h1>'+l.th+'</h1>';
+  if(isDone(id))h+='<p><span class="tag">✓ 已完成</span></p>';
+  h+='<div class="card"><h3>今天的小目标</h3><p>'+l.goal+'</p><p class="muted">四个步骤，按自己的节奏学习。基础练习之后可自选「进阶挑战」，不影响已完成的课程。</p></div>';
+  h+='<div class="lessonsteps"><a href="#words">① 词语 · 5分钟</a><a href="#examples">② 短句 · 5分钟</a><a href="#games">③ 游戏 · 5分钟</a><a href="#writing">④ 写作 · 5分钟</a></div>';
+  /* 块1：认词（5分钟） */
+  h+='<h2 id="words">① 认一认词 <span class="muted">（按需学习）</span></h2>';
+  h+='<div class="elixintro">🤟 <b>LSF 手语辅助</b>：部分词语可以打开 Elix，查找相关词语的法国手语（有些词没有视频）。这是额外帮助，不需要每个都看。<div class="elixnote">点击单词卡片中的蓝色 🤟 按钮会跳转到 Elix（新页面），再查看该词是否有视频。没有蓝色按钮时表示我们还没有关联这个词。<br><a class="elixlink" href="https://dico.elix-lsf.fr/" target="_blank" rel="noopener noreferrer">🤟 打开 Elix 手语词典 ↗</a></div></div>';
+  l.words.forEach(function(wd){
+    h+='<div class="wordcard">'+visualIcon(wd[0])+'<div class="wfr">'+esc(wd[0])+'</div><div class="whz">'+esc(wd[1])+'</div><div class="wpy">拼音（汉字读音，不是法语发音）：'+esc(wd[2])+'</div>'+elixButton(wd[0])+'</div>';
+  });
+  /* 块2：例句和语法（5分钟） */
+  h+='<h2 id="examples">② 看例句 <span class="muted">（约 5 分钟）</span></h2>';
+  l.ex.forEach(function(e){h+='<div class="card"><div class="exfr">'+esc(e[0])+'</div><div>'+esc(e[1])+'</div></div>';});
+  h+='<div class="card"><h3>📖 小讲解</h3><p>'+l.gram+'</p></div>';
+  h+=grammarFocusV8(l);
+  h+=dialogueBox(l);
+  /* 块3：练习（5分钟） */
+  h+='<h2 id="games">③ 小练习 <span class="muted">（约 5 分钟）</span></h2><p class="muted">每题都有即时讲解。答错没关系，看看解释再继续。</p>';
+  var exs=l.exs.slice();
+  /* 追加一个本课词汇连线题 */
+  var mw=l.words.slice(0,4);
+  if(mw.length>=3&&!exs.some(function(x){return x.t==="match";})){exs.push({t:"match",pairs:mw});}
+  exState.total=exs.length;
+  h+='<div id="exbox"></div>';
+  h+=advancedChallengeV8(l);
+  /* 块4：小结 + 写一句（5分钟） */
+  h+='<h2 id="writing">④ 收个尾：复习或写一句 <span class="muted">（约 5 分钟）</span></h2>';
+  var mys=S.mynotes&&S.mynotes[id]?S.mynotes[id]:"";
+  h+='<div class="card" id="finbox">'+
+     '<p>把今天的词在心里再过一遍，然后试着<b>用今天的词写一句法语</b>（想写什么就写什么，没有对错）。写完自动保存在这台设备上。</p>'+
+     '<p class="muted">你也可以回答上面的小对话，再把句子发给你想分享的人。无需完成任何作业。</p>'+
+     '<p class="muted">可以用这些词：'+l.words.map(function(w){return "<span class=tag>"+esc(w[0])+"</span>";}).join("")+'</p>'+
+     '<textarea id="myline" class="txt" style="min-height:80px" placeholder="用今天的一句话试试看……">'+esc(mys)+'</textarea>'+
+     '<div style="margin-top:10px"><button class="btn ghost" onclick="saveMyLine(\''+id+'\')">保存我的句子</button> '+
+     '<button class="btn ghost" onclick="copyMyLine(this)">复制</button></div>'+
+     '<p style="margin-top:14px">准备好了就点下面。</p>'+
+     '<button class="btn sec" id="finbtn" onclick="finishLesson('+l.w+','+l.d+')">'+(isDone(id)?"已完成 ✓":"完成本课 ✓")+'</button>'+
+     '<p class="muted">做不完也没关系，可以随时结束。</p></div>';
+  h+='<div style="display:flex;gap:10px;margin:16px 0">';
+  if(idx>0){var p=ALL[idx-1];h+='<button class="btn ghost" onclick="go(\'lesson\',{w:'+p.w+',d:'+p.d+'})">← 上一课</button>';}
+  if(idx<ALL.length-1){var nx=ALL[idx+1];h+='<button class="btn ghost" onclick="go(\'lesson\',{w:'+nx.w+',d:'+nx.d+'})">下一课 →</button>';}
+  h+='</div>';
+  app.innerHTML=h;
+  renderExs(exs,l);
+  var textarea=document.getElementById("myline");
+  if(textarea)textarea.addEventListener("input",function(){saveMyLine(id);});
+}
+function finishLesson(w,d){
+  saveMyLine(w+"-"+d);
+  var lessonToSave=getLesson(w,d);if(lessonToSave)encounterWords(lessonToSave);
+  toggleDone(w+"-"+d);
+  if(isDone(w+"-"+d)){var ii=ALL.findIndex(function(l){return l.w===w&&l.d===d;});var next=ALL[ii+1];if(next)S.current={w:next.w,d:next.d};save();go("plan",w);}
+  else renderLesson({w:w,d:d});
+}
+/* ---------- 练习渲染 ---------- */
+function renderExs(exs,l){
+  var box=document.getElementById("exbox");
+  exState.done=0;
+  box.innerHTML="";
+  exs.forEach(function(e,i){box.appendChild(buildEx(e,i,l));});
+}
+function fbEl(ok,txt){var d=document.createElement("div");d.className="fbk "+(ok?"ok":"bad");d.innerHTML=(ok?"✓ 对了！":"✗ 再看一眼：")+txt;return d;}
+function markDone(){exState.done++; if(exState.done>=exState.total){var f=document.getElementById("finbox");if(f&&!f.querySelector(".donetag")){var t=document.createElement("p");t.className="donetag okline";t.textContent="✓ 练习全部完成，可以点「完成本课」了！";f.insertBefore(t,f.firstChild);}}}
+function buildEx(e,i,l){
+  var d=document.createElement("div");d.className="card";
+  var types={mcq:"选择",fill:"填空",order:"排列",match:"配对"};
+  var t=document.createElement("p");t.innerHTML='<span class="tag">'+(i+1)+'/'+exState.total+' · '+(types[e.t]||"练习")+'</span> '+esc(e.q||"找出正确的法语和中文配对：");d.appendChild(t);
+  var solved=false,failedOnce=false;
+  function show(ok,msg){
+    var old=d.querySelector(".fbk");if(old)old.remove();
+    d.appendChild(fbEl(ok,msg));
+    if(ok&&!solved){solved=true;markDone();}
+    if(!ok&&!failedOnce){failedOnce=true;logErr((l?l.th:"")+": "+(e.q||"配对"));}
+  }
+  if(e.t==="mcq"){
+    shuffle(e.o.slice()).forEach(function(o){
+      var b=document.createElement("button");b.className="qopt";b.textContent=o;
+      b.onclick=function(){if(solved)return;var ok=e.o[e.a]===o;
+        d.querySelectorAll(".qopt").forEach(function(x){x.classList.remove("correct","wrong");});
+        b.classList.add(ok?"correct":"wrong");show(ok,ok?(e.exp||"很好！"):"还不是这个答案，再试一次。");};d.appendChild(b);
+    });
+  }else if(e.t==="fill"){
+    var inp=document.createElement("input");inp.className="txt";inp.setAttribute("aria-label","请填写法语答案");inp.autocomplete="off";d.appendChild(inp);
+    var b=document.createElement("button");b.className="btn";b.style.marginTop="10px";b.textContent="检查";
+    b.onclick=function(){if(solved)return;var ok=norm(inp.value)===norm(e.a);show(ok,ok?(e.exp||"很好！"):"再试一次。提示："+(e.exp||"请仔细看上面的词语。"));};
+    inp.addEventListener("keydown",function(ev){if(ev.key==="Enter")b.click();});d.appendChild(b);
+  }else if(e.t==="order"){
+    var selected=[],parts=e.w.map(function(v,j){return{word:v,id:j};}),mixed=shuffle(parts);
+    var slot=document.createElement("div");slot.className="slotline";d.appendChild(slot);
+    var pool=document.createElement("div");d.appendChild(pool);
+    function draw(){slot.innerHTML="";pool.innerHTML="";
+      selected.forEach(function(p,j){var b=document.createElement("button");b.className="chip";b.textContent=p.word;b.title="点这里撤销这个词";b.onclick=function(){if(solved)return;selected.splice(j,1);draw();};slot.appendChild(b);});
+      mixed.filter(function(p){return !selected.some(function(x){return x.id===p.id;});}).forEach(function(p){var b=document.createElement("button");b.className="chip";b.textContent=p.word;b.onclick=function(){if(solved)return;selected.push(p);draw();};pool.appendChild(b);});
+      if(!selected.length)slot.textContent="按顺序点击下面的法语词";
+    }
+    draw();
+    var b=document.createElement("button");b.className="btn";b.textContent="检查";
+    b.onclick=function(){if(solved)return;var ok=norm(selected.map(function(x){return x.word;}).join(" "))===norm(e.a);show(ok,ok?(e.exp||"非常好！"):"词语顺序还不对，可以点上面的词撤销后再试。")};d.appendChild(b);
+  }else if(e.t==="match"){
+    var words=e.pairs.map(function(p,j){return{fr:p[0],zh:p[1],id:j};});
+    var left=document.createElement("div"),right=document.createElement("div"),grid=document.createElement("div");grid.className="pairgrid";grid.appendChild(left);grid.appendChild(right);d.appendChild(grid);
+    var selected=-1,matched=[];
+    words.forEach(function(p){var b=document.createElement("button");b.className="chip";b.textContent=p.fr;b.setAttribute("data-fri",p.id);b.onclick=function(){if(solved||matched.includes(p.id))return;selected=p.id;refresh();};left.appendChild(b);});
+    shuffle(words).forEach(function(p){var b=document.createElement("button");b.className="chip";b.textContent=p.zh;b.setAttribute("data-zhi",p.id);b.onclick=function(){if(solved||matched.includes(p.id)||selected<0)return;
+      if(selected===p.id){matched.push(p.id);selected=-1;refresh();if(matched.length===words.length)show(true,"全部配对正确！");}
+      else{selected=-1;refresh();show(false,"还不对，请重新选择一组词语。");}
+    };right.appendChild(b);});
+    function refresh(){d.querySelectorAll("[data-fri]").forEach(function(b){var id=Number(b.dataset.fri);b.classList.toggle("selected",id===selected);b.classList.toggle("matched",matched.includes(id));b.disabled=matched.includes(id);});d.querySelectorAll("[data-zhi]").forEach(function(b){var id=Number(b.dataset.zhi);b.classList.toggle("matched",matched.includes(id));b.disabled=matched.includes(id);});}
+  }
+  return d;
+}
+function logErr(t){if(S.err.length>200)S.err.shift();S.err.push({t:t,d:Date.now()});save();}
+function saveMyLine(id){
+  var ta=document.getElementById("myline");
+  if(!ta)return;
+  if(!S.mynotes)S.mynotes={};
+  S.mynotes[id]=ta.value;
+  save();
+}
+function copyMyLine(btn){
+  var ta=document.getElementById("myline");
+  if(!ta||!ta.value.trim()){btn.textContent="先写一句吧 :)";setTimeout(function(){btn.textContent="复制";},1500);return;}
+  var t=ta.value;
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){btn.textContent="已复制 ✓";setTimeout(function(){btn.textContent="复制";},1500);});}
+  else{var ta2=document.createElement("textarea");ta2.value=t;document.body.appendChild(ta2);ta2.select();try{document.execCommand("copy");btn.textContent="已复制 ✓";}catch(e){}document.body.removeChild(ta2);}
+}
+/* ---------- 词典 ---------- */
+function renderDict(){
+  var h='<h1>法语小词典</h1><p class="muted">收录 60 课的所有词汇。可以搜法语或中文。点 ⭐ 加入收藏。</p>';
+  h+='<input id="dq" class="txt" placeholder="搜：bonjour 或 你好…" oninput="renderDictList()">';
+  h+='<div id="dlist"></div>';
+  app.innerHTML=h;
+  renderDictList();
+  setTimeout(function(){document.getElementById("dq").focus();},50);
+}
+function allWords(){
+  var seen={},arr=[];
+  ALL.forEach(function(l){l.words.forEach(function(w){
+    var k=w[0]+"|"+w[1];
+    if(!seen[k]){seen[k]=1;arr.push({fr:w[0],cn:w[1],py:w[2],wk:l.w});}
+  });});
+  return arr;
+}
+function renderDictList(){
+  var q=(document.getElementById("dq").value||"").toLowerCase();
+  var ws=allWords().filter(function(w){return !q||w.fr.toLowerCase().indexOf(q)>=0||w.cn.indexOf(q)>=0;});
+  document.getElementById("dlist").innerHTML=ws.length?ws.map(function(w){
+    var fav=S.fav.indexOf(w.fr)>=0;
+    return '<div class="card dictrow"><div class="grow"><div class="wfr" style="font-size:1.4rem">'+esc(w.fr)+'</div><div class="whz" style="font-size:1.2rem">'+esc(w.cn)+' <span class="wpy">（'+esc(w.py)+'）</span></div><span class="tag">第'+w.wk+'周</span>'+elixButton(w.fr)+'</div><button class="star" aria-label="收藏" onclick="toggleFav(\''+w.fr.replace(/'/g,"\\'")+'\');renderDictList()">'+(fav?"⭐":"☆")+'</button></div>';
+  }).join(""):'<p class="muted">没有找到这个词。试试别的写法？</p>';
+}
+function toggleFav(fr){var i=S.fav.indexOf(fr);if(i<0)S.fav.push(fr);else S.fav.splice(i,1);save();}
+/* ---------- 复习 ---------- */
+function renderRev(){
+  var h='<h1>复习</h1>';
+  var due=dueItems();
+  h+='<div class="card"><h3>🧠 今天可以回顾的词（'+due.length+'）</h3><p class="muted">复习日程：学后约1天、3天、7天和14天。记不住也没关系。</p>';
+  h+=due.length?'<button class="btn" onclick="startSpacedReview()">复习今天的词 →</button><div id="spacedbox"></div>':'<p>今天没有必须复习的词。想学的时候再来就好。🌷</p>';
+  h+='</div>';
+  var ws=allWords().filter(function(w){return S.fav.indexOf(w.fr)>=0;});
+  h+='<div class="card v9callout"><h3>🧠 更有挑战的记忆训练</h3><p>数字、时间、星期、家庭冠词：看提示自己填写，不必一次做完。</p><button class="btn sec" onclick="go(\'memorylab\')">开始练习 →</button></div>';
+  h+='<div class="card"><h3>⭐ 我的收藏（'+ws.length+'）</h3>';
+  h+=ws.length?'<div id="revbox"></div><button class="btn" style="margin-top:8px" onclick="startRevQuiz()">开始小测（收藏词）</button>':'<p class="muted">还没有收藏。去「词典」点 ⭐ 收藏生词，这里会变成专属你的小测。</p>';
+  h+='</div>';
+  h+='<div class="card"><h3>✗ 我错过的地方（'+S.err.length+'）</h3>';
+  h+=S.err.length?'<ul>'+S.err.slice(-15).reverse().map(function(e){return '<li>'+esc(e.t)+'</li>';}).join("")+'</ul><button class="btn ghost" onclick="if(confirm(\'清空错误记录？\')){S.err=[];save();renderRev();}">清空记录</button>':'<p class="muted">还没有做错的记录。做错了也不用担心：错题会自动出现在这里。</p></div>';
+  app.innerHTML=h;
+}
+function startRevQuiz(){
+  var ws=allWords().filter(function(w){return S.fav.indexOf(w.fr)>=0;});
+  if(ws.length<3){alert("至少收藏 3 个词才能开始小测。");return;}
+  var picks=shuffle(ws).slice(0,6);
+  var exs=picks.map(function(w){
+    var others=shuffle(allWords().filter(function(x){return x.fr!==w.fr;})).slice(0,2).map(function(x){return x.cn;});
+    return {t:"mcq",q:"«"+w.fr+"» 的意思是：",o:shuffle([w.cn].concat(others)),a:0,exp:w.fr+" = "+w.cn+"。",cn:w.cn};
+  });
+  exs.forEach(function(e){e.a=e.o.indexOf(e.cn);});
+  var box=document.getElementById("revbox");
+  var wrap=document.createElement("div");
+  exState={done:0,total:exs.length};
+  exs.forEach(function(e,i){wrap.appendChild(buildEx(e,i,{th:"复习"}));});
+  box.innerHTML="";box.appendChild(wrap);
+  var fin=document.createElement("p");fin.className="okline";fin.textContent="做完上面的题就完成一次复习。可以反复测。";
+  box.appendChild(fin);
+}
+/* ---------- 和你一起 ---------- */
+function renderShare(){
+  var h='<h1>和你一起 💛</h1><p class="muted">每天一句法语，发给心里的那个人。点「复制」或「发 WhatsApp」。</p>';
+  PHRASES.forEach(function(p,i){
+    h+='<div class="card"><div class="exfr">'+esc(p.fr)+'</div><div>'+esc(p.cn)+'</div>'+
+       '<button class="btn ghost" onclick="copyPh('+i+',this)">复制</button> '+
+       '<button class="btn" onclick="wa('+i+')">发 WhatsApp</button></div>';
+  });
+  h+='<p class="muted">说明：点「发 WhatsApp」会打开 WhatsApp，把这句话放进新消息，你自己选择发给谁——不会自动发送给任何联系人。</p>';
+  app.innerHTML=h;
+}
+function copyPh(i,btn){
+  var t=PHRASES[i].fr+"\n"+PHRASES[i].cn;
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){btn.textContent="已复制 ✓";setTimeout(function(){btn.textContent="复制";},1500);});}
+  else{var ta=document.createElement("textarea");ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");btn.textContent="已复制 ✓";}catch(e){}document.body.removeChild(ta);}
+}
+function wa(i){
+  var t=encodeURIComponent(PHRASES[i].fr);
+  window.open("https://wa.me/?text="+t,"_blank");
+}
+/* ---------- 可选的学习进度分享：本人明确点击才发送 ---------- */
+function progressStats(){
+  var ids=Object.create(null), studied=[], words=Object.create(null), weeks=Object.create(null);
+  (S.done||[]).forEach(function(id){ids[id]=true;});
+  ALL.forEach(function(l){
+    if(!ids[l.w+"-"+l.d])return;
+    studied.push(l);
+    weeks[l.w]=(weeks[l.w]||0)+1;
+    l.words.forEach(function(w){words[w[0].trim().toLowerCase()]=true;});
+  });
+  var notes=Object.keys(S.mynotes||{}).filter(function(id){return (S.mynotes[id]||"").trim().length>0;}).length;
+  var reviewKnown=Object.keys(S.memory||{}).filter(function(k){return (S.memory[k].ok||0)>0;}).length;
+  var recallSeen=Object.keys(S.recall||{}).filter(function(k){return (S.recall[k].attempts||0)>0;}).length;
+  return {done:studied.length,words:Object.keys(words).length,notes:notes,reviewKnown:reviewKnown,recallSeen:recallSeen,weeks:weeks,
+    last:studied.length?studied[studied.length-1]:null};
+}
+function progressText(){
+  var p=progressStats();
+  var lines=["📚 Zhou An 的法语小课堂 · 我的学习进度", "Le français avec Zhou An", "",
+    "✅ 已完成课程："+p.done+" / "+ALL.length,
+    "📖 已接触词汇："+p.words+" 个（来自已完成课程）",
+    "🧠 自评记得过的词："+p.reviewKnown+" 个（不代表已掌握）",
+    "✍️ 记忆挑战练过："+p.recallSeen+" 项",
+    "✍️ 已写学习句子："+p.notes+" 条"];
+  var wkeys=Object.keys(p.weeks).map(Number).sort(function(a,b){return a-b;});
+  if(wkeys.length){lines.push("", "🗓 每周完成情况：");wkeys.forEach(function(w){lines.push("第 "+w+" 周："+p.weeks[w]+" / 5 节");});}
+  if(p.last)lines.push("", "课程顺序中最后完成：第 "+p.last.w+" 周 · 第 "+p.last.d+" 课 · "+p.last.th);
+  lines.push("", "🌿 第二阶段（第13–24周）："+p2Completed()+" / 60 节（独立于第一阶段）");
+  lines.push("", "🌷 我按照自己的节奏慢慢学习。", (location.protocol==="https:"?location.origin+location.pathname:""));
+  return lines.join("\n");
+}
+function renderProgressShare(){
+  var p=progressStats(),pct=Math.round(p.done/ALL.length*100);
+  var h='<h1>📈 我的学习进度</h1><p class="muted">📱 只显示当前手机或浏览器里的进度，不是其他人的学习记录。只有你主动分享，别人才会看到。</p>'+storageNotice();
+  h+='<div class="card"><h3>已经学了这么多！</h3><div class="pbar"><div class="pfill" style="width:'+pct+'%"></div></div>'+
+    '<p><b>'+p.done+' / '+ALL.length+'</b> 节小课（'+pct+'%）</p>'+
+    '<p>📖 已接触词汇：<b>'+p.words+'</b> 个</p>'+
+    '<p>🧠 复习时自评记得：<b>'+p.reviewKnown+'</b> 个词</p>'+
+    '<p>✍️ 记忆挑战已尝试：<b>'+p.recallSeen+'</b> 项</p>'+  
+    '<p>✍️ 已写学习句子：<b>'+p.notes+'</b> 条</p>'+
+    '<p class="muted">词汇是已完成课程中出现过的不同法语词语数量，不代表已经全部记住；这里不统计练习成绩。</p></div>';
+  h+='<div class="card"><h3>🌿 第二阶段</h3><p>已完成 '+p2Load().done.length+' / 60 节（第13–24周）。第一阶段的 '+p.done+'/60 节不受影响。</p><button class="btn ghost" onclick="go(\'part2\')">查看进阶课程</button></div>';
+  h+='<div class="card"><h3>每周的小脚印</h3>';
+  WEEKS.forEach(function(w){var n=p.weeks[w.n]||0;h+='<div class="row"><span>第 '+w.n+' 周 · '+esc(w.th)+'</span><b>'+n+' / 5</b></div>';});
+  h+='</div><div class="card"><h3>🔐 保存自己的学习记录</h3>'+ 
+    '<p>学习记录只保存在这台设备的浏览器。如果清理浏览器数据或换手机，可能会丢失。你可以自己保存一份备份文件，需要时再恢复。</p>'+ 
+    '<button class="btn ghost" onclick="exportZhouAnBackup()">⬇️ 下载我的学习备份</button> '+ 
+    '<label class="btn ghost" for="zhouan-restore" style="cursor:pointer">⬆️ 从备份恢复</label>'+ 
+    '<input type="file" id="zhouan-restore" accept=".json,application/json" style="display:none" onchange="importZhouAnBackup(this)">'+
+    '<p class="muted">备份文件包含你的学习进度、收藏和你写的句子。请妥善保管，不要发送给陌生人。导入时会合并学习记录：已完成的课程不会变回未完成；冲突笔记保留当前设备的版本。</p>'+ 
+    '<p class="muted">⚠️ 若清除浏览器数据，同一设备内的安全副本也会消失。请另外下载 JSON 备份，妥善保存。</p></div>';
+  h+='<div class="card"><h3>🤝 自愿分享给朋友或家人</h3>'+ 
+    '<p>你可以把下面的学习总结通过 WhatsApp 发送给你想分享的人。网站不会自动发送，也不会直接让别人查看你的进度。</p>'+
+    '<textarea id="progress-preview" class="txt" readonly style="height:240px;min-height:240px;font-size:.87rem;line-height:1.5">'+esc(progressText())+'</textarea>'+
+    '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn" onclick="sendProgressWhatsApp()">💬 用 WhatsApp 分享</button> '+
+    '<button class="btn ghost" onclick="copyProgressText(this)">复制学习进度</button></div>'+
+    '<p class="muted">发送前你可以在 WhatsApp 中查看、修改或取消消息。没有任何自动分享。</p></div>';
+  app.innerHTML=h;
+}
+function sendProgressWhatsApp(){
+  var url="https://wa.me/?text="+encodeURIComponent(progressText());
+  // Ouverture déclenchée par le clic de Zhou An, destinataire choisi dans WhatsApp.
+  var win=window.open(url,"_blank","noopener,noreferrer");
+  if(!win)window.location.href=url;
+}
+function copyProgressText(btn){
+  var t=progressText();
+  function ok(){btn.textContent="已复制 ✓";setTimeout(function(){btn.textContent="复制学习进度";},1800);}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok).catch(function(){fallbackCopyProgress(t,btn);});}
+  else fallbackCopyProgress(t,btn);
+}
+function fallbackCopyProgress(t,btn){
+  var ta=document.createElement("textarea");ta.value=t;ta.setAttribute("readonly","");ta.style.position="fixed";ta.style.left="-9999px";
+  document.body.appendChild(ta);ta.select();try{if(document.execCommand("copy"))btn.textContent="已复制 ✓";else btn.textContent="请手动复制上方文字";}catch(e){btn.textContent="请手动复制上方文字";}document.body.removeChild(ta);
+}
+
+/* Sauvegarde facultative: données locales uniquement, aucun envoi réseau. */
+function exportZhouAnBackup(){
+  var payload={format:"zhouan-francais-backup",version:1,exportedAt:new Date().toISOString(),data:{done:S.done,fav:S.fav,err:S.err,mynotes:S.mynotes,current:S.current,memory:S.memory,practice:S.practice,recall:S.recall,journal:S.journal,part2:p2Load()}};
+  var blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json;charset=utf-8"});
+  var url=URL.createObjectURL(blob),a=document.createElement("a");
+  a.href=url;a.download="zhouan-francais-sauvegarde.json";document.body.appendChild(a);a.click();a.remove();
+  setTimeout(function(){URL.revokeObjectURL(url);},1200);
+}
+function importZhouAnBackup(input){
+  var file=input.files&&input.files[0];if(!file)return;
+  if(file.size>2*1024*1024){alert("备份文件太大，无法导入。");input.value="";return;}
+  var reader=new FileReader();
+  reader.onerror=function(){alert("无法读取这个文件。");input.value="";};
+  reader.onload=function(){
+    try{
+      var obj=JSON.parse(reader.result);
+      if(obj.format!=="zhouan-francais-backup"||obj.version!==1||!obj.data||!Array.isArray(obj.data.done)||!Array.isArray(obj.data.fav)||!Array.isArray(obj.data.err)||!obj.data.mynotes||typeof obj.data.mynotes!=="object"||!obj.data.memory||typeof obj.data.memory!=="object")throw Error("format");
+      var d=obj.data;
+      if(d.done.length>200||d.fav.length>2000||d.err.length>300)throw Error("volume");
+      if(!d.done.every(function(x){return typeof x==="string"&&/^([1-9]|1[0-2])-[1-5]$/.test(x);})||!d.fav.every(function(x){return typeof x==="string"&&x.length<120;}))throw Error("fields");
+      var notes=Object.keys(d.mynotes),keys=Object.keys(d.memory);
+      if(notes.length>65||keys.length>2000||!notes.every(function(k){return /^([1-9]|1[0-2])-[1-5]$/.test(k)&&typeof d.mynotes[k]==="string"&&d.mynotes[k].length<10000;}))throw Error("notes");
+      if(!keys.every(function(k){var r=d.memory[k];return k.length<120&&r&&typeof r==="object"&&Number.isFinite(r.due)&&r.due>=0&&Number.isFinite(r.stage)&&r.stage>=0&&r.stage<=4&&Number.isFinite(r.ok)&&r.ok>=0;}))throw Error("memory");
+      if(!confirm("确定要合并这个备份吗？已经完成的课程、收藏和当前笔记都不会被删除。"))return;
+      // Fusion sans perte : même un fichier plus ancien ne doit pas effacer le travail récent.
+      var combined=normalizeProgress(S);
+      combined.done=Array.from(new Set(combined.done.concat(d.done)));
+      combined.fav=Array.from(new Set(combined.fav.concat(d.fav)));
+      combined.err=combined.err.concat(d.err).slice(-300);
+      Object.keys(d.mynotes).forEach(function(id){if(!combined.mynotes[id]&&d.mynotes[id])combined.mynotes[id]=d.mynotes[id];});
+      Object.keys(d.memory).forEach(function(k){
+        var old=combined.memory[k],incoming=d.memory[k];
+        if(!old){combined.memory[k]=incoming;return;}
+        if((incoming.stage||0)>(old.stage||0)||((incoming.stage||0)===(old.stage||0)&&(incoming.ok||0)>(old.ok||0)))combined.memory[k]=incoming;
+      });
+      // Restaurer aussi les exercices V9/V10 sans toucher aux cours déjà terminés.
+      ['practice','recall'].forEach(function(field){
+        if(!isRecord(d[field]))return;
+        var entries=Object.keys(d[field]).slice(0,400);
+        entries.forEach(function(k){
+          if(k.length>120||!isRecord(d[field][k]))return;
+          var incoming=d[field][k],old=combined[field][k];
+          if(!old || ((Number(incoming.attempts)||0)>(Number(old.attempts)||0)))combined[field][k]=incoming;
+        });
+      });
+      if(isRecord(d.journal))Object.keys(d.journal).slice(0,150).forEach(function(k){
+        if(k.length<100&&typeof d.journal[k]==='string'&&d.journal[k].length<3000&&!combined.journal[k])combined.journal[k]=d.journal[k];
+      });
+      if(!combined.current)combined.current=d.current||null;
+      S=combined;save();if(isRecord(d.part2))p2Merge(d.part2);go("progress");alert("学习记录已安全合并！以前完成的课程都保留了。");
+    }catch(e){alert("这个文件不是有效的学习备份，请检查文件。 ");}
+    finally{input.value="";}
+  };
+  reader.readAsText(file,"utf-8");
+}
+/* ---------- 使用说明 ---------- */
+function renderHelp(){
+  var h='<h1>使用说明</h1>';
+  h+='<div class="card"><h3>这个课堂是什么</h3><p>为 Zhou An 准备的<strong>轻松学一点法语</strong>小课堂：只学「读和写」，<span class="badge">全程无需听力</span>。没有语音、没有发音、没有听力练习。所有讲解都是中文。</p></div>';
+  h+='<div class="card"><h3>怎么学：每天 20 分钟，四个小块</h3><ul>'+
+   '<li><b>① 认一认词（约5分钟）</b>：看 3–5 张主要词汇卡片（少数课程会额外复习旧词）：法语 | 汉字 | 拼音。拼音只是帮你确认汉字读音，<b>不是</b>法语发音。</li>'+
+   '<li><b>② 看例句（约5分钟）</b>：短句 + 中文对照 + 一小段中文讲解。</li>'+
+   '<li><b>③ 小练习（约5分钟）</b>：选择题、填空、排词、配对，答完立刻有讲解。</li>'+
+   '<li><b>④ 复习或写一句（约5分钟）</b>：用今天的词写一句属于自己的法语（自动保存），然后点「完成本课」——或直接离开，进度自动保存。</li></ul>'+
+   '<p class="muted">建议：每周 4 节新内容 + 周五轻松复习，另外两天完全休息。不想学的日子跳过就好，<b>没有必须完成的日程</b>。这个课堂不设考试、不设等级目标：会认、会用、自己觉得有意思，就是学会。</p></div>';
+  h+='<div class="card"><h3>🧠 轻松复习与图像</h3><p>学过的词会在约1、3、7、14天后重新出现。每次复习可以选择“记得”或“再看看”。图片符号仅辅助认识具体物品，并非真实手语；真正的 LSF 请查看 Elix。</p><p>有些课程有简短的书面对话。你可以模仿一句，也可以不写，没有强制成绩。</p></div>';
+  h+='<div class="card"><h3>🤟 Elix 手语词典</h3><p>部分词汇卡片和词典词条现在有「在 Elix 查询手语」按钮，点开可以在 Elix 查询相关手语；部分按钮搜索的是动词原形或相关词，并不是整句话的翻译，视频也不保证存在。你可以自由决定要不要看，完全不影响课程。Elix 是第三方独立网站；本网站不保存、转载或复制它的视频。不同词义可能对应不同手语，请留意选择正确的意思。</p><p><a href="https://dico.elix-lsf.fr/" target="_blank" rel="noopener noreferrer">打开 Elix 官方词典 ↗</a></p></div>';
+  h+='<div class="card"><h3>关于拼音和 LSF</h3><p>卡片上的拼音标注的是<b>汉字（中文）的读音</b>，跟法语发音无关——我们完全不学法语发音。另外：LSF（法国手语）是一门独立的手语语言，和书面法语是两回事，课堂上不会混淆两者；需要手语交流时，由身边的人直接用 LSF 就好。</p></div>';
+  h+='<div class="card"><h3>🧠 视觉记忆训练</h3><p>从主页或复习页打开：数字、电子钟、星期日历与家庭冠词。题目以中文提示，自己填法语答案。错误不会清除已完成的课程；练习记录留在这台设备上。复习不是考试，想休息就停。</p></div>';
+  h+='<div class="card"><h3>进度与隐私</h3><p>进度、收藏、错题都保存在你当前设备的浏览器里（localStorage），<b>不需要注册</b>。iPhone 和电脑的进度<b>不会自动同步</b>。你可以在「📈 进度」里下载备份，换设备时安全合并恢复；网站更新不会自动清空学习记录；请不要把备份文件随意转发。你可以在「📈 进度」中自愿通过 WhatsApp 分享学习总结，分享前由你选择收件人并确认。网站本身不自动发送任何个人学习记录。</p></div>';
+  h+='<div class="card"><h3>小提示</h3><p>工作中只想学一小会儿？每课随时可以停，回来点主页的「继续学习」就能接上。没有提醒、没有通知，完全由你决定什么时候学。</p></div>';
+  app.innerHTML=h;
+}
+
+/* ---------- V6: 图像帮助与简短书面对话 ---------- */
+var VISUALS={
+ "le pain":"🍞","pain":"🍞","la pomme":"🍎","pomme":"🍎","le café":"☕","café":"☕",
+ "le thé":"🍵","thé":"🍵","l'eau":"💧","eau":"💧","le riz":"🍚","riz":"🍚",
+ "le fromage":"🧀","le poisson":"🐟","le train":"🚆","train":"🚆",
+ "le bus":"🚌","bus":"🚌","le métro":"🚇","métro":"🚇","le billet":"🎫",
+ "la maison":"🏠","maison":"🏠","la chambre":"🛏️","la cuisine":"🍳",
+ "le lit":"🛏️","la table":"🍽️","la chaise":"🪑","la porte":"🚪","la fenêtre":"🪟",
+ "le livre":"📖","la mer":"🌊","la plage":"🏖️","le jardin":"🌳",
+ "le vélo":"🚲","le taxi":"🚕","le soleil":"☀️","la lune":"🌙"
+};
+function visualIcon(fr){var k=memoryKey(fr),symbol=VISUALS[k];return symbol?'<div class="v6visual" role="img" aria-label="图片提示">'+symbol+'</div>':'';}
+var DIALOGUES=[
+ ["Bonjour !", "你好！", "Bonjour !", "你好！"],
+ ["Tu as une famille ?", "你有家人吗？", "Oui, j'ai une famille.", "是的，我有家人。"],
+ ["À demain !", "明天见！", "À demain !", "明天见！"],
+ ["Ça va ?", "你还好吗？", "Oui, ça va bien.", "嗯，我很好。"],
+ ["Tu as faim ?", "你饿了吗？", "Oui, j'ai faim.", "是的，我饿了。"],
+ ["Où est la gare ?", "火车站在哪里？", "La gare est là.", "车站在那里。"],
+ ["Tu es à la maison ?", "你在家吗？", "Oui, je suis à la maison.", "是的，我在家。"],
+ ["Tu vas bien ?", "你好吗？", "Oui, je vais bien.", "是的，我很好。"],
+ ["Tu me manques.", "我想你。", "Toi aussi !", "我也想你！"],
+ ["Tu es à Rouen ?", "你在鲁昂吗？", "Oui, je suis à Rouen.", "是的，我在鲁昂。"],
+ ["Bonne journée !", "祝你今天愉快！", "Merci, toi aussi !", "谢谢，你也是！"],
+ ["Tu apprends le français ?", "你在学法语吗？", "Oui, petit à petit !", "是的，一点一点学！"]
+];
+function dialogueBox(l){
+ var dial=DIALOGUES[l.w-1];
+ return '<div class="card v6dialog"><h3>💬 一段很短的书面对话（自由选学）</h3>'+ 
+ '<div class="v6bubble"><strong>A : '+esc(dial[0])+'</strong><small>'+esc(dial[1])+'</small></div>'+
+ '<div class="v6bubble answer"><strong>B : '+esc(dial[2])+'</strong><small>'+esc(dial[3])+'</small></div>'+
+ '<p class="muted">可以把 B 的句子写进今天的笔记里，也可以自己试着写。只看懂就很好！</p></div>';
+}
+var v6review=[],v6index=0;
+function startSpacedReview(){
+ v6review=shuffle(dueItems()).slice(0,8);v6index=0;drawSpacedReview();
+}
+function drawSpacedReview(){
+ var box=document.getElementById('spacedbox');if(!box)return;
+ if(v6index>=v6review.length){box.innerHTML='<div class="fbk ok">🌷 今天的复习结束了！你可以随时继续。</div>';return;}
+ var w=v6review[v6index];
+ box.innerHTML='<div class="v6review"><p class="muted">'+(v6index+1)+' / '+v6review.length+' · 先想一想，再看答案</p>'+visualIcon(w.fr)+
+ '<div class="wfr">'+esc(w.fr)+'</div><button class="btn ghost" onclick="revealSpaced()">查看中文意思</button><div id="spacedanswer"></div></div>';
+}
+function revealSpaced(){var w=v6review[v6index],el=document.getElementById('spacedanswer');if(!el)return;
+ el.innerHTML='<p class="whz">'+esc(w.cn)+'</p><p class="muted">你刚才记得这个词吗？自己选就好。</p>'+ 
+ '<button class="btn ghost" onclick="gradeSpaced(false)">再看看</button> <button class="btn" onclick="gradeSpaced(true)">记得 ✓</button>';
+}
+function gradeSpaced(ok){var w=v6review[v6index];answerMemory(w.fr,ok);v6index++;drawSpacedReview();}
+
+/* ---------- 启动 ---------- */
+
+/* ---------- V9 : production ecrite et rappel actif, sans modifier S.done ---------- */
+var V9_TASKS={
+ numbers:[
+  {visual:'1',cn:'写出数字 1 的法语',a:['un'],hint:'只有两个字母。'},
+  {visual:'2',cn:'写出数字 2 的法语',a:['deux'],hint:'第一个字母 d。'},
+  {visual:'3',cn:'写出数字 3 的法语',a:['trois'],hint:'第一个字母 t。'},
+  {visual:'4',cn:'写出数字 4 的法语',a:['quatre'],hint:'第一个字母 q。'},
+  {visual:'5',cn:'写出数字 5 的法语',a:['cinq'],hint:'第一个字母 c。'},
+  {visual:'6',cn:'写出数字 6 的法语',a:['six'],hint:'第一个字母 s。'},
+  {visual:'7',cn:'写出数字 7 的法语',a:['sept'],hint:'第一个字母 s。'},
+  {visual:'8',cn:'写出数字 8 的法语',a:['huit'],hint:'第一个字母 h。'},
+  {visual:'9',cn:'写出数字 9 的法语',a:['neuf'],hint:'第一个字母 n。'},
+  {visual:'10',cn:'写出数字 10 的法语',a:['dix'],hint:'第一个字母 d。'},
+  {visual:'5 €',cn:'用法语写出价格中的数字（五）',a:['cinq'],hint:'C’est cinq euros.'}
+ ],
+ clocks:[
+  {visual:'🕗 08:00',cn:'填空：Il est ___ heures.（八点）',a:['huit'],hint:'8 = huit'},
+  {visual:'🕒 03:00',cn:'填空：Il est ___ heures.（三点）',a:['trois'],hint:'3 = trois'},
+  {visual:'🕢 07:30',cn:'填空：Il est sept heures et ___.',a:['demie'],hint:'半点 = et demie'},
+  {visual:'🕡 06:30',cn:'填空：Il est six heures et ___.',a:['demie'],hint:'半点 = et demie'},
+  {visual:'🕘 09:00',cn:'填空：Il est ___ heures.（九点）',a:['neuf'],hint:'9 = neuf'},
+  {visual:'🕐 01:00',cn:'填空：Il est ___ heure.（一点）',a:['une'],hint:'一点特别：une heure（单数），不是 un heure。'}
+ ],
+ days:[
+  {day:0,visual:'星期一',cn:'写出星期一的法语',a:['lundi'],hint:'l...di'},
+  {day:1,visual:'星期二',cn:'写出星期二的法语',a:['mardi'],hint:'m...di'},
+  {day:2,visual:'星期三',cn:'写出星期三的法语',a:['mercredi'],hint:'mer...di'},
+  {day:3,visual:'星期四',cn:'写出星期四的法语',a:['jeudi'],hint:'j...di'},
+  {day:4,visual:'星期五',cn:'写出星期五的法语',a:['vendredi'],hint:'ven...di'},
+  {day:5,visual:'星期六',cn:'写出星期六的法语',a:['samedi'],hint:'sa...di'},
+  {day:6,visual:'星期日',cn:'写出星期日的法语',a:['dimanche'],hint:'di...che'}
+ ],
+ family:[
+  {visual:'👩 妈妈',cn:'填空：___ mère（我的妈妈）',a:['ma'],hint:'mère 是阴性：ma mère。'},
+  {visual:'👨 爸爸',cn:'填空：___ père（我的爸爸）',a:['mon'],hint:'père 是阳性：mon père。'},
+  {visual:'👩‍👧 家人',cn:'填空：Voici ___ famille.（这是我的家人）',a:['ma'],hint:'famille 是阴性单数，用 ma，不是 mon。'},
+  {visual:'👭 姐妹',cn:'填空：J’ai ___ sœur.（我有一个姐妹）',a:['une'],hint:'有一个姐妹用 une（不确定冠词），不是 la。'},
+  {visual:'👫 兄弟',cn:'填空：J’ai ___ frère.（我有一个兄弟）',a:['un'],hint:'frère 是阳性单数，用 un。'},
+  {visual:'👩‍👧 家人',cn:'纠正：Voici mon familles. → Voici ___ famille.',a:['ma'],hint:'famille 是阴性单数；ma famille。'},
+  {visual:'👭 姐妹',cn:'纠正：J’ai la sœur. → J’ai ___ sœur.',a:['une'],hint:'表示有一个姐妹用 une sœur。'}
+ ]
+};
+var V9_CAT='numbers', V9_INDEX=0, V9_WRONG=0;
+function v9State(){if(!isRecord(S.practice))S.practice={};return S.practice;}
+function v9Key(cat,i){return cat+':'+i;}
+function v9DueCount(){var p=v9State(),today=dayStamp();return Object.keys(p).filter(function(k){return p[k]&&p[k].due<=today;}).length;}
+function v9Select(cat){if(!V9_TASKS[cat])return;V9_CAT=cat;V9_WRONG=0;var today=dayStamp(),p=v9State();var due=V9_TASKS[cat].findIndex(function(t,i){return p[v9Key(cat,i)]&&p[v9Key(cat,i)].due<=today;});
+ var untried=V9_TASKS[cat].findIndex(function(t,i){return !p[v9Key(cat,i)];});V9_INDEX=due>=0?due:untried>=0?untried:0;renderMemoryLab();}
+function v9Advance(){V9_INDEX=(V9_INDEX+1)%V9_TASKS[V9_CAT].length;V9_WRONG=0;renderMemoryLab();}
+function v9Norm(v){return String(v||'').normalize('NFC').toLowerCase().replace(/[\s.,!?;:'’]+/g,' ').trim();}
+function v9Mark(ok){var p=v9State(),k=v9Key(V9_CAT,V9_INDEX),previous=p[k]||{stage:0,attempts:0,correct:0};previous.attempts++;
+ if(ok){previous.stage=Math.min(4,(previous.stage||0)+1);previous.correct++;previous.due=dayStamp()+[1,3,7,14][previous.stage-1];}else{previous.stage=0;previous.due=dayStamp()+1;}
+ p[k]=previous;save();}
+function v9Check(){var input=document.getElementById('v9answer'),out=document.getElementById('v9feedback');if(!input||!out)return;
+ var t=V9_TASKS[V9_CAT][V9_INDEX],answer=v9Norm(input.value);if(!answer){out.textContent='先写下你的答案。';return;}
+ var ok=t.a.some(function(x){return v9Norm(x)===answer;});if(ok){v9Mark(true);out.className='fbk ok v9result';out.innerHTML='✓ 答对了！<br><span class="muted">明天或过几天会再次出现，帮助你记住。</span>';document.getElementById('v9check').disabled=true;document.getElementById('v9next').hidden=false;}
+ else{V9_WRONG++;out.className='fbk bad v9result';if(V9_WRONG===1){out.textContent='还差一点。提示：'+t.hint+' 再试一次吧。';}else{v9Mark(false);out.textContent='参考答案：'+t.a[0]+'。'+t.hint+' 明天再来试试。';document.getElementById('v9check').disabled=true;document.getElementById('v9next').hidden=false;}}
+}
+function renderMemoryLab(){var names={numbers:'🔢 数字',clocks:'🕒 时间',days:'📅 星期',family:'✍️ 家庭与冠词'},tasks=V9_TASKS[V9_CAT],task=tasks[V9_INDEX],p=v9State(),reviewed=Object.keys(p).length;
+ var h='<h1>🧠 视觉记忆训练</h1><p>不需要死记硬背，也没有考试。看提示，先自己写出法语，再检查。答错可以再试一次。</p>'+
+ '<div class="card"><b>我的练习足迹</b><p class="muted">尝试过 '+reviewed+' / '+(V9_TASKS.numbers.length+V9_TASKS.clocks.length+V9_TASKS.days.length+V9_TASKS.family.length)+' 张小卡。今天可再回顾 '+v9DueCount()+' 张。完成过的课程不会改变。</p></div>';
+ h+='<div class="v9tabs" role="group" aria-label="选择练习主题">';Object.keys(names).forEach(function(k){h+='<button class="btn '+(k===V9_CAT?'active':'ghost')+'" onclick="v9Select(\''+k+'\')">'+names[k]+'</button>';});h+='</div>';
+ h+='<div class="v9question"><p class="muted">'+names[V9_CAT]+' · '+(V9_INDEX+1)+' / '+tasks.length+'</p>';
+ h+='<div class="v9prompt"><div class="v9symbol">'+esc(task.visual)+'</div>';
+ if(V9_CAT==='days'){h+='<div class="v9cal" aria-label="一周七天">';['一','二','三','四','五','六','日'].forEach(function(d,i){h+='<span class="'+(task.day===i?'active':'')+'">'+d+'</span>';});h+='</div>';}
+ h+='</div><label for="v9answer">'+esc(task.cn)+'</label><input class="txt" id="v9answer" inputmode="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="在这里写法语答案" onkeydown="if(event.key===\'Enter\'){event.preventDefault();v9Check();}">'+
+ '<div><button class="btn" id="v9check" onclick="v9Check()">检查答案</button> <button class="btn sec" id="v9next" onclick="v9Advance()" hidden>下一题 →</button> <button class="btn ghost" onclick="v9Advance()">跳过</button></div>'+
+ '<div id="v9feedback" class="v9result" role="status" aria-live="polite"></div></div>'+
+ '<div class="card"><h3>🌷 记忆小建议</h3><p>数字：看数字直接想法语，不必一次背完 1–10。</p><p>时间：先看钟点，再想“Il est ... heure(s).”。1 点要写 une heure。</p><p>星期：对着七天日历每天练两三个词；不用连续学习。</p><p>冠词：ma famille / mon père / une sœur，连着完整短句一起记。</p><p class="muted">答题只存在当前设备，与你之前完成的 10 节课程独立。不会自动发送给任何人。</p></div>';
+ app.innerHTML=h;
+}
+
+
+/* =============== V10 : rappel actif & expression personnelle ===============
+   Données séparées (S.recall, S.journal). Ne changent JAMAIS S.done.
+   Propositions pédagogiques : pas une note ni une évaluation linguistique automatique. */
+var V10_CARDS=[
+ {id:'intro-1',cat:'句子',cn:'我叫 Zhou An。',answer:'Je m’appelle Zhou An.',a:["Je m'appelle Zhou An"],hint:'je + m’appelle + 名字',why:'m’ 指向“我”，appelle 是第一人称变位。'},
+ {id:'intro-2',cat:'句子',cn:'你叫什么名字？',answer:'Comment tu t’appelles ?',a:["Comment tu t'appelles"],hint:'Comment tu t’... ?',why:'tu 搭配 t’appelles（词尾 -s）。'},
+ {id:'intro-3',cat:'句子',cn:'她是中国人。',answer:'Elle est chinoise.',a:['Elle est chinoise'],hint:'elle est + 女性形式',why:'chinoise 是女性形式。'},
+ {id:'fam-1',cat:'冠词',cn:'我有一个姐妹。',answer:'J’ai une sœur.',a:["J'ai une sœur","J’ai une soeur","J'ai une soeur"],hint:'J’ai ___ sœur.',why:'un / une 表示“一个”，sœur 是阴性。'},
+ {id:'fam-2',cat:'冠词',cn:'这是我的家人。',answer:'Voici ma famille.',a:['Voici ma famille'],hint:'Voici ___ famille.',why:'famille 是阴性单数，所以用 ma。'},
+ {id:'fam-3',cat:'冠词',cn:'这是我的爸爸。',answer:'Voici mon père.',a:['Voici mon père'],hint:'Voici ___ père.',why:'père 是阳性名词，所以用 mon。'},
+ {id:'fam-4',cat:'冠词',cn:'我有一个兄弟。',answer:'J’ai un frère.',a:["J'ai un frère"],hint:'J’ai ___ frère.',why:'frère 是阳性名词，所以用 un。'},
+ {id:'intro-4',cat:'句子',cn:'她叫 Marie。',answer:'Elle s’appelle Marie.',a:["Elle s'appelle Marie"],hint:'Elle s’... Marie.',why:'elle 搭配 s’appelle。'},
+ {id:'numbers-1',cat:'数字',cn:'写出数字 7（法语）。',answer:'sept',a:['sept'],hint:'s...t',why:'7 = sept。'},
+ {id:'numbers-2',cat:'数字',cn:'写出数字 8（法语）。',answer:'huit',a:['huit'],hint:'h...t',why:'8 = huit。'},
+ {id:'numbers-3',cat:'数字',cn:'写出数字 10（法语）。',answer:'dix',a:['dix'],hint:'d...x',why:'10 = dix。'},
+ {id:'time-1',cat:'时间',cn:'🕢 07:30：Il est sept heures et ____.',answer:'demie',a:['demie'],hint:'d...e',why:'et demie 表示半点。'},
+ {id:'time-2',cat:'时间',cn:'🕐 01:00：Il est ____ heure.',answer:'une',a:['une'],hint:'u...e',why:'une heure 是阴性单数。'},
+ {id:'days-1',cat:'星期',cn:'星期一的法语怎么写？',answer:'lundi',a:['lundi'],hint:'l...i',why:'lundi = 星期一。'},
+ {id:'days-2',cat:'星期',cn:'星期三的法语怎么写？',answer:'mercredi',a:['mercredi'],hint:'m...i',why:'mercredi = 星期三。'}
+];
+var V10_SESSION=[],V10_POS=0,V10_MODE='quick',V10_WRONG=0,V10_REVEALED=false;
+function v10State(){if(!isRecord(S.recall))S.recall={};return S.recall;}
+function v10Norm(value){return String(value||'').normalize('NFC').toLowerCase().replace(/œ/g,'oe').replace(/[’‘]/g,"'").replace(/[.!?,;:]+/g,'').replace(/\s+/g,' ').trim();}
+function v10Record(id,success){var p=v10State(),old=p[id]||{stage:0,attempts:0,correct:0};old.attempts++;old.last=dayStamp();
+ if(success){old.correct++;old.stage=Math.min(4,(old.stage||0)+1);old.due=dayStamp()+[1,3,7,14][old.stage-1];}
+ else{old.stage=0;old.due=dayStamp()+1;}
+ p[id]=old;save();}
+function v10Due(){var t=dayStamp(),state=v10State();return V10_CARDS.filter(function(q){return state[q.id]&&state[q.id].due<=t;}).length;}
+function v10Start(mode){
+ V10_MODE=mode==='deep'?'deep':'quick';var count=V10_MODE==='deep'?10:5,today=dayStamp(),state=v10State();
+ var due=V10_CARDS.filter(function(x){return state[x.id]&&state[x.id].due<=today;});
+ var fresh=V10_CARDS.filter(function(x){return !state[x.id];});
+ var later=V10_CARDS.filter(function(x){return state[x.id]&&state[x.id].due>today;});
+ // Trier pour prioriser les difficultés sans rendre les questions toujours identiques.
+ due.sort(function(a,b){return (state[a.id].due||0)-(state[b.id].due||0);});
+ V10_SESSION=due.concat(shuffle(fresh)).concat(shuffle(later)).slice(0,count);
+ V10_POS=0;V10_WRONG=0;V10_REVEALED=false;v10Question();
+}
+function v10Question(){
+ if(V10_POS>=V10_SESSION.length){
+  app.innerHTML='<h1>🌷 完成啦！</h1><div class="card"><p>今天的记忆挑战结束了。遗忘很正常，下次会自动重新出现需要复习的内容。</p><p>已完成的课程不变，也不会扣分。</p><button class="btn" onclick="go(\'recall\')">返回记忆挑战</button></div>';return;
+ }
+ var q=V10_SESSION[V10_POS];V10_WRONG=0;V10_REVEALED=false;
+ app.innerHTML='<h1>✍️ 无提示记忆挑战</h1><p class="muted">第 '+(V10_POS+1)+' / '+V10_SESSION.length+' 题 · '+esc(q.cat)+'</p>'+
+ '<div class="card"><h3>'+esc(q.cn)+'</h3><label for="v10answer">自己写出法语（先不看答案）</label><input id="v10answer" class="txt" autocomplete="off" autocapitalize="none" spellcheck="false" onkeydown="if(event.key===\'Enter\'){event.preventDefault();v10Check();}" placeholder="请写法语答案">'+
+ '<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px"><button class="btn" id="v10check" onclick="v10Check()">检查</button><button class="btn ghost" onclick="v10Reveal()">查看参考答案</button><button class="btn ghost" onclick="v10Skip()">跳过</button></div><div id="v10feedback" role="status" aria-live="polite"></div><div id="v10controls" hidden><button class="btn sec" onclick="v10Next()">下一题 →</button></div></div>'+
+ '<p class="muted">没有分数；写错可以重新想。答案可以有不同的正确表达，自动检查只识别这里列出的形式。</p>';
+}
+function v10Finish(ok,msg){var q=V10_SESSION[V10_POS];v10Record(q.id,ok);document.getElementById('v10check').disabled=true;
+ document.getElementById('v10controls').hidden=false;var f=document.getElementById('v10feedback');f.className='fbk '+(ok?'ok':'bad');f.textContent=msg+' 参考答案：'+q.answer+' · '+q.why;}
+function v10Check(){var input=document.getElementById('v10answer');if(!input)return;var text=input.value.trim();var q=V10_SESSION[V10_POS],f=document.getElementById('v10feedback');
+ if(!text){f.className='fbk bad';f.textContent='先试着写一点。';return;}
+ var ok=q.a.some(function(a){return v10Norm(a)===v10Norm(text);});
+ if(ok){v10Finish(true,'✓ 答对了！');return;}
+ V10_WRONG++;if(V10_WRONG===1){f.className='fbk bad';f.textContent='再试一次。提示：'+q.hint;}
+ else{v10Finish(false,'没关系，下次再练习。');}
+}
+function v10Reveal(){if(V10_REVEALED)return;V10_REVEALED=true;v10Finish(false,'看过答案也能学会。');}
+function v10Skip(){if(V10_POS<V10_SESSION.length){v10Record(V10_SESSION[V10_POS].id,false);v10Next();}}
+function v10Next(){V10_POS++;v10Question();}
+function v10JournalSave(){var el=document.getElementById('v10journal');if(!el)return;var val=el.value.trim().slice(0,1200);
+ if(!isRecord(S.journal))S.journal={};var id='journal-'+dayStamp();if(val)S.journal[id]=val;save();
+ var out=document.getElementById('v10journalsaved');if(out)out.textContent=val?'已保存在这台设备。你可以自己决定是否分享。':'请先写一句话。';}
+function v10JournalCopy(){var el=document.getElementById('v10journal');if(!el||!el.value.trim())return;
+ var t=el.value.trim();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){alert('已复制，可以自行粘贴到 WhatsApp。');}).catch(function(){alert('复制失败，请手动选择文字复制。');});}else{el.focus();el.select();try{document.execCommand('copy');alert('已复制。');}catch(e){alert('请手动复制。');}}}
+function renderRecall(){var state=v10State(),n=Object.keys(state).filter(function(k){return state[k]&&state[k].attempts>0;}).length;
+ var today='journal-'+dayStamp(),old=isRecord(S.journal)?(S.journal[today]||''):'';
+ var h='<h1>🧠 记忆与表达 · V10</h1><p>课程是学习新内容；这里是检验几天以后还记得什么。不看提示先写，答错也没关系。</p>'+
+ '<div class="card"><h3>🧠 检验记忆</h3><p>已练过 '+n+' / '+V10_CARDS.length+' 个重点。现在可以复习的有 '+v10Due()+' 个。</p><p>这次先做 5 题，或者挑战 10 题。题目优先选择需要复习的内容。</p>'+
+ '<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" onclick="v10Start(\'quick\')">🌷 5 题轻松回忆</button><button class="btn sec" onclick="v10Start(\'deep\')">✍️ 10 题深入挑战</button></div><p class="muted">今天没做也没关系。答错会在以后出现，不会影响已完成的课程。</p></div>'+
+ '<div class="card"><h3>💌 真实生活里的一句话</h3><p>写一句你今天真正想说的法语，例如今天的心情、和家人的生活，或者给心爱的人一句话。</p><p class="muted">不提供唯一标准答案，你可以自由发挥。这里不会自动评分。</p>'+
+ '<label for="v10journal">我今天想写……</label><textarea id="v10journal" class="txt" maxlength="1200" style="min-height:125px;width:100%" placeholder="例如：Aujourd’hui, je suis contente.">'+esc(old)+'</textarea>'+
+ '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn" onclick="v10JournalSave()">保存我的句子</button><button class="btn ghost" onclick="v10JournalCopy()">复制句子（可发 WhatsApp）</button></div><p id="v10journalsaved" class="muted" role="status"></p><p class="muted">句子只存放在这个浏览器中，分享由你自己决定。</p></div>'+
+ '<div class="card"><h3>🔒 保留原来的进度</h3><p>这个模块不会更改已经完成的 60 课进度。新练习记录也会包含在“学习备份”中。</p><button class="btn ghost" onclick="go(\'progress\')">查看或备份我的学习记录</button></div>';
+ app.innerHTML=h;
+}
+
+
+/* ========================================================================
+ * 第二阶段 · 独立进度区 — 第13至24周共60节课
+ * IMPORTANT: Do not alter KEY=zhouanfr_v1, ALL (60 historical lessons), or rid().
+ * ======================================================================== */
+var P2_KEY='zhouanfr_part2_v1';
+var P2_WEEKS=[
+ [13,'基础强化','冠词、物主词、疑问句、动词'],
+ [14,'写我的一天','习惯、频率、连接词、简短日记'],
+ [15,'说说昨天','复合过去时（avoir / être）'],
+ [16,'谈谈明天','最近将来时、计划、邀约'],
+ [17,'描述心情','表达感受并解释原因'],
+ [18,'真实书面交流','理解消息并写出有礼貌的回复'],
+ [19,'在法国出行','车站、路线、延误、换乘'],
+ [20,'购物与比较','价格、尺寸、数量、比较'],
+ [21,'健康和日常手续','用简单句说明需求、看懂通知'],
+ [22,'法国生活与文化','读菜单、公告、活动信息'],
+ [23,'短文写作','用5–8句写一段经历'],
+ [24,'综合实践','短对话、生活场景与作品集']
+];
+/* Each item: [week,day,title,goal,word cards [fr,cn], grammar HTML, examples [fr,cn], fill prompts [q,answer,hint], writing cue] */
+var P2_DATA=[
+[13,1,'un / une / le / la：什么时候用？','学会区分「一个」和「这个、那类」',
+ [['un frère','一个兄弟'],['une sœur','一个姐妹'],['le frère','那位兄弟／兄弟这一类'],['la sœur','那位姐妹／姐妹这一类']],
+ '法语名词有语法上的阴性和阳性。<b>un / une</b> 常表示一个（不特定）；<b>le / la</b> 常指特定的人或事物，也可指某一类。<b>J’ai une sœur.</b>（我有一个姐妹）不能写成 J’ai la sœur，除非上下文特指某位姐妹。',
+ [['J’ai une sœur.','我有一个姐妹。'],['La sœur de Marie est ici.','玛丽的姐妹在这里。']],
+ [['J’ai ___ sœur.（我有一个姐妹）','une','sœur 是阴性；这里不是特指。'],['C’est ___ frère de Marie.（这是玛丽的兄弟）','le','这里指特定的兄弟。'],['J’ai ___ frère.（我有一个兄弟）','un','frère 是阳性。']],
+ '写两句：你有一位家人吗？用 un/une 和 le/la 各写一句。'],
+[13,2,'mon / ma / mes：我的','选择正确的物主词，理解阴阳性',
+ [['mon père','我的父亲'],['ma mère','我的母亲'],['mes parents','我的父母'],['ma famille','我的家人']],
+ '<b>mon</b> 用在通常为阳性的单数名词前，<b>ma</b> 用在通常为阴性的单数名词前，<b>mes</b> 用在复数前。例外：阴性名词以元音或哑音h开头，常用 <b>mon</b>：mon amie。',
+ [['Voici ma famille.','这是我的家人。'],['Mes parents habitent ici.','我的父母住在这里。']],
+ [['Voici ___ famille.','ma','famille 是阴性单数。'],['Ce sont ___ parents.','mes','parents 是复数。'],['Voici ___ amie.','mon','amie 虽是阴性，元音开头用 mon。']],
+ '用 ma famille、mon père 或 mes parents 写两句真实的话。'],
+[13,3,'为什么叫 s’appeler？','更清楚地区分动词原形与变位',
+ [['appeler','叫／打电话给'],['s’appeler','名叫（动词原形）'],['je m’appelle','我叫'],['tu t’appelles','你叫']],
+ '不带 s’ 的 <b>appeler</b> 表示叫某人、打电话给某人；<b>s’appeler</b> 表示「名叫」。变位时反身代词会变化：<b>je m’appelle</b>、<b>tu t’appelles</b>、<b>elle s’appelle</b>。注意 tu 后的 appelles 有 -s。',
+ [['Comment tu t’appelles ?','你叫什么名字？'],['Elle s’appelle Marie.','她叫玛丽。'],['J’appelle mon amie.','我给朋友打电话。']],
+ [['Tu t’____ comment ?','appelles','tu 对应 appelles。'],['Elle s’____ Marie.','appelle','elle 对应 appelle。'],['Je m’____ Zhou An.','appelle','je 对应 appelle。']],
+ '写出三句：你叫什么、她叫什么、你给谁打电话。'],
+[13,4,'疑问句与否定句','学会提问，以及用 ne…pas 回答',
+ [['est-ce que','是否／吗（提问）'],['pourquoi','为什么'],['parce que','因为'],['ne…pas','不']],
+ '法语提问可以用 <b>Est-ce que tu… ?</b>，也可以口语中直接写 <b>Tu… ?</b>。否定句用 <b>ne…pas</b> 包住动词：Je ne travaille pas。解释原因可用 <b>parce que</b>。',
+ [['Est-ce que tu travailles aujourd’hui ?','你今天工作吗？'],['Non, je ne travaille pas.','不，我今天不工作。']],
+ [['Je ___ travaille pas aujourd’hui.','ne','否定句常用 ne + 动词 + pas。'],['___ tu habites à Shanghai ?','Est-ce que','提问常见开头。'],['Je reste ici ___ je suis fatigué.','parce que','表示因为。']],
+ '写一个问题，并用完整的否定句回答。'],
+[14,1,'早晨到晚上：我的日常','用时间词描述一天',
+ [['d’abord','首先'],['ensuite','然后'],['puis','接着'],['enfin','最后']],
+ '用 <b>d’abord → ensuite → puis → enfin</b> 排列动作，句子自然连贯。时间短语可写在句首：Le matin, je…',
+ [['D’abord, je prends mon petit-déjeuner.','首先，我吃早餐。'],['Ensuite, je vais au travail.','然后，我去上班。']],
+ [['___, je me réveille.（首先）','D’abord','表示第一步。'],['___, je prends le métro.（然后）','Ensuite','表示下一步。'],['___, je rentre chez moi.（最后）','Enfin','表示最后一步。']],
+ '用 d’abord、ensuite 和 enfin 描述自己的早晨。'],
+[14,2,'总是、经常、偶尔','用频率副词描述真实习惯',
+ [['toujours','总是'],['souvent','经常'],['parfois','有时'],['rarement','很少']],
+ '频率副词通常放在变位动词后：<b>Je travaille souvent.</b> 用频率表达习惯，不需要每天都完全一样。',
+ [['Je lis souvent le soir.','我经常晚上阅读。'],['Parfois, je marche après le dîner.','有时候我晚饭后散步。']],
+ [['Je travaille ___ le matin.（经常）','souvent','表示经常。'],['___, je bois du café.（有时）','Parfois','表示有时。'],['Je suis ___ en retard.（很少）','rarement','表示很少。']],
+ '用 souvent 和 parfois 各写一句关于自己的真实习惯。'],
+[14,3,'用 et / mais / parce que 连起来','把短句写得更自然',
+ [['et','和／并且'],['mais','但是'],['parce que','因为'],['alors','所以／于是']],
+ '连接词让句子更清晰：<b>J’aime lire, mais je suis fatiguée.</b>「我喜欢阅读，但是我累了。」<b>parce que</b> 说明原因。',
+ [['Je suis contente parce que j’ai du temps.','我很高兴，因为我有时间。'],['Je veux sortir, mais il pleut.','我想出去，但是下雨了。']],
+ [['Je suis fatiguée, ___ je vais dormir.（所以）','alors','表示结果。'],['J’aime le café, ___ je n’aime pas le thé.（但是）','mais','表示转折。'],['Je reste ici ___ il pleut.（因为）','parce que','表示原因。']],
+ '把两句短句用 mais 或 parce que 连成一句。'],
+[14,4,'给朋友发一段消息','用3–4个句子表达一整天',
+ [['un message','一条消息'],['aujourd’hui','今天'],['ce soir','今天晚上'],['demain','明天']],
+ '写短消息可以按「问候 → 今天做什么 → 感受 → 小问题」组织。不需要复杂的时态，先把现在时写自然。',
+ [['Bonjour ! Aujourd’hui, je travaille.','你好！今天我工作。'],['Ce soir, je suis libre. Et toi ?','今晚我有空。你呢？']],
+ [['___, je travaille au bureau.（今天）','Aujourd’hui','表示今天。'],['Je suis libre ce ___.','soir','ce soir 表示今晚。'],['Et ___ ?（你呢）','toi','固定短句。']],
+ '写一条3–4句的法语消息，描述你今天的安排。'],
+[15,1,'昨天做了什么？avoir + participe passé','认识复合过去时的基本结构',
+ [['hier','昨天'],['j’ai travaillé','我工作了'],['j’ai mangé','我吃过了'],['j’ai regardé','我看过了']],
+ '复合过去时常见结构：<b>j’ai + 过去分词</b>。很多 -er 动词过去分词变为 -é：travailler → travaillé，manger → mangé。别把「j’ai」漏掉。',
+ [['Hier, j’ai travaillé.','昨天我工作了。'],['J’ai mangé avec ma famille.','我和家人一起吃过饭。']],
+ [['Hier, j’___ travaillé.','ai','复合过去时用 avoir 助动词。'],['J’ai ___ au restaurant.（吃）','mangé','manger → mangé。'],['J’ai ___ un film.（看）','regardé','regarder → regardé。']],
+ '用昨天的真实活动写两句 j’ai + 动词过去分词。'],
+[15,2,'être + 过去分词：我去了','认识常见移动动词的过去时',
+ [['je suis allée','我去了（女性）'],['je suis arrivée','我到了（女性）'],['je suis rentrée','我回来了（女性）'],['hier soir','昨天晚上']],
+ '一些动词用 <b>être</b> 构成复合过去时，例如 aller、arriver、rentrer。女性主语常在过去分词后加 -e：<b>Je suis allée</b>。男性为 Je suis allé。',
+ [['Je suis allée au marché.','我去市场了。'],['Je suis rentrée chez moi.','我回家了。']],
+ [['Je suis ___ à Shanghai.（到达，男性）','arrivé','男性形式 arrivé。'],['Je ___ allé au marché.','suis','aller 的过去时用 être。'],['Je suis ___ chez moi.（回家，男性）','rentré','rentrer 的男性形式。']],
+ '写两句：昨天去了哪里、什么时候回家。'],
+[15,3,'今天和昨天的区别','正确区分现在时和过去时',
+ [['aujourd’hui','今天'],['hier','昨天'],['je travaille','我工作'],['j’ai travaillé','我工作了']],
+ '看时间线索：<b>Aujourd’hui, je travaille.</b>（今天工作）；<b>Hier, j’ai travaillé.</b>（昨天工作了）。同一个动词随时间改变形式。',
+ [['Aujourd’hui, je mange du riz.','今天我吃米饭。'],['Hier, j’ai mangé du riz.','昨天我吃了米饭。']],
+ [['Hier, j’___ travaillé.','ai','过去用 j’ai + travaillé。'],['Aujourd’hui, je ___.（工作）','travaille','今天现在时。'],['Hier, j’ai ___ du riz.','mangé','表示过去。']],
+ '同一件事分别写「今天」和「昨天」。'],
+[15,4,'写一段昨天的经历','用时间顺序写短故事',
+ [['hier matin','昨天早上'],['après','之后'],['le soir','晚上'],['finalement','最后']],
+ '小故事只要3–4句：何时 → 做什么 → 然后 → 感觉。注意不要把所有动词写成现在时。',
+ [['Hier matin, j’ai travaillé.','昨天早上我工作了。'],['Après, je suis rentrée chez moi.','之后我回家了。']],
+ [['Hier, j’___ mangé au restaurant.','ai','需要助动词 ai。'],['Après, je suis ___ chez moi.（女性）','rentrée','注意 être 和阴性 -e。'],['___, j’ai regardé un film.（最后）','Finalement','表示最后。']],
+ '用3–4句讲述昨天发生的事情。'],
+[16,1,'明天我要做什么？futur proche','了解 aller + 动词原形',
+ [['demain','明天'],['je vais travailler','我将工作'],['je vais partir','我将出发'],['je vais lire','我将阅读']],
+ '最近将来时：<b>aller（变位）+ 动词原形</b>。Je vais partir.「我打算出发。」动词 partir 不变成过去分词。',
+ [['Demain, je vais travailler.','明天我要工作。'],['Je vais lire ce soir.','今晚我打算看书。']],
+ [['Demain, je ___ travailler.','vais','je vais + 动词原形。'],['Je vais ___.（出发）','partir','这里用动词原形。'],['Tu ___ venir demain ?','vas','tu vas + 动词原形。']],
+ '写两句关于明天的计划，使用 je vais。'],
+[16,2,'约定时间与地点','学会提出简单的见面安排',
+ [['se retrouver','碰面／汇合'],['à quelle heure','几点'],['où','在哪里'],['vers','大约（时间）']],
+ '提议可以写 <b>On se retrouve où ?</b>（我们在哪里见面？）或 <b>On se retrouve vers 15 heures ?</b>（我们大约15点见？）。',
+ [['On se retrouve demain ?','我们明天见面吗？'],['Vers quelle heure ?','大约几点？']],
+ [['On se retrouve ___ 15 heures ?','vers','表示大约。'],['On se retrouve ___ ?（哪里）','où','问地点。'],['À ___ heure ?','quelle','固定表达。']],
+ '写一条邀请朋友在某个时间地点见面的消息。'],
+[16,3,'愿望与计划','区分想要和已经安排',
+ [['je voudrais','我想要（礼貌）'],['j’aimerais','我希望'],['je vais','我要／将要'],['peut-être','也许']],
+ '<b>J’aimerais</b> 表达愿望；<b>je vais</b> 更像已有计划。<b>peut-être</b> 表示不确定。写消息时注意这三个意思不同。',
+ [['J’aimerais visiter Rouen.','我想参观鲁昂。'],['Je vais visiter Rouen demain.','我明天会参观鲁昂。']],
+ [['J’___ visiter Rouen.（我希望）','aimerais','愿望用 aimerais。'],['Demain, je ___ visiter Rouen.','vais','已安排计划可用 vais。'],['___, je viendrai.（也许）','Peut-être','表示也许。']],
+ '写一件你希望做的事和一件已经安排好的事。'],
+[16,4,'发出邀请并回答','理解邀请、同意和拒绝',
+ [['tu es libre ?','你有空吗？'],['avec plaisir','很乐意'],['désolée','抱歉（女性）'],['une autre fois','下次']],
+ '接受邀请：<b>Oui, avec plaisir !</b>；礼貌拒绝：<b>Désolée, je ne peux pas. Une autre fois ?</b> 对方和你都可以按真实情况选择。',
+ [['Tu es libre samedi ?','你星期六有空吗？'],['Oui, avec plaisir !','好的，很乐意！'],['Désolée, je ne peux pas.','抱歉，我不行。']],
+ [['Oui, avec ___ !','plaisir','很乐意。'],['___, je ne peux pas.（抱歉，女性）','Désolée','表示抱歉。'],['Une autre ___ ?','fois','固定说法：下次？']],
+ '写一条邀请，以及一条接受或婉拒的回复。'],
+[17, 1, "我今天的心情（男性说法）", "用完整句表达快乐、担心与疲惫。", [["content", "高兴的（男性）"], ["inquiet", "担心的（男性）"], ["fatigué", "疲惫的（男性）"], ["soulagé", "松了一口气的（男性）"], ["un peu", "有一点"]], "描述自己的心情时常用 <b>je suis + 形容词</b>。男性说 <b>content / inquiet / fatigué / soulagé</b>；女性形式是 contente / inquiète / fatiguée / soulagée。<b>un peu</b> 表示程度不强，如 « Je suis un peu inquiet. »。不用急着记住全部词尾，先结合情境理解。", [["Je suis content aujourd’hui.", "我今天很开心。"], ["Je suis un peu inquiet.", "我有点担心。"], ["Maintenant, je suis soulagé.", "现在我松了一口气。"]], [["Je suis ___ aujourd’hui.（我今天很开心，男性）", "content", "男性形式为 content。"], ["Je suis un ___ inquiet.", "peu", "un peu = 有一点。"], ["Maintenant, je suis ___.（松了一口气，男性）", "soulagé", "男性形式为 soulagé。"]], "写三句话，分别说明你现在的心情、今天早上的心情，以及为什么不同。"],
+[17, 2, "为什么？因为……", "用 parce que 解释情绪的原因。", [["parce que", "因为"], ["pourquoi", "为什么"], ["heureuse", "幸福、快乐的（女性）"], ["stressée", "有压力的（女性）"], ["une bonne nouvelle", "好消息"]], "<b>Pourquoi ?</b> 用来问原因；<b>parce que</b> 用来回答。例：« Pourquoi es-tu heureuse ? — Parce que j’ai une bonne nouvelle. »。在元音前，<b>que</b> 会写成 <b>qu’</b>：parce qu’il pleut。区分“原因”和“时间”。", [["Pourquoi es-tu heureuse ?", "你为什么高兴？"], ["Je suis heureuse parce que j’ai une bonne nouvelle.", "我很高兴，因为我有个好消息。"]], [["___ es-tu heureuse ?", "Pourquoi", "问原因。"], ["Je suis heureuse ___ que tu es là.", "parce", "parce que 表示因为。"], ["Je suis stressée parce ___ j’ai beaucoup de travail.", "que", "parce que 后面接原因。"]], "用 parce que 写两句，说明你今天为什么开心或疲惫。"],
+[17, 3, "表达喜欢和偏好", "比较 j’aime、je préfère 与 je déteste 的语气。", [["je préfère", "我更喜欢"], ["j’aime bien", "我挺喜欢"], ["je déteste", "我讨厌"], ["plutôt", "比较、宁愿"], ["un choix", "选择"]], "<b>J’aime bien</b> 表示喜欢；<b>je préfère A à B</b> 表示比起 B 更喜欢 A；<b>je déteste</b> 表示很不喜欢，语气更强。不要把 « Je préfère » 理解成 « 我必须 »。", [["J’aime bien le café.", "我挺喜欢咖啡。"], ["Je préfère le train à la voiture.", "比起汽车，我更喜欢火车。"], ["Je déteste attendre longtemps.", "我讨厌等太久。"]], [["Je ___ le train à la voiture.", "préfère", "表达更喜欢。"], ["J’___ bien le café.", "aime", "j’aime bien。"], ["Je ___ attendre longtemps.（我讨厌）", "déteste", "语气较强。"]], "写三个偏好：食物、交通工具、休息方式，至少用一次 je préfère。"],
+[17, 4, "安慰与鼓励", "读懂并写出有温度的短消息。", [["bon courage", "加油、祝顺利"], ["prends soin de toi", "照顾好自己"], ["ça va aller", "会好起来的"], ["je pense à toi", "我想着你"], ["repose-toi", "休息一下"]], "这些短句可以直接用于 WhatsApp。<b>Prends soin de toi</b> 和 <b>Repose-toi</b> 是对一个熟悉的人提出的建议或关心；<b>Bon courage</b> 常用来鼓励正在面对困难的人。注意：实际交流应根据对方的情况选择，不必一次用很多句。", [["Tu es fatiguée ? Repose-toi.", "你累了吗？休息一下。"], ["Bon courage pour demain !", "祝你明天顺利！"], ["Je pense à toi.", "我想着你。"]], [["Bon ___ pour demain !", "courage", "表示鼓励。"], ["Prends soin de ___.", "toi", "对熟人表达关心。"], ["Je pense ___ toi.", "à", "penser à quelqu’un。"]], "给一位今天很累的朋友写一条两句以上的温柔消息。"],
+[18, 1, "读懂一条完整消息", "找出消息中的问题、时间和请求。", [["tu peux", "你能……吗"], ["ce soir", "今晚"], ["répondre", "回复"], ["disponible", "有空的"], ["rapidement", "很快地"]], "先在一条消息中寻找三个线索：<b>谁</b>、<b>何时</b>、<b>希望你做什么</b>。« Tu peux me répondre ce soir ? » 是请求，不只是询问能力。回复时可以确认时间或提出其他时间。", [["Tu peux me répondre ce soir ?", "你今晚能回复我吗？"], ["Je suis disponible après huit heures.", "我八点以后有空。"]], [["Tu peux me ___ ce soir ?", "répondre", "回复 = répondre。"], ["Je suis ___ après huit heures.", "disponible", "表示有空。"], ["Tu peux répondre ___ ?（很快）", "rapidement", "副词表示很快地。"]], "给「今晚八点后你有空吗？」写一个完整回复：同意或礼貌改时间。"],
+[18, 2, "礼貌地提出请求", "区分 tu peux、pourrais-tu 与 s’il te plaît。", [["tu pourrais", "你能否……（更委婉）"], ["s’il te plaît", "请（对熟人）"], ["envoyer", "发送"], ["un document", "一份文件"], ["quand tu peux", "你方便时"]], "<b>Tu peux… ?</b> 是日常说法；<b>Tu pourrais… ?</b> 更委婉。对熟人可以加 <b>s’il te plaît</b>。« Quand tu peux » 表示不用立刻回应。礼貌不意味着句子必须很长。", [["Tu pourrais m’envoyer le document ?", "你能把文件发给我吗？"], ["Réponds quand tu peux, s’il te plaît.", "你方便的时候回复我就好。"]], [["Tu ___ m’envoyer le document ?（更委婉）", "pourrais", "tu pourrais。"], ["Réponds quand tu ___.", "peux", "你方便时。"], ["S’il te ___ !", "plaît", "固定搭配。"]], "写一条礼貌消息，请别人发一张照片或一份资料。"],
+[18, 3, "说明误会、重新确认", "用 je n’ai pas compris 和 tu veux dire… ?。", [["je n’ai pas compris", "我没理解"], ["tu veux dire… ?", "你是说……吗"], ["exactement", "确切地"], ["répéter", "重复"], ["une précision", "一个补充说明"]], "交流出现误会时，可以先说 <b>Je n’ai pas compris.</b> 再问 <b>Tu veux dire… ?</b>。在书面消息中，<b>Tu peux préciser ?</b> 比单独发很多问号更清楚。<b>compris</b> 是 comprendre 的过去分词。", [["Je n’ai pas compris ton message.", "我没理解你的消息。"], ["Tu veux dire vendredi ou samedi ?", "你是说星期五还是星期六？"]], [["Je n’ai pas ___ ton message.", "compris", "过去分词 compris。"], ["Tu veux ___ vendredi ?", "dire", "你是说。"], ["Tu peux ___ ?（补充说明）", "préciser", "明确说明。"]], "写两句：礼貌表示没理解，再问对方是否指星期五。"],
+[18, 4, "回复不同意见", "温和表达同意、不同意或折中。", [["je suis d’accord", "我同意"], ["je ne suis pas d’accord", "我不同意"], ["mais", "但是"], ["peut-être", "或许"], ["on peut essayer", "我们可以试试看"]], "<b>Je suis d’accord</b> 表示同意。不同意时可以先认可对方的观点，再加 <b>mais</b>，例如 « Je comprends, mais je préfère samedi. »。<b>On peut essayer</b> 是开放的折中方式。", [["Je suis d’accord avec toi.", "我同意你的看法。"], ["Je comprends, mais je préfère samedi.", "我理解，但我更喜欢星期六。"], ["On peut essayer une autre solution.", "我们可以试试另一种办法。"]], [["Je suis d’___ avec toi.", "accord", "固定搭配。"], ["Je comprends, ___ je préfère samedi.", "mais", "表示转折。"], ["On peut ___.", "essayer", "试试看。"]], "写一段两到三句的回复：对方建议周五见面，你更喜欢周六。"],
+[19, 1, "看懂车票和出发时间", "阅读车站、站台和出发信息。", [["le départ", "出发"], ["l’arrivée", "抵达"], ["le quai", "站台"], ["la voie", "轨道编号／站台股道"], ["à l’heure", "准时"]], "读车票时优先找 <b>départ（出发）</b>、<b>arrivée（到达）</b> 和时间。在法国车站，<b>voie</b> 常指列车所用股道，<b>quai</b> 指乘客候车的站台。注意具体车次的信息以当日车站公告为准。", [["Le train part à 14 h 20.", "火车14点20分出发。"], ["Le départ est voie 4.", "列车从4号股道出发。"]], [["Le train ___ à 14 h 20.", "part", "partir 的第三人称。"], ["Le ___ est voie 4.", "départ", "出发。"], ["Le train est ___ l’heure.", "à", "à l’heure = 准时。"]], "编写一条短消息，告诉朋友列车几点出发、从几号股道离开。"],
+[19, 2, "换乘与方向", "描述从一条线路换乘另一条线路。", [["la correspondance", "换乘"], ["changer de ligne", "换线"], ["descendre", "下车"], ["monter", "上车"], ["direction", "方向／终点方向"]], "<b>Je descends à…</b> 表示我在某站下车；<b>je change de ligne</b> 表示换线；<b>je prends la ligne…</b> 表示乘某条线。阅读地图时要同时看方向和站名，而不只看线路颜色。", [["Je descends à la prochaine station.", "我在下一站下车。"], ["Je change de ligne à République.", "我在共和国站换线。"]], [["Je ___ de ligne à République.", "change", "changer de ligne。"], ["Je ___ à la prochaine station.", "descends", "descendre = 下车。"], ["Je prends la ligne 2 en ___ du centre.", "direction", "表示方向。"]], "写一段两句的路线说明，包含在哪里下车和在哪里换线。"],
+[19, 3, "延误与改时间", "看懂 retard、annulé 并通知朋友。", [["en retard", "晚点"], ["annulé", "取消的（阳性）"], ["prévu", "原定的"], ["attendre", "等待"], ["finalement", "最终／结果"]], "<b>Le train est en retard.</b> 表示列车晚点；<b>Le train est annulé.</b> 表示取消。通知别人时最好说明影响和下一步，例如 « J’arriverai plus tard. »。这里出现的将来时先作为常用句理解即可。", [["Mon train a vingt minutes de retard.", "我的火车晚点20分钟。"], ["Le train est annulé.", "列车被取消了。"], ["Je vais arriver plus tard.", "我会晚一点到。"]], [["Mon train est en ___.", "retard", "晚点。"], ["Le train est ___.（被取消）", "annulé", "注意阳性形式。"], ["Je vais arriver plus ___.", "tard", "更晚。"]], "写一条短信：火车晚点20分钟，你会晚到，并向对方说明。"],
+[19, 4, "在城市里求助", "请求书面方向说明与无障碍信息。", [["un plan", "地图"], ["la sortie", "出口"], ["accessible", "可进入／无障碍的"], ["un ascenseur", "电梯"], ["indiquer", "指示、告诉"]], "使用 <b>Où est… ?</b> 或 <b>Vous pouvez m’indiquer… ?</b> 请求方向；用 <b>Il y a un ascenseur ?</b> 询问是否有电梯。对不熟悉的人常用 vous。若需要书面信息，可以说 « Vous pouvez l’écrire ? »。", [["Où est la sortie, s’il vous plaît ?", "请问出口在哪里？"], ["Y a-t-il un ascenseur ?", "有电梯吗？"], ["Vous pouvez l’écrire ?", "您能写下来吗？"]], [["Où est la ___ ?（出口）", "sortie", "表示出口。"], ["Il y a un ___ ?（电梯）", "ascenseur", "表示电梯。"], ["Vous pouvez l’___ ?（写下来）", "écrire", "不定式 écrire。"]], "写一段在车站使用的询问信息，至少问出口和电梯在哪里。"],
+[20, 1, "数量和单位", "理解公斤、克、件等购物单位。", [["un kilo", "一公斤"], ["cent grammes", "一百克"], ["une bouteille", "一瓶"], ["un paquet", "一包"], ["une quantité", "数量"]], "法语购物经常用 <b>数量 + de + 商品</b>：un kilo de pommes、une bouteille d’eau。元音前 de 变成 d’。留意数字与单位，不用急着一次背完所有量词。", [["Je voudrais un kilo de pommes.", "我想要一公斤苹果。"], ["Une bouteille d’eau, s’il vous plaît.", "请给我一瓶水。"]], [["Un kilo ___ pommes.", "de", "数量 + de。"], ["Une bouteille ___ eau.", "d’", "元音前写 d’。"], ["Je voudrais un ___ de riz.（一包米）", "paquet", "一包。"]], "写一张有三种食品和数量的简短购物清单。"],
+[20, 2, "尺码、颜色和试穿", "问尺寸并表达衣服是否合适。", [["la taille", "尺码"], ["essayer", "试穿／尝试"], ["trop grand", "太大"], ["trop petit", "太小"], ["la couleur", "颜色"]], "问尺码可以用 <b>Vous avez cette taille ?</b>。形容衣服时说 <b>C’est trop grand / trop petit</b>。这里的形容词要根据所修饰名词变化；作为初学阶段，可以先掌握这些整句表达。", [["Je peux essayer cette veste ?", "我能试穿这件外套吗？"], ["Cette taille est trop grande.", "这个尺码太大了。"]], [["Je peux ___ cette veste ?", "essayer", "试穿。"], ["Cette ___ est trop grande.", "taille", "尺码。"], ["C’est ___ petit.", "trop", "表示过于。"]], "写两句向店员询问：你能否试穿，以及这个尺码不合适。"],
+[20, 3, "比较价格和质量", "使用 plus… que / moins… que。", [["plus cher", "更贵"], ["moins cher", "更便宜"], ["meilleur", "更好的"], ["comparer", "比较"], ["la qualité", "质量"]], "<b>A est plus cher que B</b> 表示 A 比 B 贵；<b>A est moins cher que B</b> 表示 A 比 B 便宜。<b>meilleur</b> 是 bon 的比较级，不要写 plus bon。比较时要清楚说出两个对象。", [["Ce sac est moins cher que l’autre.", "这个包比另一个便宜。"], ["Ce produit est meilleur.", "这个产品更好。"]], [["Ce sac est ___ cher que l’autre.（更便宜）", "moins", "moins cher。"], ["Ce produit est ___ que l’autre.（更好）", "meilleur", "bon 的比较级。"], ["Je veux ___ les prix.", "comparer", "比较价格。"]], "比较两件物品，写两句：哪件更便宜，哪件更适合你。"],
+[20, 4, "退换与询问条件", "理解收据、退款与换货说明。", [["le ticket de caisse", "购物小票"], ["échanger", "换货"], ["rembourser", "退款"], ["un défaut", "瑕疵"], ["la garantie", "保修"]], "在店里可以说 <b>Je voudrais échanger cet article.</b> 或 <b>Est-ce possible d’être remboursée ?</b>。实际退换货条件因商店与购买方式而异，需要看具体政策。不要将课程示例当作法律承诺。", [["J’ai gardé le ticket de caisse.", "我保留了购物小票。"], ["Je voudrais échanger cet article.", "我想换这件商品。"], ["Il y a un défaut.", "有一个瑕疵。"]], [["J’ai gardé le ticket de ___.", "caisse", "购物小票。"], ["Je voudrais ___ cet article.", "échanger", "换货。"], ["Il y a un ___.", "défaut", "表示瑕疵。"]], "模拟写一条礼貌消息：买来的商品有问题，想了解是否可以换货。"],
+[21, 1, "表达身体不舒服", "用准确而简单的句子说症状。", [["j’ai mal à…", "我……疼"], ["la tête", "头"], ["le ventre", "肚子"], ["depuis hier", "从昨天起"], ["un rendez-vous", "预约"]], "<b>J’ai mal à la tête</b> 表示头痛，<b>j’ai mal au ventre</b> 表示肚子痛（à + le = au）。<b>Depuis hier</b> 表示症状从昨天开始。这里只学习文字表达，不用于自行诊断。", [["J’ai mal à la tête.", "我头痛。"], ["J’ai mal au ventre depuis hier.", "我从昨天开始肚子疼。"]], [["J’ai mal ___ ventre.", "au", "à + le = au。"], ["J’ai mal à la ___.（头）", "tête", "固定表达。"], ["J’ai mal au ventre ___ hier.", "depuis", "表示从……开始。"]], "写两句向医生说明不适的部位和持续时间。"],
+[21, 2, "预约与改约", "写清日期、时间和请求。", [["prendre rendez-vous", "预约"], ["reporter", "推迟／改期"], ["confirmer", "确认"], ["disponible", "有空"], ["une date", "日期"]], "请求预约可写 <b>Je voudrais prendre rendez-vous.</b>；改时间可写 <b>Je voudrais reporter mon rendez-vous.</b>。最好说明可用日期，并请对方确认。这些表达适用于一般服务和医疗预约。", [["Je voudrais prendre rendez-vous mardi.", "我想预约星期二。"], ["Pouvez-vous confirmer la date ?", "您能确认日期吗？"]], [["Je voudrais prendre ___-vous.", "rendez", "rendez-vous 中间有连字符。"], ["Pouvez-vous ___ la date ?", "confirmer", "确认。"], ["Je voudrais ___ mon rendez-vous.", "reporter", "改期。"]], "写一条预约消息，包含你希望的日期，并请对方确认。"],
+[21, 3, "看懂简单表格", "识别姓名、出生日期、地址等栏目。", [["le nom", "姓氏"], ["le prénom", "名字"], ["la date de naissance", "出生日期"], ["l’adresse", "地址"], ["obligatoire", "必填／必须的"]], "法国表格中 <b>nom</b> 常指姓，<b>prénom</b> 指名。<b>Date de naissance</b> 是出生日期，<b>obligatoire</b> 表示必填。请使用虚构信息练习，不要在练习网页里填写真实身份证件号码。", [["Nom : Martin ; Prénom : Léa.", "姓：马丁；名：莱娅。"], ["La date de naissance est obligatoire.", "出生日期为必填项。"]], [["Le ___ est le nom de famille.", "nom", "姓氏。"], ["Le ___ est le nom donné à la naissance.", "prénom", "名字。"], ["Cette information est ___.（必填）", "obligatoire", "表示必须填写。"]], "用完全虚构的姓名和城市写一个两到三行的示例表格。"],
+[21, 4, "读懂通知和操作步骤", "理解请携带、请填写、请回复。", [["apporter", "带来"], ["remplir", "填写"], ["joindre", "附上"], ["avant", "在……之前"], ["un justificatif", "证明材料"]], "通知中经常出现不定式：<b>Remplir le formulaire</b>、<b>Apporter un justificatif</b>。<b>Avant vendredi</b> 表示在星期五之前。学习时把每条说明拆成“行动 + 物品 + 截止时间”三部分。", [["Veuillez remplir le formulaire.", "请填写表格。"], ["Apportez un justificatif avant vendredi.", "请在星期五前带来证明材料。"]], [["Veuillez ___ le formulaire.", "remplir", "填写表格。"], ["___ un justificatif.", "Apportez", "请带来。"], ["___ vendredi.（在星期五之前）", "Avant", "表示截止时间前。"]], "把这条指示改写成一条简短的法语备忘录：星期五前填表并带材料。"],
+[22, 1, "读懂菜单与用餐信息", "识别套餐、食材和价格。", [["une entrée", "前菜"], ["un plat", "主菜"], ["un dessert", "甜点"], ["compris", "包含的"], ["sans", "不含／不要"]], "菜单可能写 <b>Entrée + plat + dessert</b>。<b>boisson comprise</b> 表示包含饮料，<b>sans fromage</b> 表示不加奶酪。先识别价格与是否包含，再根据自己的需要点餐。", [["Le menu comprend un plat et un dessert.", "套餐包括主菜和甜点。"], ["Je voudrais ce plat sans fromage.", "我想要这道不加奶酪的菜。"]], [["Je voudrais ce plat ___ fromage.", "sans", "表示不加。"], ["Le menu ___ un dessert.", "comprend", "包括。"], ["Une ___ avant le plat principal.", "entrée", "前菜。"]], "写一条点餐消息，说明想要主菜和甜点，以及一个“不加……”要求。"],
+[22, 2, "读懂活动海报", "掌握日期、地点、开放和免费等信息。", [["l’exposition", "展览"], ["l’entrée gratuite", "免费入场"], ["ouvert", "开放的"], ["fermé", "关闭的"], ["de… à…", "从……到……"]], "活动海报中的 <b>du mardi au dimanche</b> 表示从周二到周日，<b>de 10 h à 18 h</b> 表示10点到18点。<b>Entrée gratuite</b> 说的是入场免费，不表示所有附加服务都免费。", [["L’exposition est ouverte de 10 h à 18 h.", "展览从10点开放至18点。"], ["L’entrée est gratuite le dimanche.", "星期日免费入场。"]], [["L’exposition est ___ de 10 h à 18 h.", "ouverte", "exposition 是阴性。"], ["L’entrée est ___.", "gratuite", "阴性形式。"], ["De 10 h ___ 18 h.", "à", "de… à…。"]], "自己编一个虚构展览海报：活动名称、日期、地点和票价。"],
+[22, 3, "认识城市生活公告", "读懂请勿、允许和营业变化。", [["interdit", "禁止的"], ["autorisé", "允许的"], ["les horaires", "营业时间／时刻表"], ["exceptionnellement", "临时地／特别地"], ["une fermeture", "关闭"]], "公告会出现 <b>Interdit</b>（禁止）、<b>Autorisé</b>（允许）和 <b>Fermeture exceptionnelle</b>（临时关闭）。遇到时间变化，要检查日期与适用范围；不要把旧公告当作现在有效的信息。", [["Le musée est exceptionnellement fermé lundi.", "博物馆星期一临时关闭。"], ["Les chiens ne sont pas autorisés.", "不允许带狗。"]], [["Le musée est ___ fermé lundi.", "exceptionnellement", "临时地。"], ["Les chiens ne sont pas ___.", "autorisés", "阳性复数形式。"], ["Consultez les ___ d’ouverture.", "horaires", "开放时间。"]], "写一条简短公告：一个虚构场所星期一临时关闭。"],
+[22, 4, "介绍一个喜欢的地方", "用位置、理由和建议组织短文。", [["le quartier", "街区"], ["agréable", "舒适宜人的"], ["animé", "热闹的"], ["calme", "安静的"], ["je recommande", "我推荐"]], "介绍地点时先写 <b>在哪里</b>，再写 <b>是什么样</b>，最后写 <b>为什么喜欢</b>。可以用 <b>parce que</b> 连接理由：« J’aime ce quartier parce qu’il est calme. »。用具体例子比堆砌形容词更清楚。", [["J’aime ce quartier parce qu’il est agréable.", "我喜欢这个街区，因为它很宜人。"], ["Je recommande ce petit café.", "我推荐这家小咖啡馆。"]], [["J’aime ce quartier ___ qu’il est calme.", "parce", "parce que 引原因。"], ["Ce quartier est très ___.（热闹）", "animé", "形容街区。"], ["Je ___ ce café.", "recommande", "我推荐。"]], "写四句介绍一个你喜欢的地方，包含位置、两种特点和理由。"],
+[23, 1, "一段短文怎么组织？", "按开头、经过、结尾写五句。", [["d’abord", "首先"], ["ensuite", "接着"], ["puis", "然后"], ["enfin", "最后"], ["un paragraphe", "一个段落"]], "写短文时先明确主题，再按顺序写。<b>D’abord → ensuite → puis → enfin</b> 帮助读者跟上你的思路。连接词并非越多越好：一段五句短文使用两三个即可。", [["D’abord, je travaille.", "首先我工作。"], ["Ensuite, je rentre à la maison.", "然后我回家。"], ["Enfin, je me repose.", "最后我休息。"]], [["___, je travaille.（首先）", "D’abord", "表示开头。"], ["___, je rentre à la maison.（接着）", "Ensuite", "表示第二步。"], ["___, je me repose.（最后）", "Enfin", "结束顺序。"]], "用五句法语写今天的日程，至少出现两个连接词。"],
+[23, 2, "昨天发生的事", "用时间线把过去时串起来。", [["hier matin", "昨天早上"], ["hier soir", "昨天晚上"], ["j’ai visité", "我参观了"], ["je suis allé", "我去了（男性）"], ["après", "之后"]], "写过去发生的事情常用 <b>passé composé</b>：<b>j’ai visité</b>（我参观了）与 <b>je suis allé</b>（我去了，男性）。注意表示移动的 aller 在这一用法里搭配 être。叙述时用 hier matin、après、hier soir 安排顺序。", [["Hier matin, je suis allé au marché.", "昨天早上我去了市场。"], ["Après, j’ai visité une amie.", "之后我去拜访了一位朋友。"]], [["Hier matin, je suis ___ au marché.", "allé", "男性形式 allé。"], ["Après, j’___ visité une amie.", "ai", "visiter 用 avoir。"], ["Hier ___, j’ai lu.", "soir", "昨天晚上。"]], "写五句关于某个过去的日子，包含至少一次 j’ai… 和一次 je suis allé…。"],
+[23, 3, "说说感受和原因", "让短文不仅有事实，也有个人体验。", [["j’étais", "我当时是／处于"], ["je me suis senti", "我感到（男性）"], ["surpris", "惊讶的（男性）"], ["agréable", "愉快的"], ["à cause de", "因为（常用于不利原因）"]], "叙述过去的感受时可用 <b>j’étais + 形容词</b> 或 <b>je me suis senti + 形容词</b>。<b>parce que</b> 常用于中性解释，<b>à cause de</b> 多见于不利原因。感受不必复杂，写清“我觉得怎样 + 为什么”即可。", [["J’étais fatigué, mais content.", "我当时累，但很高兴。"], ["Je me suis senti surpris.", "我感到惊讶。"]], [["J’___ fatigué, mais content.", "étais", "描述过去的状态。"], ["Je me suis ___ surpris.", "senti", "男性形式。"], ["___ cause du bruit, je n’ai pas dormi.", "À", "à cause de。"]], "给上节课的日记添加两句：你的感受是什么？原因是什么？"],
+[23, 4, "修改自己的短文", "检查一致性、冠词、动词和标点。", [["relire", "重读"], ["corriger", "修改"], ["une erreur", "错误"], ["un accord", "词形一致／配合"], ["une phrase claire", "清楚的句子"]], "修改短文时分四步：① 每句有没有主语与动词？② 名词前的冠词正确吗？③ 阴性／复数和动词形式一致吗？④ 标点是否清楚？不要一边写一边纠正所有错误，先把意思写完整，再进行第二遍修改。", [["Voici ma famille.", "这是我的家人。"], ["J’ai une sœur.", "我有一个姐妹。"], ["Hier, je suis allé au musée.", "昨天我去了博物馆。"]], [["Voici ___ famille.", "ma", "famille 阴性单数。"], ["J’ai ___ sœur.", "une", "一个姐妹。"], ["Hier, je suis ___ au musée.", "allé", "男性过去分词。"]], "从自己的旧短文里选三句，修改后再补充一句解释为何改动。"],
+[24, 1, "日常对话：约时间", "综合阅读、提问、时间和礼貌表达。", [["on se retrouve ?", "我们见面好吗？"], ["à quelle heure ?", "几点？"], ["ça me va", "我可以／这个安排合适"], ["décaler", "调整时间"], ["confirmer", "确认"]], "一段完整的文字对话通常需要 <b>提出建议 → 确定时间 → 确认</b>。可以用 « Ça me va » 同意，或 « On peut décaler ? » 提出改时间。要关注对方是否明确确认了日期与地点。", [["On se retrouve samedi à 15 heures ?", "我们星期六15点见面好吗？"], ["Oui, ça me va. À samedi !", "好，没问题，星期六见！"]], [["À ___ heure ?", "quelle", "固定问法。"], ["Oui, ça me ___.", "va", "表示安排合适。"], ["Tu peux ___ l’heure ?", "confirmer", "确认时间。"]], "写一段四轮的虚构 WhatsApp 对话，约定时间、地点，并有明确确认。"],
+[24, 2, "解决一个生活小问题", "用四句说明问题、需要和解决办法。", [["un problème", "问题"], ["une solution", "解决办法"], ["il manque", "缺少"], ["j’ai besoin de", "我需要"], ["c’est possible ?", "可以吗？"]], "写求助消息时采用 <b>问题 → 具体需求 → 礼貌请求 → 感谢</b> 的结构。例如 « Il manque une information » 后说明你需要什么。表达清楚比使用复杂词汇更重要。", [["Il manque une information dans le formulaire.", "表格里缺少一项信息。"], ["J’ai besoin d’aide, s’il vous plaît.", "我需要帮助，谢谢。"]], [["Il ___ une information.", "manque", "表示缺少。"], ["J’ai ___ d’aide.", "besoin", "j’ai besoin de。"], ["Est-ce que c’est ___ ?", "possible", "表示是否可行。"]], "模拟给服务机构写一条四句留言：说明表格中缺少信息并礼貌求助。"],
+[24, 3, "我的法语小故事", "独立写一段6–8句的个人叙述。", [["au début", "一开始"], ["maintenant", "现在"], ["j’ai appris", "我学会了"], ["je peux", "我能够"], ["je voudrais continuer", "我想继续"]], "这次不用逐字翻译中文，而是用已经掌握的句型表达。结构建议：① 从哪里开始；② 学过什么；③ 什么困难；④ 如何练习；⑤ 现在能做什么；⑥ 未来想学什么。<b>Je peux + 动词原形</b> 表示能够做某事。", [["Au début, je connaissais peu de mots français.", "开始时，我认识的法语词很少。"], ["Maintenant, je peux écrire un petit message.", "现在我能写一条简短消息。"]], [["Maintenant, je ___ écrire un message.", "peux", "je peux = 我能。"], ["J’___ appris de nouveaux mots.", "ai", "复合过去时。"], ["Je voudrais ___.（继续）", "continuer", "动词原形。"]], "不看示范，写一段6–8句法语短文，讲述你的学习经历。可以先写草稿，再修改。"],
+[24, 4, "学完后，我能做什么？", "综合真实情境，规划下一步学习。", [["je comprends", "我理解"], ["je sais écrire", "我会写"], ["je dois revoir", "我需要复习"], ["mon objectif", "我的目标"], ["progresser", "进步"]], "自我评估时区分 <b>je comprends</b>（能读懂）、<b>je sais écrire</b>（会写）和 <b>je dois revoir</b>（还需要复习）。不要仅根据做完的课数判断水平。真正的进步在于能否几天后不看提示写出意思清楚的消息。", [["Je comprends un message simple.", "我能看懂简单消息。"], ["Je dois revoir les dates et les heures.", "我需要复习日期和时间。"]], [["Je ___ un message simple.", "comprends", "理解。"], ["Je sais ___ une phrase.", "écrire", "会写。"], ["Mon ___ est de progresser.", "objectif", "目标。"]], "写一段自我总结：三项已经会做的事、两项要复习的内容和一个下一阶段目标。"]
+];
+function p2Load(){
+ try{var v=JSON.parse(localStorage.getItem(P2_KEY)||'{}');return {done:Array.isArray(v.done)?v.done.filter(function(x){return /^(?:1[3-9]|2[0-4])-[1-5]$/.test(x);}):[],notes:isRecord(v.notes)?v.notes:{},review:isRecord(v.review)?v.review:{}};}catch(e){return {done:[],notes:{},review:{}};}
+}
+function p2Save(v){try{localStorage.setItem(P2_KEY,JSON.stringify(v));}catch(e){storageWarning=true;}}
+function p2Merge(v){var x=p2Load();if(Array.isArray(v.done))x.done=Array.from(new Set(x.done.concat(v.done.filter(function(id){return typeof id==='string'&&/^(?:1[3-9]|2[0-4])-[1-5]$/.test(id);}))));
+ if(isRecord(v.notes))Object.keys(v.notes).forEach(function(k){if(/^(?:1[3-9]|2[0-4])-[1-5]$/.test(k)&&typeof v.notes[k]==='string'&&v.notes[k].length<4000&&!x.notes[k])x.notes[k]=v.notes[k];});
+ if(isRecord(v.review))Object.keys(v.review).slice(0,120).forEach(function(k){if(/^(?:1[3-9]|2[0-4])-[1-5]$/.test(k)&&isRecord(v.review[k])&&!x.review[k])x.review[k]=v.review[k];});p2Save(x);}
+function p2Get(w,d){return P2_DATA.find(function(q){return q[0]===w&&q[1]===d;});}
+function p2Completed(){return p2Load().done.length;}
+function renderPart2(arg){
+ var progress=p2Load();
+ if(isRecord(arg)&&arg.w&&arg.d){renderP2Lesson(arg.w,arg.d);return;}
+ var h='<h1>🌿 第二阶段 · 进阶法语</h1><p>第13–24周：从认识法语，到能够独立理解和写出真实消息。第13–24周的60节课程全部开放，每周含4节新课和1节综合复习。</p>'+storageNotice();
+ h+='<div class="card"><h3>两个独立的学习进度</h3><p>第一阶段：<b>'+S.done.length+' / 60</b> 节已完成</p><p>第二阶段：<b>'+p2Completed()+' / 60</b> 节已完成</p><p class="muted">旧课程的成绩不会清零。第二阶段可自由体验，但建议先巩固第一阶段的基础。</p><button class="btn ghost" onclick="go(\'progress\')">保存我的全部学习记录</button></div>';
+ P2_WEEKS.forEach(function(w){var enabled=w[0]<=24;var done=progress.done.filter(function(id){return id.indexOf(w[0]+'-')===0;}).length;
+  h+='<div class="card"><h3>第'+w[0]+'周 · '+esc(w[1])+(enabled?' · '+done+'/5':' · 即将开放')+'</h3><p class="muted">'+esc(w[2])+'</p>';
+  if(enabled){for(var d=1;d<=5;d++){var title=d===5?'本周综合复习':p2Get(w[0],d)[2];h+='<button class="daybtn" style="width:100%;margin:6px 0" onclick="go(\'part2\',{w:'+w[0]+',d:'+d+'})"><span class="dn">第'+d+'课 · '+esc(title)+(progress.done.indexOf(w[0]+'-'+d)>=0?' ✓':'')+'</span></button>';}}
+  else h+='<p class="muted">本周课程已开放。</p>';h+='</div>';
+ });app.innerHTML=h;
+}
+function p2SaveNote(w,d){var id=w+'-'+d,el=document.getElementById('p2note');if(!el)return;var x=p2Load();x.notes[id]=el.value.slice(0,4000);p2Save(x);var status=document.getElementById('p2notestatus');if(status)status.textContent='已保存在这台设备。';}
+function p2Done(w,d){p2SaveNote(w,d);var x=p2Load(),id=w+'-'+d;if(x.done.indexOf(id)<0)x.done.push(id);p2Save(x);go('part2',{w:w,d:d});}
+function p2Review(w){var prev=P2_DATA.filter(function(v){return v[0]===w;});
+ var words=prev.map(function(x){return x[4][0];});var ex=[];prev.forEach(function(x){ex.push(x[7][0]);});
+ return [w,5,'本周综合复习','回忆这一周的语法，再用自己的话写一段短文。',words,'先尝试不看答案。答错不影响已经完成的旧课程；需要时可以回到本周课程查阅。',prev.map(function(x){return x[6][0];}),ex,'试着写3–5句，尽量使用这一周的新语法。'];
+}
+function renderP2Lesson(w,d){var l=d===5?p2Review(w):p2Get(w,d);if(!l){go('part2');return;}var id=w+'-'+d,x=p2Load();
+ var h='<p><button class="btn ghost" onclick="go(\'part2\')">← 返回进阶课程</button></p><h1>第'+w+'周 · 第'+d+'课</h1><h2>'+esc(l[2])+'</h2><p>'+esc(l[3])+'</p>';
+ if(x.done.indexOf(id)>=0)h+='<div class="fbk ok">✓ 本课已完成，随时可以复习。</div>';
+ h+='<div class="card"><h3>① 今日词汇 · 新词与复习</h3>';
+ l[4].forEach(function(q){h+='<div class="wordcard"><div class="wfr">'+esc(q[0])+'</div><div class="whz">'+esc(q[1])+'</div>'+elixButton(q[0])+'</div>';});h+='</div>';
+ h+='<div class="card"><h3>② 句子与语法</h3><p>'+l[5]+'</p>';
+ l[6].forEach(function(a){h+='<div class="v6bubble"><strong>'+esc(a[0])+'</strong><small>'+esc(a[1])+'</small></div>';});h+='</div>';
+ h+='<div class="card"><h3>③ 无提示填空挑战</h3><p class="muted">先自己写，再检查。答案和提示用中文说明。可以多练几次。</p>';
+ l[7].forEach(function(q,i){h+='<div class="advanced-question"><label for="p2q'+i+'">'+(i+1)+'. '+esc(q[0])+'</label><input id="p2q'+i+'" autocomplete="off" placeholder="写出缺少的法语" aria-label="第'+(i+1)+'题"><button class="btn ghost" style="margin-top:8px" onclick="p2Check('+w+','+d+','+i+')">检查 · 查看提示</button><p class="advanced-result" id="p2fb'+i+'" role="status"></p></div>';});h+='</div>';
+ h+='<div class="card"><h3>④ 用自己的话写</h3><p>'+esc(l[8])+'</p><textarea class="txt" id="p2note" style="min-height:110px;width:100%" placeholder="试着写几句法语……">'+esc(x.notes[id]||'')+'</textarea><p><button class="btn ghost" onclick="p2SaveNote('+w+','+d+')">保存我的句子</button></p><p id="p2notestatus" class="muted" role="status"></p><button class="btn sec" onclick="p2Done('+w+','+d+')">完成本课 ✓</button><p class="muted">完成只是学习记录，错误不会扣分。旧课程不受影响。</p></div>';
+ app.innerHTML=h;
+ var ta=document.getElementById('p2note');if(ta)ta.addEventListener('input',function(){p2SaveNote(w,d);});
+}
+function p2Norm(s){return String(s).normalize('NFC').toLowerCase().replace(/[’‘]/g,"'").replace(/[.!?。？,，;；\s]+/g,' ').trim();}
+function p2Check(w,d,i){var l=d===5?p2Review(w):p2Get(w,d),q=l[7][i],inp=document.getElementById('p2q'+i),fb=document.getElementById('p2fb'+i);if(!inp||!fb)return;
+ var val=p2Norm(inp.value),correct=p2Norm(q[1]);var ok=val===correct;fb.className='advanced-result fbk '+(ok?'ok':'bad');fb.textContent=ok?'✓ 正确！ '+q[2]:'再想一想。提示：'+q[2]+'（参考答案：'+q[1]+'）';
+ var p=p2Load(),id=w+'-'+d;if(!isRecord(p.review[id]))p.review[id]={};p.review[id][i]={ok:ok,at:Date.now()};p2Save(p);
+}
+
+go("home");
+</script>
+
+</body>
+</html>
